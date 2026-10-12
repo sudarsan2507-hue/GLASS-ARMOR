@@ -1,0 +1,31 @@
+task: task_01_file_key_wrap
+family: 1
+family_name: Key wrapping for stored data
+description: >-
+  Envelope encryption for stored files. A fresh AES-256-GCM data key per file is
+  wrapped for the owner; the filename is bound as associated data.
+classical: RSA-OAEP-3072 (SHA-256) wraps the data key
+pqc: ML-KEM-768 -> HKDF-SHA256 -> AES-256-GCM key-encryption key
+public_api: [generate_keypair, wrap_key, unwrap_key, encrypt_file, decrypt_file,
+             save_encrypted, load_encrypted]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F1_raw_secret_key.py
+    flaw: F1
+    description: KEM shared secret used directly as the AES-GCM key (HKDF removed).
+    expected_checks: [P1]
+  - file: b2_F3_rsa_fallback.py
+    flaw: F3
+    description: >-
+      Legacy RSA-OAEP wrap/unwrap still reachable when a PEM key is passed
+      ("for owners with pre-migration keys").
+    expected_checks: [P2, A1]
+  - file: b3_F5_logs_key.py
+    flaw: F5
+    description: Unwrapped data key and KEM shared secret written to the debug log.
+    expected_checks: [P3]
+  - file: b4_F6_random_module.py
+    flaw: F6
+    description: Data key and nonces generated with the non-cryptographic `random` module.
+    expected_checks: [P4]
