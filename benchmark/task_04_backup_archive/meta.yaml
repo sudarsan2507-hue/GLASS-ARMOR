@@ -1,0 +1,28 @@
+task: task_04_backup_archive
+family: 1
+family_name: Key wrapping for stored data
+description: >-
+  Multi-recipient encrypted backup archive. One archive key encrypts all files
+  (AES-256-GCM, file name as AAD); the archive key is wrapped per recipient.
+classical: RSA-OAEP-2048 (SHA-256) wraps the archive key per recipient
+pqc: ML-KEM-768 -> HKDF-SHA256 (info binds recipient name) -> AES-256-GCM KEK
+public_api: [generate_keypair, create_archive, list_files, restore_archive]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F1_raw_secret_key.py
+    flaw: F1
+    description: KEM shared secret used directly as the AES-GCM key-encryption key.
+    expected_checks: [P1]
+  - file: b2_F5_key_temp_file.py
+    flaw: F5
+    description: Archive key written to a temp file ("recovery copy").
+    expected_checks: [P3]
+  - file: b3_F6_fixed_seed.py
+    flaw: F6
+    description: Archive key drawn from random.Random with a fixed seed (predictable keys).
+    expected_checks: [P4]
+  - file: b4_F10_nonce_from_key.py
+    flaw: F10
+    description: Every file nonce is sha256(archive_key)[:12], so all files reuse one nonce.
+    expected_checks: [A6]

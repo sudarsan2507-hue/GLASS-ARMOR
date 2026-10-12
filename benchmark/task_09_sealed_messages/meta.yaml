@@ -1,0 +1,32 @@
+task: task_09_sealed_messages
+family: 2
+family_name: Session key setup
+description: >-
+  End-to-end "sealed box" chat messages to a recipient's long-term identity key, with
+  an ephemeral sender key per message and the sender name inside the ciphertext.
+classical: Ephemeral-static X25519 -> HKDF-SHA256 (bound to both public keys) -> AES-256-GCM
+pqc: >-
+  Hybrid identity (X25519 + ML-KEM-768); HKDF-SHA256 over both secrets, bound to the
+  ephemeral key, KEM ciphertext and recipient X25519 key
+public_api: [generate_identity, fingerprint, seal, open_sealed]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F2_context_not_bound.py
+    flaw: F2
+    description: HKDF info does not include the ephemeral key, KEM ciphertext or recipient key.
+    expected_checks: [P6]
+  - file: b2_F4_pq_secret_unused.py
+    flaw: F4
+    description: ML-KEM shared secret computed but not fed into HKDF; only X25519 decides the key.
+    expected_checks: [P6, A4]
+  - file: b3_F6_random_ephemeral.py
+    flaw: F6
+    description: >-
+      Ephemeral X25519 private key from random.randbytes (predictable), so the classical
+      half of the hybrid gives no protection.
+    expected_checks: [P4]
+  - file: b4_F5_key_in_exception.py
+    flaw: F5
+    description: X25519 identity private key included in the exception when opening fails.
+    expected_checks: [P3, A3]

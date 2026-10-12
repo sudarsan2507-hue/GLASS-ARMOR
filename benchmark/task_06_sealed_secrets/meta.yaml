@@ -1,0 +1,28 @@
+task: task_06_sealed_secrets
+family: 1
+family_name: Key wrapping for stored data
+description: >-
+  Sealed deployment secrets: a dict of secrets sealed with a cluster public key,
+  bound to an environment name as AAD; supports re-sealing (rotate) and loading into env.
+classical: RSA-OAEP-2048 wraps a random AES-256-GCM key (token "v1.")
+pqc: ML-KEM-768 -> HKDF-SHA256 -> AES-256-GCM (token "v2.")
+public_api: [generate_keypair, seal, unseal, rotate, load_into_env]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F1_raw_secret_key.py
+    flaw: F1
+    description: KEM shared secret used directly as the AES-GCM key.
+    expected_checks: [P1]
+  - file: b2_F3_legacy_v1_tokens.py
+    flaw: F3
+    description: Old "v1." tokens are still accepted and unsealed with RSA-OAEP.
+    expected_checks: [P2]
+  - file: b3_F5_logs_secrets.py
+    flaw: F5
+    description: Unsealed secrets dict written to the info log in load_into_env.
+    expected_checks: [P3]
+  - file: b4_F6_random_nonce.py
+    flaw: F6
+    description: AES-GCM nonce from random.getrandbits (non-cryptographic PRNG).
+    expected_checks: [P4]
