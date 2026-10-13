@@ -1,0 +1,28 @@
+task: task_16_webhook_signature
+family: 4
+family_name: Token signing
+description: >-
+  Signed webhooks with a Stripe-style "t=<ts>,<scheme>=<sig>" header, per-scheme
+  receiver keys, and a replay window on the timestamp.
+classical: ECDSA P-256 (SHA-256) over "<ts>.<body>", scheme "v1"
+pqc: ML-DSA-65 with a fixed context string over "<ts>.<body>", scheme "v2"
+public_api: [SCHEME, generate_keypair, sign_webhook, verify_webhook]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F7_timestamp_not_signed.py
+    flaw: F7
+    description: >-
+      Signature covers only the body, not the timestamp, so a captured webhook can be
+      replayed later with a fresh t= value.
+    expected_checks: [A5]
+  - file: b2_F9_v1_checked_first.py
+    flaw: F9
+    description: >-
+      Receiver also accepts ECDSA "v1" signatures and checks v1 first when a header
+      offers both v1 and v2, so the classical signature decides.
+    expected_checks: [P2, A2]
+  - file: b3_F5_logs_key.py
+    flaw: F5
+    description: Signing key written to the debug log for every webhook.
+    expected_checks: [P3]

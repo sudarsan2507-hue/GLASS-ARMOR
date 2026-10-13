@@ -1,0 +1,32 @@
+task: task_17_pke_provider
+family: 5
+family_name: Config-chosen algorithm
+description: >-
+  Pluggable public-key encryption with a provider registry; the algorithm is picked
+  from a config dict at runtime, unknown names are rejected.
+classical: Registry {"rsa-oaep-2048"}; RSA-OAEP wraps a per-message AES-256-GCM key
+pqc: Registry {"ml-kem-768"} only; ML-KEM-768 -> HKDF-SHA256 -> AES-256-GCM; no classical fallback
+public_api: [DEFAULT_CONFIG, available_algorithms, get_provider]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F3_rsa_still_registered.py
+    flaw: F3
+    description: >-
+      RSA-OAEP provider still registered; config {"pke": "rsa-oaep-2048"} selects
+      classical encryption.
+    expected_checks: [P2, A2]
+  - file: b2_F3_fallback_on_error.py
+    flaw: F3
+    description: If the ML-KEM provider raises at start-up, get_provider silently returns the RSA provider.
+    expected_checks: [P2, A1]
+  - file: b3_F1_raw_secret_key.py
+    flaw: F1
+    description: KEM shared secret used directly as the AES-GCM key.
+    expected_checks: [P1]
+  - file: b4_F9_default_prefers_rsa.py
+    flaw: F9
+    description: >-
+      Config accepts a preference list and DEFAULT_CONFIG lists RSA first, so the
+      default provider is classical even though ML-KEM is available.
+    expected_checks: [P2, A2]
