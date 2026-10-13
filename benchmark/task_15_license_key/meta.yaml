@@ -1,0 +1,26 @@
+task: task_15_license_key
+family: 4
+family_name: Token signing
+description: >-
+  Offline license keys: vendor-signed {customer, product, expires, seats} packed
+  into a pasteable base32 string; the app checks signature, product and expiry.
+classical: ECDSA P-256 (SHA-256) over the payload JSON ("LIC1-")
+pqc: ML-DSA-65 with a fixed context string over the payload JSON ("LIC2-")
+public_api: [generate_keypair, issue_license, verify_license]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F7_product_not_signed.py
+    flaw: F7
+    description: >-
+      Product name is excluded from the signed data, so a license for one product can
+      be edited to unlock another.
+    expected_checks: [A5]
+  - file: b2_F3_legacy_lic1.py
+    flaw: F3
+    description: Old "LIC1-" ECDSA licenses are still accepted.
+    expected_checks: [P2]
+  - file: b3_F5_key_in_exception.py
+    flaw: F5
+    description: Vendor private key (repr) included in the exception message if signing fails.
+    expected_checks: [P3, A3]

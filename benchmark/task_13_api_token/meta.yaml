@@ -1,0 +1,28 @@
+task: task_13_api_token
+family: 4
+family_name: Token signing
+description: >-
+  JWT-style compact API tokens (header.claims.signature) with iat/exp, algorithm
+  pinning and expiry checks.
+classical: RS256 (RSA-2048 PKCS#1 v1.5, SHA-256)
+pqc: ML-DSA-65 with a fixed context string; header alg "ML-DSA-65"
+public_api: [InvalidToken, generate_keypair, issue_token, verify_token]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F7_context_ignored.py
+    flaw: F7
+    description: >-
+      ML-DSA context string dropped, so any signature by the same key over the same
+      bytes (other purpose/service) is accepted as a token signature.
+    expected_checks: [A5]
+  - file: b2_F3_rs256_header.py
+    flaw: F3
+    description: >-
+      If the (attacker-controlled) header says RS256, the token is verified with RSA
+      instead of being rejected.
+    expected_checks: [P2, A2]
+  - file: b3_F5_key_temp_file.py
+    flaw: F5
+    description: Signing key cached in a world-readable temp file.
+    expected_checks: [P3]

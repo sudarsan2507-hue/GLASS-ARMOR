@@ -1,0 +1,27 @@
+task: task_11_invoice_signing
+family: 3
+family_name: Document signing
+description: >-
+  Signed e-invoices and credit notes as dicts; canonical JSON + document-type
+  domain separation so one document type cannot be passed off as another.
+classical: ECDSA P-256 (SHA-256) over "<doc-type>|<canonical JSON>"
+pqc: ML-DSA-65 over canonical JSON with the document type as context string
+public_api: [generate_keypair, sign_invoice, verify_invoice, sign_credit_note,
+             verify_credit_note, invoice_total]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F7_doc_type_ignored.py
+    flaw: F7
+    description: >-
+      Context (document type) dropped, so a signed credit note also verifies as an
+      invoice with the same fields.
+    expected_checks: [A5]
+  - file: b2_F3_ecdsa_pem_keys.py
+    flaw: F3
+    description: PEM (ECDSA) issuer keys are still accepted and verified with ECDSA.
+    expected_checks: [P2]
+  - file: b3_F5_logs_key_on_error.py
+    flaw: F5
+    description: Private key written to the error log when signing fails.
+    expected_checks: [P3, A3]
