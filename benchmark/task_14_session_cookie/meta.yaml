@@ -1,0 +1,31 @@
+task: task_14_session_cookie
+family: 4
+family_name: Token signing
+description: >-
+  Signed web session cookies (random session id, user, expiry) plus HMAC-based CSRF
+  tokens checked on form posts.
+classical: ECDSA P-256 (SHA-256) over the session JSON
+pqc: ML-DSA-65 with a fixed context string over the session JSON
+public_api: [generate_keypair, csrf_token, issue_session, load_session, check_csrf]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F8_csrf_not_constant_time.py
+    flaw: F8
+    description: CSRF token compared with == instead of hmac.compare_digest.
+    expected_checks: [P5]
+  - file: b2_F6_random_session_id.py
+    flaw: F6
+    description: Session id generated with random.choices (predictable PRNG) instead of secrets.
+    expected_checks: [P4]
+  - file: b3_F7_expiry_not_signed.py
+    flaw: F7
+    description: >-
+      Signature covers only sid and user, not exp; a client can edit exp in its cookie
+      and extend the session indefinitely.
+    expected_checks: [A5]
+  - file: b4_F8_bytewise_compare.py
+    flaw: F8
+    held_out: true  # added after the gate was frozen
+    description: CSRF token compared with a hand-written loop that exits at the first differing character.
+    expected_checks: [P5]

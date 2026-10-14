@@ -1,0 +1,39 @@
+task: task_20_suite_negotiation
+family: 5
+family_name: Config-chosen algorithm
+description: >-
+  TLS-like handshake: client offers cipher suites with key shares, server picks by its
+  preference list, both derive a session key bound to suite and hellos; AES-GCM records.
+classical: Suites X25519-AES256GCM and P256-AES256GCM
+pqc: >-
+  Only X25519MLKEM768-AES256GCM (hybrid; HKDF over both secrets, bound to suite and
+  both hellos); no classical suites
+public_api: [SERVER_PREFERENCE, CLIENT_SUITES, client_hello, server_hello, client_finish, Channel]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F9_classical_suite_preferred.py
+    flaw: F9
+    description: >-
+      Classical X25519 suite kept and listed first in SERVER_PREFERENCE, so it is chosen
+      whenever the client offers both.
+    expected_checks: [A2]
+  - file: b2_F3_classical_suite_accepted.py
+    flaw: F3
+    description: Server still accepts the classical suite when a client offers only that one.
+    expected_checks: [A2]
+  - file: b3_F2_no_transcript.py
+    flaw: F2
+    description: HKDF info contains only the suite name, not the hellos (no transcript binding).
+    expected_checks: [P6]
+  - file: b4_F10_counter_nonce_both_ways.py
+    flaw: F10
+    description: >-
+      Channel uses a counter nonce from 0 and both sides share one key, so record n from
+      the client and record n from the server reuse (key, nonce).
+    expected_checks: [A6]
+  - file: b5_F4_classical_twice.py
+    flaw: F4
+    held_out: true  # added after the gate was frozen
+    description: Hybrid secret is classical + classical (typo); the ML-KEM secret is computed but never used.
+    expected_checks: [P6, A4]

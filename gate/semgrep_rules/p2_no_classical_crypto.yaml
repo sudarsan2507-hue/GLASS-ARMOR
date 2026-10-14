@@ -1,0 +1,68 @@
+rules:
+  - id: pqgate-P2-rsa-import
+    message: >
+      RSA key generation or encryption imported after PQC migration.
+      Classical asymmetric operations must be removed.
+    languages: [python]
+    severity: ERROR
+    pattern: from cryptography.hazmat.primitives.asymmetric import rsa
+    metadata:
+      flaw: F3
+      check: P2
+      description: RSA asymmetric crypto still imported
+
+  - id: pqgate-P2-rsa-generate-private-key
+    message: >
+      rsa.generate_private_key() called after PQC migration.
+    languages: [python]
+    severity: ERROR
+    pattern: rsa.generate_private_key(...)
+    metadata:
+      flaw: F3
+      check: P2
+      description: RSA key generation present
+
+  - id: pqgate-P2-ec-import
+    message: >
+      ECDH/ECDSA import present after PQC migration. Classical elliptic-curve
+      asymmetric operations must be removed.
+    languages: [python]
+    severity: ERROR
+    pattern: from cryptography.hazmat.primitives.asymmetric import ec
+    metadata:
+      flaw: F3
+      check: P2
+      description: EC asymmetric crypto still imported
+
+  - id: pqgate-P2-ec-generate-private-key
+    message: >
+      ec.generate_private_key() called after PQC migration.
+    languages: [python]
+    severity: ERROR
+    pattern: ec.generate_private_key(...)
+    metadata:
+      flaw: F3
+      check: P2
+      description: EC key generation present
+
+  - id: pqgate-P2-rsa-oaep-import
+    message: >
+      OAEP padding import present — RSA encryption still in use.
+    languages: [python]
+    severity: ERROR
+    pattern: from cryptography.hazmat.primitives.asymmetric import padding
+    metadata:
+      flaw: F3
+      check: P2
+      description: RSA OAEP padding imported
+
+  - id: pqgate-P2-padding-oaep
+    message: >
+      padding.OAEP used — RSA encryption still active after PQC migration.
+    languages: [python]
+    severity: ERROR
+    pattern: padding.OAEP(...)
+    metadata:
+      flaw: F3
+      check: P2
+      description: padding.OAEP() present

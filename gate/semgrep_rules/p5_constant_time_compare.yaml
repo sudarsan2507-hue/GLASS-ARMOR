@@ -1,0 +1,26 @@
+# P5: MACs, tags and check values must be compared with hmac.compare_digest, not ==/!=.
+rules:
+  - id: pqgate-P5-mac-compared-with-eq
+    message: MAC / tag / check value compared with == or != instead of hmac.compare_digest().
+    languages: [python]
+    severity: ERROR
+    pattern-either:
+      - patterns:
+          - pattern-either:
+              - pattern: $A == $B
+              - pattern: $A != $B
+          - pattern-not: $X == "..."
+          - pattern-not: $X != "..."
+          - metavariable-regex:
+              metavariable: $A
+              regex: ^(self\.)?_*\w*(mac|tag|digest|check|csrf|hmac)\w*(\(.*\))?$
+      - patterns:
+          - pattern-either:
+              - pattern: $A == $B
+              - pattern: $A != $B
+          - pattern-not: $X == "..."
+          - pattern-not: $X != "..."
+          - metavariable-regex:
+              metavariable: $B
+              regex: ^(self\.)?_*\w*(mac|tag|digest|check|csrf|hmac)\w*(\(.*\))?$
+    metadata: {check: P5, flaw: F8}

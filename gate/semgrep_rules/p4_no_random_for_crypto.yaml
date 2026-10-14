@@ -1,0 +1,11 @@
+# P4: keys, nonces, salts and ids must come from os.urandom / secrets, never `random`.
+rules:
+  - id: pqgate-P4-random-module
+    message: The non-cryptographic `random` module is used; use os.urandom() or the secrets module.
+    languages: [python]
+    severity: ERROR
+    pattern-either:
+      - pattern: import random
+      - pattern: from random import $X
+      - pattern: random.$FUNC(...)
+    metadata: {check: P4, flaw: F6}

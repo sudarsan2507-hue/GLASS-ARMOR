@@ -1,0 +1,26 @@
+task: task_19_crypto_policy
+family: 5
+family_name: Config-chosen algorithm
+description: >-
+  Message encryption whose key exchange and AEAD are chosen by a policy string
+  ("kex=...; aead=..."); unknown settings are rejected.
+classical: kex ecdh-p256 (ECIES-style ephemeral ECDH + HKDF), aead AES-256-GCM or ChaCha20-Poly1305
+pqc: kex ml-kem-768 only (KEM + HKDF bound to policy and KEM ciphertext); no classical fallback
+public_api: [DEFAULT_POLICY, AEADS, KEX, Policy, load_policy]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F9_default_prefers_x25519.py
+    flaw: F9
+    description: >-
+      kex accepts a preference list and DEFAULT_POLICY lists x25519 first, so the
+      default policy is purely classical although ML-KEM is supported.
+    expected_checks: [P2, A2]
+  - file: b2_F3_missing_kex_is_classical.py
+    flaw: F3
+    description: A policy without a kex entry silently selects classical X25519.
+    expected_checks: [P2, A2]
+  - file: b3_F1_raw_secret_key.py
+    flaw: F1
+    description: KEM shared secret used directly as the AEAD key (HKDF bypassed).
+    expected_checks: [P1]

@@ -1,0 +1,39 @@
+task: task_02_session_handshake
+family: 2
+family_name: Session key setup
+description: >-
+  Client/server handshake that derives a session key, plus an AES-256-GCM message
+  channel (SecureChannel) that uses that key.
+classical: X25519 -> HKDF-SHA256 (info includes both hello messages)
+pqc: >-
+  Hybrid X25519 + ML-KEM-768; HKDF-SHA256 over both secrets, info includes both
+  hellos (and so the KEM ciphertext)
+public_api: [client_start, server_respond, client_finish, SecureChannel]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+# A4 here means: corrupt ONLY the ML-KEM shared secret on one side (transcript unchanged)
+# and see whether both sides still agree on the key.
+variants:
+  - file: b1_F2_xor_no_transcript.py
+    flaw: F2
+    description: >-
+      Secrets combined with XOR and the transcript (hellos incl. KEM ciphertext)
+      left out of the HKDF info.
+    expected_checks: [P6]
+  - file: b2_F4_pq_secret_unused.py
+    flaw: F4
+    description: ML-KEM shared secret computed but not fed into HKDF; only X25519 decides the key.
+    expected_checks: [P6, A4]
+  - file: b3_F10_nonce_per_channel.py
+    flaw: F10
+    description: One random nonce chosen per SecureChannel and reused for every message.
+    expected_checks: [A6]
+  - file: b4_F5_key_in_exception.py
+    flaw: F5
+    description: Session key hex included in the exception raised on a failed decryption.
+    expected_checks: [P3, A3]
+  - file: b5_F4_ciphertext_as_secret.py
+    flaw: F4
+    held_out: true  # added after the gate was frozen
+    description: KEM ciphertext (public) is fed into HKDF instead of the ML-KEM shared secret, so only X25519 protects the key.
+    expected_checks: [P6, A4]

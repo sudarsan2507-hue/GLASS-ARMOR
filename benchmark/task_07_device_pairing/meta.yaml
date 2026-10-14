@@ -1,0 +1,34 @@
+task: task_07_device_pairing
+family: 2
+family_name: Session key setup
+description: >-
+  Smart-home device <-> hub pairing with a 6-digit verification code, then
+  HMAC-authenticated commands using the pairing key.
+classical: X25519 -> HKDF-SHA256 (info includes both hellos)
+pqc: Hybrid X25519 + ML-KEM-768; HKDF-SHA256 over both secrets, info includes both hellos
+public_api: [device_start, parse_device_id, hub_respond, device_finish, verification_code,
+             sign_command, verify_command]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F2_no_transcript.py
+    flaw: F2
+    description: Hellos (incl. the KEM ciphertext) left out of the HKDF info; no transcript binding.
+    expected_checks: [P6]
+  - file: b2_F4_pq_secret_unused.py
+    flaw: F4
+    description: ML-KEM shared secret computed but not fed into HKDF; only X25519 decides the key.
+    expected_checks: [P6, A4]
+  - file: b3_F8_tag_not_constant_time.py
+    flaw: F8
+    description: HMAC command tag compared with == instead of hmac.compare_digest.
+    expected_checks: [P5]
+  - file: b4_F5_prints_key.py
+    flaw: F5
+    description: Pairing key printed to stdout after pairing.
+    expected_checks: [P3]
+  - file: b5_F8_hex_compare.py
+    flaw: F8
+    held_out: true  # added after the gate was frozen
+    description: Command tag compared as hex strings with == instead of hmac.compare_digest.
+    expected_checks: [P5]

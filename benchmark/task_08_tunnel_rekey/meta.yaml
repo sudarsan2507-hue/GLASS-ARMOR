@@ -1,0 +1,38 @@
+task: task_08_tunnel_rekey
+family: 2
+family_name: Session key setup
+description: >-
+  Two-peer encrypted tunnel: handshake, per-direction AES-256-GCM keys with counter
+  nonces, replay protection, and synchronized rekeying.
+classical: X25519 -> HKDF-SHA256 (info includes both messages) -> two direction keys
+pqc: Hybrid X25519 + ML-KEM-768; HKDF-SHA256 over both secrets, info includes both messages
+public_api: [initiator_start, responder_accept, initiator_finish, Tunnel]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+# A6 here: send one packet in each direction; same key + same counter -> repeated (key, nonce).
+variants:
+  - file: b1_F10_same_key_both_directions.py
+    flaw: F10
+    description: >-
+      Both directions use the same key while both counters start at 0, so packet n in
+      each direction reuses the same (key, nonce).
+    expected_checks: [A6]
+  - file: b2_F2_xor_no_transcript.py
+    flaw: F2
+    description: Secrets XOR-combined and handshake messages left out of the HKDF info.
+    expected_checks: [P6]
+  - file: b3_F3_classical_only_peer.py
+    flaw: F3
+    description: >-
+      Responder still accepts a 32-byte X25519-only handshake ("old peers"), giving a
+      purely classical tunnel.
+    expected_checks: [A2]
+  - file: b4_F5_logs_keys.py
+    flaw: F5
+    description: Both traffic keys written to the debug log on every rekey.
+    expected_checks: [P3]
+  - file: b5_F4_pq_from_public_key.py
+    flaw: F4
+    held_out: true  # added after the gate was frozen
+    description: The PQ input to HKDF is sha256 of the public ML-KEM key (anyone can compute it); the KEM exchange still runs but its secret is unused.
+    expected_checks: [P6, A4]

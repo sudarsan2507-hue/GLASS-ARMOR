@@ -1,0 +1,33 @@
+# P1: the KEM shared secret must go through a KDF before it is used as a cipher key.
+# Name-independent detection is in gate/static_dataflow.py; these rules catch the
+# direct "unpack then use" shapes.
+rules:
+  - id: pqgate-P1-encap-raw-to-aead
+    message: Result of encap_secret() used directly as an AEAD key (no KDF).
+    languages: [python]
+    severity: ERROR
+    pattern-either:
+      - pattern: |
+          $CT, $SS = $KEM.encap_secret(...)
+          ...
+          AESGCM($SS)
+      - pattern: |
+          $CT, $SS = $KEM.encap_secret(...)
+          ...
+          ChaCha20Poly1305($SS)
+    metadata: {check: P1, flaw: F1}
+
+  - id: pqgate-P1-decap-raw-to-aead
+    message: Result of decap_secret() used directly as an AEAD key (no KDF).
+    languages: [python]
+    severity: ERROR
+    pattern-either:
+      - pattern: |
+          $SS = $KEM.decap_secret(...)
+          ...
+          AESGCM($SS)
+      - pattern: |
+          $SS = $KEM.decap_secret(...)
+          ...
+          ChaCha20Poly1305($SS)
+    metadata: {check: P1, flaw: F1}
