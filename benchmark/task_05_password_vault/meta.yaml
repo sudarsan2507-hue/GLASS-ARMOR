@@ -1,0 +1,35 @@
+task: task_05_password_vault
+family: 1
+family_name: Key wrapping for stored data
+description: >-
+  Password vault. A vault key is wrapped for the owner and verified with an HMAC
+  key-check value; entries are AES-256-GCM encrypted with the entry name as AAD.
+classical: RSA-OAEP-2048 (SHA-256) wraps the vault key
+pqc: ML-KEM-768 -> HKDF-SHA256 -> AES-256-GCM KEK
+public_api: [WrongKeyError, generate_keypair, new_vault, unlock, add_entry, get_entry, list_entries]
+
+# expected_checks: gate checks that should flag the variant (P* = static, A* = adversarial)
+variants:
+  - file: b1_F1_raw_secret_key.py
+    flaw: F1
+    description: KEM shared secret used directly as the AES-GCM key-encryption key.
+    expected_checks: [P1]
+  - file: b2_F3_import_fallback.py
+    flaw: F3
+    description: >-
+      If `import oqs` fails, the module silently falls back to RSA-OAEP for key
+      generation and wrapping.
+    expected_checks: [P2, A1]
+  - file: b3_F8_check_not_constant_time.py
+    flaw: F8
+    description: HMAC key-check value compared with != instead of hmac.compare_digest.
+    expected_checks: [P5]
+  - file: b4_F5_logs_key.py
+    flaw: F5
+    description: Derived vault key written to the warning log when the key check fails.
+    expected_checks: [P3]
+  - file: b5_F8_hex_string_compare.py
+    flaw: F8
+    held_out: true  # added after the gate was frozen
+    description: Key-check value compared as a hex string with != instead of hmac.compare_digest.
+    expected_checks: [P5]
