@@ -1,0 +1,19 @@
+{
+  "round": 0,
+  "source": "results\\raw\\gemma3_4b\\task_12_audit_log\\sample_2.py",
+  "eval": {
+    "all_tests_pass": true,
+    "tests_passed": 9,
+    "tests_failed": 0,
+    "uses_oqs": true,
+    "gate_verdict": "FAIL",
+    "gate_flags": [
+      "A1",
+      "P2",
+      "P3"
+    ],
+    "adv_load_error": null,
+    "feedback_tests": "Test suite: all 9 tests passed.",
+    "feedback_gate": "Test suite: all 9 tests passed.\n\nSecurity checker: 6 finding(s):\n- [P2] line 12: ECDH/ECDSA import present after PQC migration. Classical elliptic-curve asymmetric operations must be removed.\n- [P2] line 20: ec.generate_private_key() called after PQC migration.\n- [P3] line 98: Secret key material passed to print(), an exception message or a file write.\n- [P3] line 100: Secret key material passed to print(), an exception message or a file write.\n- [P3] line 113: Secret key material passed to print(), an exception message or a file write.\n- [A1] With liboqs unavailable or failing, the code still works by falling back to classical cryptography."
+  }
+}
