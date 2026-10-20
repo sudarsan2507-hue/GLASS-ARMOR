@@ -1,0 +1,18 @@
+{
+  "round": 0,
+  "source": "results\\raw\\qwen2.5-coder_3b\\task_20_suite_negotiation\\sample_3.py",
+  "eval": {
+    "all_tests_pass": true,
+    "tests_passed": 9,
+    "tests_failed": 0,
+    "uses_oqs": true,
+    "gate_verdict": "FAIL",
+    "gate_flags": [
+      "A2",
+      "P2"
+    ],
+    "adv_load_error": null,
+    "feedback_tests": "Test suite: all 9 tests passed.",
+    "feedback_gate": "Test suite: all 9 tests passed.\n\nSecurity checker: 3 finding(s):\n- [P2] line 18: ECDH/ECDSA import present after PQC migration. Classical elliptic-curve asymmetric operations must be removed.\n- [P2] line 45: ec.generate_private_key() called after PQC migration.\n- [A2] When a classical algorithm is offered (alone or next to the post-quantum one), it is accepted or preferred."
+  }
+}
