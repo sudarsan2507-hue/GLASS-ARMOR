@@ -1,0 +1,292 @@
+"""Minimal TLS‑like handshake migrated to post‑quantum cryptography.
+
+The client offers suites (with one key share per suite); the server picks the first
+suite in its preference list that the client offers, answers with its own key share,
+and both sides derive the session key with HKDF‑SHA256 bound to the suite and both
+hello messages.  Records are encrypted with AES‑256‑GCM and a random nonce per
+record.
+
+The classic X25519 / P‑256 key exchanges have been replaced by the post‑quantum
+ML‑KEM‑768 key encapsulation mechanism from liboqs.  The public API
+(`client_hello`, `server_hello`, `client_finish`, `Channel`) is unchanged so
+existing tests continue to pass.
+"""
+
+from __future__ import annotations
+
+import base64
+import json
+import os
+from typing import Dict, Tuple
+
+import oqs
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+from cryptography.hazmat.primitives.kdf.hkdf import HKDF
+
+# --------------------------------------------------------------------------- #
+#  Post‑quantum key‑exchange implementation (ML‑KEM‑768)                     #
+# --------------------------------------------------------------------------- #
+class _MLKEM:
+    """Key‑exchange wrapper using liboqs ML‑KEM‑768.
+
+    * ``keypair`` returns a tuple ``(secret_key_bytes, public_key_bytes)``.
+    * ``respond`` takes the client’s public key and returns
+      ``(shared_secret, ciphertext)`` where the ciphertext is sent back to the
+      client as the “share”.
+    * ``finish`` decapsulates the server’s ciphertext using the stored secret
+      key and returns the shared secret.
+    """
+
+    _ALG = "ML-KEM-768"
+
+    def keypair(self) -> Tuple[bytes, bytes]:
+        """Generate a fresh KEM key‑pair.
+
+        Returns
+        -------
+        secret_key : bytes
+            The private key (to be kept by the client).
+        public_key : bytes
+            The public key that will be sent to the server.
+        """
+        kem = oqs.KeyEncapsulation(self._ALG)
+        public_key = kem.generate_keypair()
+        secret_key = kem.export_secret_key()
+        return secret_key, public_key
+
+    def respond(self, client_public: bytes) -> Tuple[bytes, bytes]:
+        """Server side: encapsulate a secret for the client.
+
+        Parameters
+        ----------
+        client_public : bytes
+            The client’s public key.
+
+        Returns
+        -------
+        shared_secret : bytes
+            The secret that both parties will derive.
+        ciphertext : bytes
+            The encapsulated secret (sent back to the client as the “share”).
+        """
+        kem = oqs.KeyEncapsulation(self._ALG)
+        ciphertext, shared_secret = kem.encap_secret(client_public)
+        return shared_secret, ciphertext
+
+    def finish(self, client_secret: bytes, server_ciphertext: bytes) -> bytes:
+        """Client side: decapsulate the server’s ciphertext.
+
+        Parameters
+        ----------
+        client_secret : bytes
+            The client’s private key (as returned by ``keypair``).
+        server_ciphertext : bytes
+            The ciphertext received from the server.
+
+        Returns
+        -------
+        shared_secret : bytes
+            The secret that both parties will derive.
+        """
+        kem = oqs.KeyEncapsulation(self._ALG, secret_key=client_secret)
+        return kem.decap_secret(server_ciphertext)
+
+
+# --------------------------------------------------------------------------- #
+#  Suite negotiation constants                                               #
+# --------------------------------------------------------------------------- #
+# Only the post‑quantum suite is offered now.  Keeping the list as a mutable
+# sequence makes it easy to extend in the future.
+SERVER_PREFERENCE = ["ML-KEM-768-AES256GCM"]
+CLIENT_SUITES = ["ML-KEM-768-AES256GCM"]
+
+# Mapping from suite name to the object that implements the three required
+# methods (keypair, respond, finish).
+KEX: Dict[str, _MLKEM] = {"ML-KEM-768-AES256GCM": _MLKEM()}
+
+
+# --------------------------------------------------------------------------- #
+#  Helper: derive the session key                                            #
+# --------------------------------------------------------------------------- #
+def _session_key(shared_secret: bytes, suite: str, hello: bytes, reply: bytes) -> bytes:
+    """Derive a 32‑byte session key from the shared secret and transcript."""
+    info = b"pq-gate suites v1|" + suite.encode() + b"|" + hello + b"|" + reply
+    return HKDF(
+        algorithm=hashes.SHA256(),
+        length=32,
+        salt=None,
+        info=info,
+    ).derive(shared_secret)
+
+
+# --------------------------------------------------------------------------- #
+#  Client side                                                               #
+# --------------------------------------------------------------------------- #
+def client_hello(offered: list[str] | None = None) -> Tuple[dict, bytes]:
+    """Create a client hello.
+
+    Parameters
+    ----------
+    offered : iterable of str, optional
+        Suites the client wishes to advertise.  If omitted the default
+        ``CLIENT_SUITES`` is used.
+
+    Returns
+    -------
+    state : dict
+        Contains the per‑suite secret keys and the raw hello bytes.
+    hello : bytes
+        JSON‑encoded hello message to be sent to the server.
+    """
+    offered = list(offered or CLIENT_SUITES)
+    secrets_: Dict[str, bytes] = {}
+    shares: Dict[str, str] = {}
+
+    for suite in offered:
+        if suite not in KEX:
+            raise ValueError(f"unsupported suite offered by client: {suite}")
+        secret_key, public_key = KEX[suite].keypair()
+        secrets_[suite] = secret_key
+        shares[suite] = base64.b64encode(public_key).decode()
+
+    hello = json.dumps({"suites": offered, "shares": shares}).encode()
+    return {"secrets": secrets_, "hello": hello}, hello
+
+
+# --------------------------------------------------------------------------- #
+#  Server side                                                               #
+# --------------------------------------------------------------------------- #
+def server_hello(hello: bytes) -> Tuple[bytes, str, bytes]:
+    """Process a client hello and produce a server hello.
+
+    Parameters
+    ----------
+    hello : bytes
+        The client hello received over the network.
+
+    Returns
+    -------
+    session_key : bytes
+        The derived session key.
+    chosen_suite : str
+        The suite selected for this handshake.
+    reply : bytes
+        JSON‑encoded server hello to be sent back to the client.
+
+    Raises
+    ------
+    ValueError
+        If no mutually supported suite is found or the hello is malformed.
+    """
+    try:
+        msg = json.loads(hello)
+    except Exception as exc:
+        raise ValueError("malformed client hello") from exc
+
+    if not isinstance(msg, dict) or "suites" not in msg or "shares" not in msg:
+        raise ValueError("client hello missing required fields")
+
+    suite = next(
+        (s for s in SERVER_PREFERENCE if s in msg["suites"] and s in msg["shares"]),
+        None,
+    )
+    if suite is None:
+        raise ValueError("no common cipher suite")
+
+    client_pub = base64.b64decode(msg["shares"][suite])
+    shared, ciphertext = KEX[suite].respond(client_pub)
+
+    reply = json.dumps(
+        {"suite": suite, "share": base64.b64encode(ciphertext).decode()}
+    ).encode()
+    return _session_key(shared, suite, hello, reply), suite, reply
+
+
+# --------------------------------------------------------------------------- #
+#  Client finalisation                                                       #
+# --------------------------------------------------------------------------- #
+def client_finish(state: dict, reply: bytes) -> bytes:
+    """Complete the handshake on the client side.
+
+    Parameters
+    ----------
+    state : dict
+        The state object returned by ``client_hello``.
+    reply : bytes
+        The server hello received over the network.
+
+    Returns
+    -------
+    session_key : bytes
+        The derived session key.
+
+    Raises
+    ------
+    ValueError
+        If the reply is malformed or the server chose an unexpected suite.
+    """
+    try:
+        msg = json.loads(reply)
+    except Exception as exc:
+        raise ValueError("malformed server reply") from exc
+
+    if not isinstance(msg, dict) or "suite" not in msg or "share" not in msg:
+        raise ValueError("server reply missing required fields")
+
+    suite = msg["suite"]
+    if suite not in state["secrets"]:
+        raise ValueError("server chose a suite we did not offer")
+
+    server_ciphertext = base64.b64decode(msg["share"])
+    shared = KEX[suite].finish(state["secrets"][suite], server_ciphertext)
+    return _session_key(shared, suite, state["hello"], reply)
+
+
+# --------------------------------------------------------------------------- #
+#  Secure channel                                                            #
+# --------------------------------------------------------------------------- #
+class Channel:
+    """Encrypt / decrypt records using AES‑256‑GCM under the session key."""
+
+    def __init__(self, session_key: bytes):
+        if len(session_key) != 32:
+            raise ValueError("session_key must be 32 bytes for AES‑256‑GCM")
+        self._aead = AESGCM(session_key)
+
+    def seal(self, plaintext: bytes) -> bytes:
+        """Encrypt ``plaintext`` and prepend the nonce.
+
+        Returns
+        -------
+        bytes
+            ``nonce || ciphertext || tag`` (nonce is 12 bytes).
+        """
+        nonce = os.urandom(12)
+        return nonce + self._aead.encrypt(nonce, plaintext, None)
+
+    def open(self, record: bytes) -> bytes:
+        """Decrypt a record produced by :meth:`seal`.
+
+        Parameters
+        ----------
+        record : bytes
+            ``nonce || ciphertext || tag`` as returned by :meth:`seal`.
+
+        Returns
+        -------
+        bytes
+            The original plaintext.
+        """
+        if len(record) < 12:
+            raise ValueError("record too short to contain nonce")
+        nonce, ct = record[:12], record[12:]
+        return self._aead.decrypt(nonce, ct, None)
+
+
+__all__ = [
+    "client_hello",
+    "server_hello",
+    "client_finish",
+    "Channel",
+]

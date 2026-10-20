@@ -1,0 +1,17 @@
+{
+  "round": 0,
+  "source": "results\\raw\\openai_gpt-oss-120b\\task_20_suite_negotiation\\sample_1.py",
+  "eval": {
+    "all_tests_pass": true,
+    "tests_passed": 9,
+    "tests_failed": 0,
+    "uses_oqs": true,
+    "gate_verdict": "FAIL",
+    "gate_flags": [
+      "A2"
+    ],
+    "adv_load_error": null,
+    "feedback_tests": "Test suite: all 9 tests passed.",
+    "feedback_gate": "Test suite: all 9 tests passed.\n\nSecurity checker: 1 finding(s):\n- [A2] When a classical algorithm is offered (alone or next to the post-quantum one), it is accepted or preferred."
+  }
+}
