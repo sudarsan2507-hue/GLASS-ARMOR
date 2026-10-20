@@ -1,0 +1,414 @@
+liboqs-python faulthandler is disabled
+400 samples found
+[  1/400] gemma3:4b          task_01_file_key_wrap        s0 tests=fail oqs=False gate=FAIL P2
+[  2/400] gemma3:4b          task_01_file_key_wrap        s1 tests=fail oqs=False gate=FAIL P2
+[  3/400] gemma3:4b          task_01_file_key_wrap        s2 tests=fail oqs=False gate=FAIL P2
+[  4/400] gemma3:4b          task_01_file_key_wrap        s3 tests=fail oqs=False gate=FAIL P2
+[  5/400] gemma3:4b          task_01_file_key_wrap        s4 tests=fail oqs=False gate=FAIL P2
+[  6/400] gemma3:4b          task_02_session_handshake    s0 tests=PASS oqs=False gate=FAIL A4
+[  7/400] gemma3:4b          task_02_session_handshake    s1 tests=PASS oqs=False gate=FAIL A4
+[  8/400] gemma3:4b          task_02_session_handshake    s2 tests=PASS oqs=False gate=FAIL A4
+[  9/400] gemma3:4b          task_02_session_handshake    s3 tests=PASS oqs=False gate=FAIL A4
+[ 10/400] gemma3:4b          task_02_session_handshake    s4 tests=PASS oqs=False gate=FAIL A4
+[ 11/400] gemma3:4b          task_03_document_signing     s0 tests=PASS oqs=False gate=FAIL P2
+[ 12/400] gemma3:4b          task_03_document_signing     s1 tests=PASS oqs=True gate=FAIL P2
+[ 13/400] gemma3:4b          task_03_document_signing     s2 tests=PASS oqs=True gate=FAIL P2
+[ 14/400] gemma3:4b          task_03_document_signing     s3 tests=PASS oqs=True gate=FAIL P2
+[ 15/400] gemma3:4b          task_03_document_signing     s4 tests=PASS oqs=False gate=FAIL P2
+[ 16/400] gemma3:4b          task_04_backup_archive       s0 tests=PASS oqs=False gate=FAIL P2
+[ 17/400] gemma3:4b          task_04_backup_archive       s1 tests=PASS oqs=False gate=FAIL P2
+[ 18/400] gemma3:4b          task_04_backup_archive       s2 tests=PASS oqs=False gate=FAIL P2
+[ 19/400] gemma3:4b          task_04_backup_archive       s3 tests=PASS oqs=False gate=FAIL P2
+[ 20/400] gemma3:4b          task_04_backup_archive       s4 tests=PASS oqs=False gate=FAIL P2
+[ 21/400] gemma3:4b          task_05_password_vault       s0 tests=PASS oqs=False gate=FAIL P2
+[ 22/400] gemma3:4b          task_05_password_vault       s1 tests=PASS oqs=False gate=FAIL P2
+[ 23/400] gemma3:4b          task_05_password_vault       s2 tests=PASS oqs=False gate=FAIL P2
+[ 24/400] gemma3:4b          task_05_password_vault       s3 tests=PASS oqs=False gate=FAIL P2
+[ 25/400] gemma3:4b          task_05_password_vault       s4 tests=PASS oqs=False gate=FAIL P2
+[ 26/400] gemma3:4b          task_06_sealed_secrets       s0 tests=PASS oqs=False gate=FAIL P2
+[ 27/400] gemma3:4b          task_06_sealed_secrets       s1 tests=PASS oqs=False gate=FAIL P2
+[ 28/400] gemma3:4b          task_06_sealed_secrets       s2 tests=PASS oqs=False gate=FAIL P2
+[ 29/400] gemma3:4b          task_06_sealed_secrets       s3 tests=PASS oqs=False gate=FAIL P2
+[ 30/400] gemma3:4b          task_06_sealed_secrets       s4 tests=PASS oqs=False gate=FAIL P2
+[ 31/400] gemma3:4b          task_07_device_pairing       s0 tests=PASS oqs=False gate=FAIL A4
+[ 32/400] gemma3:4b          task_07_device_pairing       s1 tests=fail oqs=False gate= 
+[ 33/400] gemma3:4b          task_07_device_pairing       s2 tests=PASS oqs=False gate=FAIL A4
+[ 34/400] gemma3:4b          task_07_device_pairing       s3 tests=PASS oqs=False gate=FAIL A4
+[ 35/400] gemma3:4b          task_07_device_pairing       s4 tests=PASS oqs=False gate=FAIL A4
+[ 36/400] gemma3:4b          task_08_tunnel_rekey         s0 tests=fail oqs=False gate=PASS 
+[ 37/400] gemma3:4b          task_08_tunnel_rekey         s1 tests=fail oqs=False gate=PASS 
+[ 38/400] gemma3:4b          task_08_tunnel_rekey         s2 tests=fail oqs=False gate=PASS 
+[ 39/400] gemma3:4b          task_08_tunnel_rekey         s3 tests=PASS oqs=False gate=FAIL A2|A4
+[ 40/400] gemma3:4b          task_08_tunnel_rekey         s4 tests=PASS oqs=False gate=FAIL A2|A4
+[ 41/400] gemma3:4b          task_09_sealed_messages      s0 tests=PASS oqs=False gate=FAIL A4
+[ 42/400] gemma3:4b          task_09_sealed_messages      s1 tests=PASS oqs=False gate=FAIL A4
+[ 43/400] gemma3:4b          task_09_sealed_messages      s2 tests=PASS oqs=False gate=FAIL A4
+[ 44/400] gemma3:4b          task_09_sealed_messages      s3 tests=PASS oqs=False gate=FAIL A4
+[ 45/400] gemma3:4b          task_09_sealed_messages      s4 tests=PASS oqs=False gate=FAIL A4
+[ 46/400] gemma3:4b          task_10_update_manifest      s0 tests=PASS oqs=False gate=FAIL P2
+[ 47/400] gemma3:4b          task_10_update_manifest      s1 tests=fail oqs=True gate=FAIL P2
+[ 48/400] gemma3:4b          task_10_update_manifest      s2 tests=PASS oqs=False gate=FAIL P2
+[ 49/400] gemma3:4b          task_10_update_manifest      s3 tests=PASS oqs=False gate=FAIL P2
+[ 50/400] gemma3:4b          task_10_update_manifest      s4 tests=fail oqs=False gate= 
+[ 51/400] gemma3:4b          task_11_invoice_signing      s0 tests=fail oqs=True gate=FAIL P2
+[ 52/400] gemma3:4b          task_11_invoice_signing      s1 tests=PASS oqs=False gate=FAIL P2
+[ 53/400] gemma3:4b          task_11_invoice_signing      s2 tests=fail oqs=True gate=FAIL P2
+[ 54/400] gemma3:4b          task_11_invoice_signing      s3 tests=PASS oqs=False gate=FAIL P2
+[ 55/400] gemma3:4b          task_11_invoice_signing      s4 tests=fail oqs=False gate=FAIL P2
+[ 56/400] gemma3:4b          task_12_audit_log            s0 tests=PASS oqs=False gate=FAIL P2
+[ 57/400] gemma3:4b          task_12_audit_log            s1 tests=fail oqs=True gate=FAIL P2
+[ 58/400] gemma3:4b          task_12_audit_log            s2 tests=PASS oqs=True gate=FAIL A1|P2|P3
+[ 59/400] gemma3:4b          task_12_audit_log            s3 tests=PASS oqs=True gate=FAIL A1|P2|P3
+[ 60/400] gemma3:4b          task_12_audit_log            s4 tests=fail oqs=True gate=PASS 
+[ 61/400] gemma3:4b          task_13_api_token            s0 tests=PASS oqs=False gate=FAIL A2|P2
+[ 62/400] gemma3:4b          task_13_api_token            s1 tests=PASS oqs=False gate=FAIL A2|P2
+[ 63/400] gemma3:4b          task_13_api_token            s2 tests=PASS oqs=False gate=FAIL A2|P2
+[ 64/400] gemma3:4b          task_13_api_token            s3 tests=PASS oqs=False gate=FAIL A2|P2
+[ 65/400] gemma3:4b          task_13_api_token            s4 tests=PASS oqs=False gate=FAIL A2|P2
+[ 66/400] gemma3:4b          task_14_session_cookie       s0 tests=PASS oqs=False gate=FAIL P2
+[ 67/400] gemma3:4b          task_14_session_cookie       s1 tests=PASS oqs=False gate=FAIL P2
+[ 68/400] gemma3:4b          task_14_session_cookie       s2 tests=PASS oqs=False gate=FAIL P2
+[ 69/400] gemma3:4b          task_14_session_cookie       s3 tests=PASS oqs=False gate=FAIL P2
+[ 70/400] gemma3:4b          task_14_session_cookie       s4 tests=PASS oqs=False gate=FAIL P2
+[ 71/400] gemma3:4b          task_15_license_key          s0 tests=PASS oqs=False gate=FAIL P2
+[ 72/400] gemma3:4b          task_15_license_key          s1 tests=PASS oqs=False gate=FAIL P2
+[ 73/400] gemma3:4b          task_15_license_key          s2 tests=fail oqs=False gate=FAIL P2
+[ 74/400] gemma3:4b          task_15_license_key          s3 tests=fail oqs=False gate=FAIL P2
+[ 75/400] gemma3:4b          task_15_license_key          s4 tests=fail oqs=False gate=FAIL P2
+[ 76/400] gemma3:4b          task_16_webhook_signature    s0 tests=PASS oqs=False gate=FAIL P2
+[ 77/400] gemma3:4b          task_16_webhook_signature    s1 tests=PASS oqs=False gate=FAIL P2
+[ 78/400] gemma3:4b          task_16_webhook_signature    s2 tests=PASS oqs=False gate=FAIL P2
+[ 79/400] gemma3:4b          task_16_webhook_signature    s3 tests=PASS oqs=False gate=FAIL P2
+[ 80/400] gemma3:4b          task_16_webhook_signature    s4 tests=PASS oqs=False gate=FAIL P2
+[ 81/400] gemma3:4b          task_17_pke_provider         s0 tests=fail oqs=False gate=FAIL P2
+[ 82/400] gemma3:4b          task_17_pke_provider         s1 tests=fail oqs=False gate=FAIL P2
+[ 83/400] gemma3:4b          task_17_pke_provider         s2 tests=fail oqs=False gate=FAIL P2
+[ 84/400] gemma3:4b          task_17_pke_provider         s3 tests=fail oqs=False gate=FAIL P2
+[ 85/400] gemma3:4b          task_17_pke_provider         s4 tests=fail oqs=True gate=PASS 
+[ 86/400] gemma3:4b          task_18_signer_negotiation   s0 tests=fail oqs=False gate=FAIL P2|P3
+[ 87/400] gemma3:4b          task_18_signer_negotiation   s1 tests=fail oqs=False gate=FAIL P2
+[ 88/400] gemma3:4b          task_18_signer_negotiation   s2 tests=fail oqs=False gate=FAIL P2|P3
+[ 89/400] gemma3:4b          task_18_signer_negotiation   s3 tests=fail oqs=False gate=FAIL P2
+[ 90/400] gemma3:4b          task_18_signer_negotiation   s4 tests=fail oqs=False gate=FAIL P2
+[ 91/400] gemma3:4b          task_19_crypto_policy        s0 tests=PASS oqs=False gate=FAIL A2|P2
+[ 92/400] gemma3:4b          task_19_crypto_policy        s1 tests=PASS oqs=False gate=FAIL A2|P2
+[ 93/400] gemma3:4b          task_19_crypto_policy        s2 tests=PASS oqs=False gate=FAIL A2|P2
+[ 94/400] gemma3:4b          task_19_crypto_policy        s3 tests=PASS oqs=False gate=FAIL A2|P2
+[ 95/400] gemma3:4b          task_19_crypto_policy        s4 tests=PASS oqs=False gate=FAIL A2|P2
+[ 96/400] gemma3:4b          task_20_suite_negotiation    s0 tests=PASS oqs=False gate=FAIL A2|P2
+[ 97/400] gemma3:4b          task_20_suite_negotiation    s1 tests=PASS oqs=False gate=FAIL A2|P2|P3
+[ 98/400] gemma3:4b          task_20_suite_negotiation    s2 tests=PASS oqs=False gate=FAIL A2|P2
+[ 99/400] gemma3:4b          task_20_suite_negotiation    s3 tests=PASS oqs=False gate=FAIL A2|P2|P3
+[100/400] gemma3:4b          task_20_suite_negotiation    s4 tests=PASS oqs=False gate=FAIL A2|P2
+[101/400] openai/gpt-oss-120b task_01_file_key_wrap        s0 tests=fail oqs=True gate=FAIL P1
+[102/400] openai/gpt-oss-120b task_01_file_key_wrap        s1 tests=fail oqs=True gate=FAIL P1
+[103/400] openai/gpt-oss-120b task_01_file_key_wrap        s2 tests=fail oqs=True gate=FAIL P1
+[104/400] openai/gpt-oss-120b task_01_file_key_wrap        s3 tests=fail oqs=True gate= 
+[105/400] openai/gpt-oss-120b task_01_file_key_wrap        s4 tests=fail oqs=True gate=FAIL P1
+[106/400] openai/gpt-oss-120b task_02_session_handshake    s0 tests=PASS oqs=True gate=PASS 
+[107/400] openai/gpt-oss-120b task_02_session_handshake    s1 tests=fail oqs=True gate=PASS 
+[108/400] openai/gpt-oss-120b task_02_session_handshake    s2 tests=PASS oqs=True gate=PASS 
+[109/400] openai/gpt-oss-120b task_02_session_handshake    s3 tests=PASS oqs=True gate=PASS 
+[110/400] openai/gpt-oss-120b task_02_session_handshake    s4 tests=PASS oqs=True gate=PASS 
+[111/400] openai/gpt-oss-120b task_03_document_signing     s0 tests=PASS oqs=True gate=PASS 
+[112/400] openai/gpt-oss-120b task_03_document_signing     s1 tests=PASS oqs=True gate=PASS 
+[113/400] openai/gpt-oss-120b task_03_document_signing     s2 tests=PASS oqs=True gate=PASS 
+[114/400] openai/gpt-oss-120b task_03_document_signing     s3 tests=PASS oqs=True gate=PASS 
+[115/400] openai/gpt-oss-120b task_03_document_signing     s4 tests=PASS oqs=True gate=PASS 
+[116/400] openai/gpt-oss-120b task_04_backup_archive       s0 tests=fail oqs=True gate= 
+[117/400] openai/gpt-oss-120b task_04_backup_archive       s1 tests=fail oqs=True gate=PASS 
+[118/400] openai/gpt-oss-120b task_04_backup_archive       s2 tests=fail oqs=True gate=PASS 
+[119/400] openai/gpt-oss-120b task_04_backup_archive       s3 tests=PASS oqs=True gate=FAIL P1
+[120/400] openai/gpt-oss-120b task_04_backup_archive       s4 tests=PASS oqs=True gate=PASS 
+[121/400] openai/gpt-oss-120b task_05_password_vault       s0 tests=PASS oqs=True gate=PASS 
+[122/400] openai/gpt-oss-120b task_05_password_vault       s1 tests=PASS oqs=True gate=PASS 
+[123/400] openai/gpt-oss-120b task_05_password_vault       s2 tests=PASS oqs=True gate=PASS 
+[124/400] openai/gpt-oss-120b task_05_password_vault       s3 tests=PASS oqs=True gate=PASS 
+[125/400] openai/gpt-oss-120b task_05_password_vault       s4 tests=PASS oqs=True gate=PASS 
+[126/400] openai/gpt-oss-120b task_06_sealed_secrets       s0 tests=PASS oqs=True gate=FAIL P1
+[127/400] openai/gpt-oss-120b task_06_sealed_secrets       s1 tests=PASS oqs=True gate=FAIL P1
+[128/400] openai/gpt-oss-120b task_06_sealed_secrets       s2 tests=fail oqs=True gate=FAIL P1
+[129/400] openai/gpt-oss-120b task_06_sealed_secrets       s3 tests=PASS oqs=True gate=FAIL P1
+[130/400] openai/gpt-oss-120b task_06_sealed_secrets       s4 tests=PASS oqs=True gate=FAIL P1
+[131/400] openai/gpt-oss-120b task_07_device_pairing       s0 tests=fail oqs=True gate=PASS 
+[132/400] openai/gpt-oss-120b task_07_device_pairing       s1 tests=fail oqs=True gate=PASS 
+[133/400] openai/gpt-oss-120b task_07_device_pairing       s2 tests=PASS oqs=True gate=PASS 
+[134/400] openai/gpt-oss-120b task_07_device_pairing       s3 tests=fail oqs=True gate=PASS 
+[135/400] openai/gpt-oss-120b task_07_device_pairing       s4 tests=fail oqs=True gate=PASS 
+[136/400] openai/gpt-oss-120b task_08_tunnel_rekey         s0 tests=fail oqs=True gate=PASS 
+[137/400] openai/gpt-oss-120b task_08_tunnel_rekey         s1 tests=fail oqs=True gate=PASS 
+[138/400] openai/gpt-oss-120b task_08_tunnel_rekey         s2 tests=fail oqs=True gate=PASS 
+[139/400] openai/gpt-oss-120b task_08_tunnel_rekey         s3 tests=fail oqs=True gate=PASS 
+[140/400] openai/gpt-oss-120b task_08_tunnel_rekey         s4 tests=fail oqs=True gate=PASS 
+[141/400] openai/gpt-oss-120b task_09_sealed_messages      s0 tests=fail oqs=True gate=PASS 
+[142/400] openai/gpt-oss-120b task_09_sealed_messages      s1 tests=PASS oqs=True gate=PASS 
+[143/400] openai/gpt-oss-120b task_09_sealed_messages      s2 tests=PASS oqs=True gate=PASS 
+[144/400] openai/gpt-oss-120b task_09_sealed_messages      s3 tests=fail oqs=True gate=PASS 
+[145/400] openai/gpt-oss-120b task_09_sealed_messages      s4 tests=PASS oqs=True gate=PASS 
+[146/400] openai/gpt-oss-120b task_10_update_manifest      s0 tests=PASS oqs=True gate=PASS 
+[147/400] openai/gpt-oss-120b task_10_update_manifest      s1 tests=PASS oqs=True gate=PASS 
+[148/400] openai/gpt-oss-120b task_10_update_manifest      s2 tests=PASS oqs=True gate=PASS 
+[149/400] openai/gpt-oss-120b task_10_update_manifest      s3 tests=PASS oqs=True gate=PASS 
+[150/400] openai/gpt-oss-120b task_10_update_manifest      s4 tests=PASS oqs=True gate=PASS 
+[151/400] openai/gpt-oss-120b task_11_invoice_signing      s0 tests=PASS oqs=True gate=PASS 
+[152/400] openai/gpt-oss-120b task_11_invoice_signing      s1 tests=PASS oqs=True gate=PASS 
+[153/400] openai/gpt-oss-120b task_11_invoice_signing      s2 tests=PASS oqs=True gate=PASS 
+[154/400] openai/gpt-oss-120b task_11_invoice_signing      s3 tests=fail oqs=True gate=PASS 
+[155/400] openai/gpt-oss-120b task_11_invoice_signing      s4 tests=PASS oqs=True gate=PASS 
+[156/400] openai/gpt-oss-120b task_12_audit_log            s0 tests=PASS oqs=True gate=PASS 
+[157/400] openai/gpt-oss-120b task_12_audit_log            s1 tests=PASS oqs=True gate=PASS 
+[158/400] openai/gpt-oss-120b task_12_audit_log            s2 tests=PASS oqs=True gate=PASS 
+[159/400] openai/gpt-oss-120b task_12_audit_log            s3 tests=PASS oqs=True gate=PASS 
+[160/400] openai/gpt-oss-120b task_12_audit_log            s4 tests=PASS oqs=True gate=PASS 
+[161/400] openai/gpt-oss-120b task_13_api_token            s0 tests=PASS oqs=True gate=FAIL A5
+[162/400] openai/gpt-oss-120b task_13_api_token            s1 tests=PASS oqs=True gate=FAIL A5
+[163/400] openai/gpt-oss-120b task_13_api_token            s2 tests=PASS oqs=True gate=FAIL A5
+[164/400] openai/gpt-oss-120b task_13_api_token            s3 tests=PASS oqs=True gate=FAIL A5
+[165/400] openai/gpt-oss-120b task_13_api_token            s4 tests=PASS oqs=True gate=FAIL A5
+[166/400] openai/gpt-oss-120b task_14_session_cookie       s0 tests=PASS oqs=True gate=PASS 
+[167/400] openai/gpt-oss-120b task_14_session_cookie       s1 tests=PASS oqs=True gate=PASS 
+[168/400] openai/gpt-oss-120b task_14_session_cookie       s2 tests=PASS oqs=True gate=PASS 
+[169/400] openai/gpt-oss-120b task_14_session_cookie       s3 tests=PASS oqs=True gate=PASS 
+[170/400] openai/gpt-oss-120b task_14_session_cookie       s4 tests=PASS oqs=True gate=PASS 
+[171/400] openai/gpt-oss-120b task_15_license_key          s0 tests=fail oqs=True gate=PASS 
+[172/400] openai/gpt-oss-120b task_15_license_key          s1 tests=fail oqs=True gate=PASS 
+[173/400] openai/gpt-oss-120b task_15_license_key          s2 tests=fail oqs=True gate=PASS 
+[174/400] openai/gpt-oss-120b task_15_license_key          s3 tests=PASS oqs=True gate=PASS 
+[175/400] openai/gpt-oss-120b task_15_license_key          s4 tests=PASS oqs=True gate=PASS 
+[176/400] openai/gpt-oss-120b task_16_webhook_signature    s0 tests=fail oqs=True gate=PASS 
+[177/400] openai/gpt-oss-120b task_16_webhook_signature    s1 tests=fail oqs=True gate=PASS 
+[178/400] openai/gpt-oss-120b task_16_webhook_signature    s2 tests=fail oqs=True gate=PASS 
+[179/400] openai/gpt-oss-120b task_16_webhook_signature    s3 tests=PASS oqs=True gate=PASS 
+[180/400] openai/gpt-oss-120b task_16_webhook_signature    s4 tests=PASS oqs=True gate=PASS 
+[181/400] openai/gpt-oss-120b task_17_pke_provider         s0 tests=PASS oqs=True gate=FAIL P1
+[182/400] openai/gpt-oss-120b task_17_pke_provider         s1 tests=PASS oqs=True gate=FAIL A2|P1|P2
+[183/400] openai/gpt-oss-120b task_17_pke_provider         s2 tests=PASS oqs=True gate=FAIL P1|P3
+[184/400] openai/gpt-oss-120b task_17_pke_provider         s3 tests=PASS oqs=True gate=PASS 
+[185/400] openai/gpt-oss-120b task_17_pke_provider         s4 tests=PASS oqs=True gate=FAIL P1
+[186/400] openai/gpt-oss-120b task_18_signer_negotiation   s0 tests=PASS oqs=True gate=PASS 
+[187/400] openai/gpt-oss-120b task_18_signer_negotiation   s1 tests=PASS oqs=True gate=PASS 
+[188/400] openai/gpt-oss-120b task_18_signer_negotiation   s2 tests=PASS oqs=True gate=PASS 
+[189/400] openai/gpt-oss-120b task_18_signer_negotiation   s3 tests=PASS oqs=True gate=PASS 
+[190/400] openai/gpt-oss-120b task_18_signer_negotiation   s4 tests=fail oqs=True gate=PASS 
+[191/400] openai/gpt-oss-120b task_19_crypto_policy        s0 tests=PASS oqs=True gate=PASS 
+[192/400] openai/gpt-oss-120b task_19_crypto_policy        s1 tests=PASS oqs=True gate=PASS 
+[193/400] openai/gpt-oss-120b task_19_crypto_policy        s2 tests=PASS oqs=True gate=FAIL A2|P2
+[194/400] openai/gpt-oss-120b task_19_crypto_policy        s3 tests=fail oqs=True gate=PASS 
+[195/400] openai/gpt-oss-120b task_19_crypto_policy        s4 tests=fail oqs=True gate=FAIL A2|P2
+[196/400] openai/gpt-oss-120b task_20_suite_negotiation    s0 tests=PASS oqs=True gate=FAIL A2
+[197/400] openai/gpt-oss-120b task_20_suite_negotiation    s1 tests=PASS oqs=True gate=FAIL A2
+[198/400] openai/gpt-oss-120b task_20_suite_negotiation    s2 tests=PASS oqs=True gate=FAIL A2
+[199/400] openai/gpt-oss-120b task_20_suite_negotiation    s3 tests=PASS oqs=True gate=FAIL A2
+[200/400] openai/gpt-oss-120b task_20_suite_negotiation    s4 tests=PASS oqs=True gate=FAIL A2
+[201/400] qwen2.5-coder:3b   task_01_file_key_wrap        s0 tests=fail oqs=False gate=FAIL P1|P2
+[202/400] qwen2.5-coder:3b   task_01_file_key_wrap        s1 tests=PASS oqs=False gate=FAIL P2
+[203/400] qwen2.5-coder:3b   task_01_file_key_wrap        s2 tests=PASS oqs=False gate=FAIL P2
+[204/400] qwen2.5-coder:3b   task_01_file_key_wrap        s3 tests=PASS oqs=False gate=FAIL P2
+[205/400] qwen2.5-coder:3b   task_01_file_key_wrap        s4 tests=PASS oqs=False gate=FAIL P2
+[206/400] qwen2.5-coder:3b   task_02_session_handshake    s0 tests=fail oqs=False gate=FAIL P2
+[207/400] qwen2.5-coder:3b   task_02_session_handshake    s1 tests=fail oqs=False gate=FAIL P2
+[208/400] qwen2.5-coder:3b   task_02_session_handshake    s2 tests=fail oqs=False gate=PASS 
+[209/400] qwen2.5-coder:3b   task_02_session_handshake    s3 tests=fail oqs=False gate= 
+[210/400] qwen2.5-coder:3b   task_02_session_handshake    s4 tests=PASS oqs=False gate=FAIL A4
+[211/400] qwen2.5-coder:3b   task_03_document_signing     s0 tests=PASS oqs=False gate=FAIL P2
+[212/400] qwen2.5-coder:3b   task_03_document_signing     s1 tests=fail oqs=True gate=FAIL P2
+[213/400] qwen2.5-coder:3b   task_03_document_signing     s2 tests=fail oqs=True gate=FAIL P2
+[214/400] qwen2.5-coder:3b   task_03_document_signing     s3 tests=fail oqs=True gate=FAIL P2
+[215/400] qwen2.5-coder:3b   task_03_document_signing     s4 tests=fail oqs=True gate=FAIL P2
+[216/400] qwen2.5-coder:3b   task_04_backup_archive       s0 tests=fail oqs=False gate= 
+[217/400] qwen2.5-coder:3b   task_04_backup_archive       s1 tests=fail oqs=False gate=FAIL P1|P2
+[218/400] qwen2.5-coder:3b   task_04_backup_archive       s2 tests=fail oqs=False gate=FAIL P2
+[219/400] qwen2.5-coder:3b   task_04_backup_archive       s3 tests=fail oqs=False gate=FAIL P2
+[220/400] qwen2.5-coder:3b   task_04_backup_archive       s4 tests=fail oqs=False gate=FAIL P1|P2
+[221/400] qwen2.5-coder:3b   task_05_password_vault       s0 tests=fail oqs=True gate=FAIL P2
+[222/400] qwen2.5-coder:3b   task_05_password_vault       s1 tests=fail oqs=False gate= 
+[223/400] qwen2.5-coder:3b   task_05_password_vault       s2 tests=fail oqs=False gate= 
+[224/400] qwen2.5-coder:3b   task_05_password_vault       s3 tests=fail oqs=True gate=FAIL P2
+[225/400] qwen2.5-coder:3b   task_05_password_vault       s4 tests=fail oqs=True gate=FAIL P2
+[226/400] qwen2.5-coder:3b   task_06_sealed_secrets       s0 tests=PASS oqs=False gate=FAIL P2
+[227/400] qwen2.5-coder:3b   task_06_sealed_secrets       s1 tests=PASS oqs=False gate=FAIL P2
+[228/400] qwen2.5-coder:3b   task_06_sealed_secrets       s2 tests=PASS oqs=False gate=FAIL P2
+[229/400] qwen2.5-coder:3b   task_06_sealed_secrets       s3 tests=PASS oqs=False gate=FAIL P2
+[230/400] qwen2.5-coder:3b   task_06_sealed_secrets       s4 tests=PASS oqs=False gate=FAIL P2
+[231/400] qwen2.5-coder:3b   task_07_device_pairing       s0 tests=PASS oqs=False gate=FAIL A4
+[232/400] qwen2.5-coder:3b   task_07_device_pairing       s1 tests=PASS oqs=False gate=FAIL A4
+[233/400] qwen2.5-coder:3b   task_07_device_pairing       s2 tests=PASS oqs=False gate=FAIL A4
+[234/400] qwen2.5-coder:3b   task_07_device_pairing       s3 tests=PASS oqs=False gate=FAIL A4
+[235/400] qwen2.5-coder:3b   task_07_device_pairing       s4 tests=PASS oqs=False gate=FAIL A4
+[236/400] qwen2.5-coder:3b   task_08_tunnel_rekey         s0 tests=PASS oqs=False gate=FAIL A2|A4
+[237/400] qwen2.5-coder:3b   task_08_tunnel_rekey         s1 tests=PASS oqs=False gate=FAIL A2|A4
+[238/400] qwen2.5-coder:3b   task_08_tunnel_rekey         s2 tests=fail oqs=False gate=PASS 
+[239/400] qwen2.5-coder:3b   task_08_tunnel_rekey         s3 tests=PASS oqs=False gate=FAIL A2|A4
+[240/400] qwen2.5-coder:3b   task_08_tunnel_rekey         s4 tests=fail oqs=False gate=PASS 
+[241/400] qwen2.5-coder:3b   task_09_sealed_messages      s0 tests=PASS oqs=False gate=FAIL A4
+[242/400] qwen2.5-coder:3b   task_09_sealed_messages      s1 tests=PASS oqs=False gate=FAIL A4
+[243/400] qwen2.5-coder:3b   task_09_sealed_messages      s2 tests=PASS oqs=False gate=FAIL A4
+[244/400] qwen2.5-coder:3b   task_09_sealed_messages      s3 tests=PASS oqs=False gate=FAIL A4
+[245/400] qwen2.5-coder:3b   task_09_sealed_messages      s4 tests=PASS oqs=False gate=FAIL A4
+[246/400] qwen2.5-coder:3b   task_10_update_manifest      s0 tests=PASS oqs=False gate=FAIL P2
+[247/400] qwen2.5-coder:3b   task_10_update_manifest      s1 tests=PASS oqs=False gate=FAIL P2
+[248/400] qwen2.5-coder:3b   task_10_update_manifest      s2 tests=fail oqs=False gate=FAIL P2
+[249/400] qwen2.5-coder:3b   task_10_update_manifest      s3 tests=fail oqs=False gate=FAIL P2
+[250/400] qwen2.5-coder:3b   task_10_update_manifest      s4 tests=fail oqs=False gate=FAIL P2
+[251/400] qwen2.5-coder:3b   task_11_invoice_signing      s0 tests=PASS oqs=False gate=FAIL P2
+[252/400] qwen2.5-coder:3b   task_11_invoice_signing      s1 tests=PASS oqs=False gate=FAIL P2
+[253/400] qwen2.5-coder:3b   task_11_invoice_signing      s2 tests=fail oqs=False gate=FAIL P2
+[254/400] qwen2.5-coder:3b   task_11_invoice_signing      s3 tests=fail oqs=False gate=FAIL P2
+[255/400] qwen2.5-coder:3b   task_11_invoice_signing      s4 tests=fail oqs=False gate=FAIL P2
+[256/400] qwen2.5-coder:3b   task_12_audit_log            s0 tests=PASS oqs=False gate=FAIL P2
+[257/400] qwen2.5-coder:3b   task_12_audit_log            s1 tests=PASS oqs=False gate=FAIL P2
+[258/400] qwen2.5-coder:3b   task_12_audit_log            s2 tests=PASS oqs=False gate=FAIL P2
+[259/400] qwen2.5-coder:3b   task_12_audit_log            s3 tests=PASS oqs=False gate=FAIL P2
+[260/400] qwen2.5-coder:3b   task_12_audit_log            s4 tests=PASS oqs=False gate=FAIL P2
+[261/400] qwen2.5-coder:3b   task_13_api_token            s0 tests=PASS oqs=False gate=FAIL A2|P2
+[262/400] qwen2.5-coder:3b   task_13_api_token            s1 tests=PASS oqs=False gate=FAIL A2|P2
+[263/400] qwen2.5-coder:3b   task_13_api_token            s2 tests=PASS oqs=False gate=FAIL A2|P2
+[264/400] qwen2.5-coder:3b   task_13_api_token            s3 tests=fail oqs=False gate=FAIL A2|P2
+[265/400] qwen2.5-coder:3b   task_13_api_token            s4 tests=PASS oqs=False gate=FAIL A2|P2
+[266/400] qwen2.5-coder:3b   task_14_session_cookie       s0 tests=fail oqs=False gate=FAIL P2
+[267/400] qwen2.5-coder:3b   task_14_session_cookie       s1 tests=fail oqs=False gate= 
+[268/400] qwen2.5-coder:3b   task_14_session_cookie       s2 tests=PASS oqs=False gate=FAIL P2
+[269/400] qwen2.5-coder:3b   task_14_session_cookie       s3 tests=fail oqs=False gate=FAIL P2
+[270/400] qwen2.5-coder:3b   task_14_session_cookie       s4 tests=fail oqs=False gate=FAIL P2
+[271/400] qwen2.5-coder:3b   task_15_license_key          s0 tests=fail oqs=False gate=FAIL P2
+[272/400] qwen2.5-coder:3b   task_15_license_key          s1 tests=fail oqs=False gate=FAIL P2
+[273/400] qwen2.5-coder:3b   task_15_license_key          s2 tests=fail oqs=True gate=FAIL P2
+[274/400] qwen2.5-coder:3b   task_15_license_key          s3 tests=fail oqs=True gate=FAIL P2
+[275/400] qwen2.5-coder:3b   task_15_license_key          s4 tests=fail oqs=False gate=FAIL P2
+[276/400] qwen2.5-coder:3b   task_16_webhook_signature    s0 tests=PASS oqs=False gate=FAIL P2
+[277/400] qwen2.5-coder:3b   task_16_webhook_signature    s1 tests=PASS oqs=False gate=FAIL P2
+[278/400] qwen2.5-coder:3b   task_16_webhook_signature    s2 tests=PASS oqs=False gate=FAIL P2
+[279/400] qwen2.5-coder:3b   task_16_webhook_signature    s3 tests=PASS oqs=False gate=FAIL P2
+[280/400] qwen2.5-coder:3b   task_16_webhook_signature    s4 tests=PASS oqs=False gate=FAIL P2
+[281/400] qwen2.5-coder:3b   task_17_pke_provider         s0 tests=fail oqs=True gate=FAIL P2
+[282/400] qwen2.5-coder:3b   task_17_pke_provider         s1 tests=fail oqs=False gate=FAIL P2
+[283/400] qwen2.5-coder:3b   task_17_pke_provider         s2 tests=fail oqs=False gate=FAIL P2
+[284/400] qwen2.5-coder:3b   task_17_pke_provider         s3 tests=fail oqs=True gate=PASS 
+[285/400] qwen2.5-coder:3b   task_17_pke_provider         s4 tests=fail oqs=False gate=FAIL P2
+[286/400] qwen2.5-coder:3b   task_18_signer_negotiation   s0 tests=fail oqs=False gate=FAIL P2
+[287/400] qwen2.5-coder:3b   task_18_signer_negotiation   s1 tests=fail oqs=False gate=FAIL P2
+[288/400] qwen2.5-coder:3b   task_18_signer_negotiation   s2 tests=fail oqs=False gate=FAIL P2
+[289/400] qwen2.5-coder:3b   task_18_signer_negotiation   s3 tests=fail oqs=False gate=FAIL A2|P2
+[290/400] qwen2.5-coder:3b   task_18_signer_negotiation   s4 tests=fail oqs=False gate=FAIL P2
+[291/400] qwen2.5-coder:3b   task_19_crypto_policy        s0 tests=PASS oqs=False gate=FAIL A2|P2
+[292/400] qwen2.5-coder:3b   task_19_crypto_policy        s1 tests=PASS oqs=False gate=FAIL A2|P2
+[293/400] qwen2.5-coder:3b   task_19_crypto_policy        s2 tests=PASS oqs=False gate=FAIL A2|P2
+[294/400] qwen2.5-coder:3b   task_19_crypto_policy        s3 tests=PASS oqs=False gate=FAIL A2|P2
+[295/400] qwen2.5-coder:3b   task_19_crypto_policy        s4 tests=PASS oqs=False gate=FAIL A2|P2
+[296/400] qwen2.5-coder:3b   task_20_suite_negotiation    s0 tests=PASS oqs=False gate=FAIL A2|P2
+[297/400] qwen2.5-coder:3b   task_20_suite_negotiation    s1 tests=fail oqs=False gate=FAIL P2
+[298/400] qwen2.5-coder:3b   task_20_suite_negotiation    s2 tests=PASS oqs=False gate=FAIL A2|P2
+[299/400] qwen2.5-coder:3b   task_20_suite_negotiation    s3 tests=PASS oqs=True gate=FAIL A2|P2
+[300/400] qwen2.5-coder:3b   task_20_suite_negotiation    s4 tests=PASS oqs=False gate=FAIL A2|P2
+[301/400] qwen2.5-coder:7b   task_01_file_key_wrap        s0 tests=fail oqs=True gate=FAIL P1|P2
+[302/400] qwen2.5-coder:7b   task_01_file_key_wrap        s1 tests=fail oqs=True gate=FAIL P1|P2
+[303/400] qwen2.5-coder:7b   task_01_file_key_wrap        s2 tests=fail oqs=True gate=FAIL P1|P2
+[304/400] qwen2.5-coder:7b   task_01_file_key_wrap        s3 tests=fail oqs=True gate=FAIL P1|P2
+[305/400] qwen2.5-coder:7b   task_01_file_key_wrap        s4 tests=fail oqs=True gate=FAIL P1|P2
+[306/400] qwen2.5-coder:7b   task_02_session_handshake    s0 tests=fail oqs=True gate=PASS 
+[307/400] qwen2.5-coder:7b   task_02_session_handshake    s1 tests=fail oqs=True gate=PASS 
+[308/400] qwen2.5-coder:7b   task_02_session_handshake    s2 tests=fail oqs=True gate=PASS 
+[309/400] qwen2.5-coder:7b   task_02_session_handshake    s3 tests=fail oqs=True gate=PASS 
+[310/400] qwen2.5-coder:7b   task_02_session_handshake    s4 tests=fail oqs=True gate=PASS 
+[311/400] qwen2.5-coder:7b   task_03_document_signing     s0 tests=fail oqs=True gate=FAIL A1|A5|P2
+[312/400] qwen2.5-coder:7b   task_03_document_signing     s1 tests=fail oqs=True gate=FAIL P2
+[313/400] qwen2.5-coder:7b   task_03_document_signing     s2 tests=fail oqs=True gate=FAIL P2
+[314/400] qwen2.5-coder:7b   task_03_document_signing     s3 tests=fail oqs=True gate=FAIL P2
+[315/400] qwen2.5-coder:7b   task_03_document_signing     s4 tests=fail oqs=True gate=FAIL P2
+[316/400] qwen2.5-coder:7b   task_04_backup_archive       s0 tests=fail oqs=True gate=FAIL P2
+[317/400] qwen2.5-coder:7b   task_04_backup_archive       s1 tests=fail oqs=True gate=FAIL P1|P2
+[318/400] qwen2.5-coder:7b   task_04_backup_archive       s2 tests=fail oqs=True gate=FAIL P1|P2
+[319/400] qwen2.5-coder:7b   task_04_backup_archive       s3 tests=fail oqs=True gate=FAIL P2
+[320/400] qwen2.5-coder:7b   task_04_backup_archive       s4 tests=fail oqs=True gate=FAIL P1|P2
+[321/400] qwen2.5-coder:7b   task_05_password_vault       s0 tests=fail oqs=True gate=FAIL P2
+[322/400] qwen2.5-coder:7b   task_05_password_vault       s1 tests=PASS oqs=True gate=FAIL A1|P2
+[323/400] qwen2.5-coder:7b   task_05_password_vault       s2 tests=PASS oqs=True gate=FAIL A1|P2
+[324/400] qwen2.5-coder:7b   task_05_password_vault       s3 tests=PASS oqs=True gate=FAIL A1|P2
+[325/400] qwen2.5-coder:7b   task_05_password_vault       s4 tests=PASS oqs=True gate=FAIL A1|P2
+[326/400] qwen2.5-coder:7b   task_06_sealed_secrets       s0 tests=fail oqs=True gate=FAIL P1|P2
+[327/400] qwen2.5-coder:7b   task_06_sealed_secrets       s1 tests=fail oqs=True gate=FAIL P1|P2
+[328/400] qwen2.5-coder:7b   task_06_sealed_secrets       s2 tests=fail oqs=True gate=FAIL P1|P2
+[329/400] qwen2.5-coder:7b   task_06_sealed_secrets       s3 tests=fail oqs=True gate=FAIL P2
+[330/400] qwen2.5-coder:7b   task_06_sealed_secrets       s4 tests=PASS oqs=True gate=FAIL A1|P2
+[331/400] qwen2.5-coder:7b   task_07_device_pairing       s0 tests=fail oqs=True gate=PASS 
+[332/400] qwen2.5-coder:7b   task_07_device_pairing       s1 tests=fail oqs=True gate=PASS 
+[333/400] qwen2.5-coder:7b   task_07_device_pairing       s2 tests=fail oqs=True gate=PASS 
+[334/400] qwen2.5-coder:7b   task_07_device_pairing       s3 tests=fail oqs=True gate=PASS 
+[335/400] qwen2.5-coder:7b   task_07_device_pairing       s4 tests=fail oqs=True gate=PASS 
+[336/400] qwen2.5-coder:7b   task_08_tunnel_rekey         s0 tests=fail oqs=True gate=PASS 
+[337/400] qwen2.5-coder:7b   task_08_tunnel_rekey         s1 tests=fail oqs=True gate=PASS 
+[338/400] qwen2.5-coder:7b   task_08_tunnel_rekey         s2 tests=fail oqs=True gate=PASS 
+[339/400] qwen2.5-coder:7b   task_08_tunnel_rekey         s3 tests=fail oqs=True gate=PASS 
+[340/400] qwen2.5-coder:7b   task_08_tunnel_rekey         s4 tests=fail oqs=True gate=PASS 
+[341/400] qwen2.5-coder:7b   task_09_sealed_messages      s0 tests=fail oqs=True gate=PASS 
+[342/400] qwen2.5-coder:7b   task_09_sealed_messages      s1 tests=fail oqs=True gate=PASS 
+[343/400] qwen2.5-coder:7b   task_09_sealed_messages      s2 tests=fail oqs=True gate=PASS 
+[344/400] qwen2.5-coder:7b   task_09_sealed_messages      s3 tests=fail oqs=True gate=PASS 
+[345/400] qwen2.5-coder:7b   task_09_sealed_messages      s4 tests=fail oqs=True gate=PASS 
+[346/400] qwen2.5-coder:7b   task_10_update_manifest      s0 tests=fail oqs=True gate=FAIL A5|P2
+[347/400] qwen2.5-coder:7b   task_10_update_manifest      s1 tests=fail oqs=True gate=PASS 
+[348/400] qwen2.5-coder:7b   task_10_update_manifest      s2 tests=fail oqs=True gate=FAIL P2
+[349/400] qwen2.5-coder:7b   task_10_update_manifest      s3 tests=fail oqs=True gate=PASS 
+[350/400] qwen2.5-coder:7b   task_10_update_manifest      s4 tests=fail oqs=True gate=PASS 
+[351/400] qwen2.5-coder:7b   task_11_invoice_signing      s0 tests=fail oqs=True gate=FAIL A5|P2
+[352/400] qwen2.5-coder:7b   task_11_invoice_signing      s1 tests=fail oqs=True gate=FAIL P2
+[353/400] qwen2.5-coder:7b   task_11_invoice_signing      s2 tests=fail oqs=True gate=FAIL A5|P2
+[354/400] qwen2.5-coder:7b   task_11_invoice_signing      s3 tests=fail oqs=True gate=PASS 
+[355/400] qwen2.5-coder:7b   task_11_invoice_signing      s4 tests=fail oqs=True gate=PASS 
+[356/400] qwen2.5-coder:7b   task_12_audit_log            s0 tests=fail oqs=True gate=PASS 
+[357/400] qwen2.5-coder:7b   task_12_audit_log            s1 tests=fail oqs=True gate=PASS 
+[358/400] qwen2.5-coder:7b   task_12_audit_log            s2 tests=fail oqs=True gate=PASS 
+[359/400] qwen2.5-coder:7b   task_12_audit_log            s3 tests=fail oqs=True gate=PASS 
+[360/400] qwen2.5-coder:7b   task_12_audit_log            s4 tests=fail oqs=True gate=PASS 
+[361/400] qwen2.5-coder:7b   task_13_api_token            s0 tests=fail oqs=True gate=PASS 
+[362/400] qwen2.5-coder:7b   task_13_api_token            s1 tests=fail oqs=True gate=PASS 
+[363/400] qwen2.5-coder:7b   task_13_api_token            s2 tests=fail oqs=True gate=PASS 
+[364/400] qwen2.5-coder:7b   task_13_api_token            s3 tests=fail oqs=True gate=FAIL P2
+[365/400] qwen2.5-coder:7b   task_13_api_token            s4 tests=fail oqs=True gate=PASS 
+[366/400] qwen2.5-coder:7b   task_14_session_cookie       s0 tests=fail oqs=True gate=FAIL P2
+[367/400] qwen2.5-coder:7b   task_14_session_cookie       s1 tests=fail oqs=True gate=FAIL P2
+[368/400] qwen2.5-coder:7b   task_14_session_cookie       s2 tests=fail oqs=True gate=FAIL P2
+[369/400] qwen2.5-coder:7b   task_14_session_cookie       s3 tests=fail oqs=True gate=FAIL P2
+[370/400] qwen2.5-coder:7b   task_14_session_cookie       s4 tests=fail oqs=True gate=FAIL P2
+[371/400] qwen2.5-coder:7b   task_15_license_key          s0 tests=fail oqs=True gate=FAIL A5
+[372/400] qwen2.5-coder:7b   task_15_license_key          s1 tests=fail oqs=True gate=PASS 
+[373/400] qwen2.5-coder:7b   task_15_license_key          s2 tests=fail oqs=True gate=FAIL A5
+[374/400] qwen2.5-coder:7b   task_15_license_key          s3 tests=fail oqs=True gate=PASS 
+[375/400] qwen2.5-coder:7b   task_15_license_key          s4 tests=fail oqs=True gate=PASS 
+[376/400] qwen2.5-coder:7b   task_16_webhook_signature    s0 tests=fail oqs=True gate=PASS 
+[377/400] qwen2.5-coder:7b   task_16_webhook_signature    s1 tests=fail oqs=True gate=PASS 
+[378/400] qwen2.5-coder:7b   task_16_webhook_signature    s2 tests=fail oqs=True gate=PASS 
+[379/400] qwen2.5-coder:7b   task_16_webhook_signature    s3 tests=fail oqs=True gate=PASS 
+[380/400] qwen2.5-coder:7b   task_16_webhook_signature    s4 tests=fail oqs=True gate=PASS 
+[381/400] qwen2.5-coder:7b   task_17_pke_provider         s0 tests=fail oqs=True gate=FAIL P1|P2
+[382/400] qwen2.5-coder:7b   task_17_pke_provider         s1 tests=fail oqs=True gate=FAIL P1|P2
+[383/400] qwen2.5-coder:7b   task_17_pke_provider         s2 tests=fail oqs=True gate=FAIL P1
+[384/400] qwen2.5-coder:7b   task_17_pke_provider         s3 tests=fail oqs=True gate=FAIL P1
+[385/400] qwen2.5-coder:7b   task_17_pke_provider         s4 tests=fail oqs=True gate=FAIL P1
+[386/400] qwen2.5-coder:7b   task_18_signer_negotiation   s0 tests=PASS oqs=True gate=PASS 
+[387/400] qwen2.5-coder:7b   task_18_signer_negotiation   s1 tests=fail oqs=False gate=FAIL P2
+[388/400] qwen2.5-coder:7b   task_18_signer_negotiation   s2 tests=PASS oqs=True gate=PASS 
+[389/400] qwen2.5-coder:7b   task_18_signer_negotiation   s3 tests=PASS oqs=True gate=PASS 
+[390/400] qwen2.5-coder:7b   task_18_signer_negotiation   s4 tests=PASS oqs=True gate=PASS 
+[391/400] qwen2.5-coder:7b   task_19_crypto_policy        s0 tests=fail oqs=True gate=PASS 
+[392/400] qwen2.5-coder:7b   task_19_crypto_policy        s1 tests=fail oqs=True gate=PASS 
+[393/400] qwen2.5-coder:7b   task_19_crypto_policy        s2 tests=fail oqs=True gate=PASS 
+[394/400] qwen2.5-coder:7b   task_19_crypto_policy        s3 tests=fail oqs=True gate=FAIL P1
+[395/400] qwen2.5-coder:7b   task_19_crypto_policy        s4 tests=fail oqs=True gate=PASS 
+[396/400] qwen2.5-coder:7b   task_20_suite_negotiation    s0 tests=fail oqs=True gate=FAIL P2
+[397/400] qwen2.5-coder:7b   task_20_suite_negotiation    s1 tests=fail oqs=True gate=FAIL P2
+[398/400] qwen2.5-coder:7b   task_20_suite_negotiation    s2 tests=fail oqs=True gate=FAIL P2
+[399/400] qwen2.5-coder:7b   task_20_suite_negotiation    s3 tests=fail oqs=True gate=FAIL P2
+[400/400] qwen2.5-coder:7b   task_20_suite_negotiation    s4 tests=fail oqs=True gate=FAIL P2
+
+Summary per model
+  gemma3:4b: 100 samples | generated ok 100 | syntax ok 98 | all tests pass 71 | of those use liboqs 5 | of those gate FAIL 5
+    gate checks fired on test-passing PQC migrations: {'A1': 2, 'P2': 5, 'P3': 2}
+  openai/gpt-oss-120b: 100 samples | generated ok 100 | syntax ok 98 | all tests pass 69 | of those use liboqs 69 | of those gate FAIL 20
+    gate checks fired on test-passing PQC migrations: {'A2': 7, 'A5': 5, 'P1': 9, 'P2': 2, 'P3': 1}
+  qwen2.5-coder:3b: 100 samples | generated ok 100 | syntax ok 95 | all tests pass 52 | of those use liboqs 1 | of those gate FAIL 1
+    gate checks fired on test-passing PQC migrations: {'A2': 1, 'P2': 1}
+  qwen2.5-coder:7b: 100 samples | generated ok 100 | syntax ok 100 | all tests pass 9 | of those use liboqs 9 | of those gate FAIL 5
+    gate checks fired on test-passing PQC migrations: {'A1': 5, 'P2': 5}
+
+Wrote results\tables\phase3_eval.csv

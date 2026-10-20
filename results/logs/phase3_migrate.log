@@ -1,0 +1,645 @@
+﻿Plan: 2 models x 20 tasks x 5 samples = 200
+[gemma3:4b] task_01_file_key_wrap sample_0 (seed 1001)
+    ok in 359.3s
+[gemma3:4b] task_01_file_key_wrap sample_1 (seed 1002)
+    ok in 268.1s
+[gemma3:4b] task_01_file_key_wrap sample_2 (seed 1003)
+    ok in 264.9s
+[gemma3:4b] task_01_file_key_wrap sample_3 (seed 1004)
+    ok in 260.3s
+[gemma3:4b] task_01_file_key_wrap sample_4 (seed 1005)
+    ok in 268.1s
+[gemma3:4b] task_02_session_handshake sample_0 (seed 1001)
+    ok in 216.3s
+[gemma3:4b] task_02_session_handshake sample_1 (seed 1002)
+    ok in 161.9s
+[gemma3:4b] task_02_session_handshake sample_2 (seed 1003)
+    ok in 169.6s
+[gemma3:4b] task_02_session_handshake sample_3 (seed 1004)
+    ok in 165.2s
+[gemma3:4b] task_02_session_handshake sample_4 (seed 1005)
+    ok in 170.3s
+[gemma3:4b] task_03_document_signing sample_0 (seed 1001)
+    ok in 196.3s
+[gemma3:4b] task_03_document_signing sample_1 (seed 1002)
+    ok in 184.4s
+[gemma3:4b] task_03_document_signing sample_2 (seed 1003)
+    ok in 200.7s
+[gemma3:4b] task_03_document_signing sample_3 (seed 1004)
+    ok in 189.2s
+[gemma3:4b] task_03_document_signing sample_4 (seed 1005)
+    ok in 143.0s
+[gemma3:4b] task_04_backup_archive sample_0 (seed 1001)
+    ok in 229.8s
+[gemma3:4b] task_04_backup_archive sample_1 (seed 1002)
+    ok in 186.1s
+[gemma3:4b] task_04_backup_archive sample_2 (seed 1003)
+    ok in 204.5s
+[gemma3:4b] task_04_backup_archive sample_3 (seed 1004)
+    ok in 181.2s
+[gemma3:4b] task_04_backup_archive sample_4 (seed 1005)
+    ok in 186.1s
+[gemma3:4b] task_05_password_vault sample_0 (seed 1001)
+    ok in 262.9s
+[gemma3:4b] task_05_password_vault sample_1 (seed 1002)
+    ok in 198.6s
+[gemma3:4b] task_05_password_vault sample_2 (seed 1003)
+    ok in 198.4s
+[gemma3:4b] task_05_password_vault sample_3 (seed 1004)
+    ok in 195.6s
+[gemma3:4b] task_05_password_vault sample_4 (seed 1005)
+    ok in 195.5s
+[gemma3:4b] task_06_sealed_secrets sample_0 (seed 1001)
+    ok in 208.9s
+[gemma3:4b] task_06_sealed_secrets sample_1 (seed 1002)
+    ok in 162.5s
+[gemma3:4b] task_06_sealed_secrets sample_2 (seed 1003)
+    ok in 164.2s
+[gemma3:4b] task_06_sealed_secrets sample_3 (seed 1004)
+    ok in 171.2s
+[gemma3:4b] task_06_sealed_secrets sample_4 (seed 1005)
+    ok in 170.3s
+[gemma3:4b] task_07_device_pairing sample_0 (seed 1001)
+    ok in 236.8s
+[gemma3:4b] task_07_device_pairing sample_1 (seed 1002)
+    ok in 3.1s
+[gemma3:4b] task_07_device_pairing sample_2 (seed 1003)
+    ok in 197.3s
+[gemma3:4b] task_07_device_pairing sample_3 (seed 1004)
+    ok in 197.4s
+[gemma3:4b] task_07_device_pairing sample_4 (seed 1005)
+    ok in 201.2s
+[gemma3:4b] task_08_tunnel_rekey sample_0 (seed 1001)
+    ok in 276.9s
+[gemma3:4b] task_08_tunnel_rekey sample_1 (seed 1002)
+    ok in 261.5s
+[gemma3:4b] task_08_tunnel_rekey sample_2 (seed 1003)
+    ok in 278.0s
+[gemma3:4b] task_08_tunnel_rekey sample_3 (seed 1004)
+    ok in 266.1s
+[gemma3:4b] task_08_tunnel_rekey sample_4 (seed 1005)
+    ok in 266.3s
+[gemma3:4b] task_09_sealed_messages sample_0 (seed 1001)
+    ok in 263.2s
+[gemma3:4b] task_09_sealed_messages sample_1 (seed 1002)
+    ok in 204.2s
+[gemma3:4b] task_09_sealed_messages sample_2 (seed 1003)
+    ok in 202.2s
+[gemma3:4b] task_09_sealed_messages sample_3 (seed 1004)
+    ok in 205.2s
+[gemma3:4b] task_09_sealed_messages sample_4 (seed 1005)
+    ok in 201.5s
+[gemma3:4b] task_10_update_manifest sample_0 (seed 1001)
+    ok in 245.0s
+[gemma3:4b] task_10_update_manifest sample_1 (seed 1002)
+    ok in 179.7s
+[gemma3:4b] task_10_update_manifest sample_2 (seed 1003)
+    ok in 199.8s
+[gemma3:4b] task_10_update_manifest sample_3 (seed 1004)
+    ok in 190.6s
+[gemma3:4b] task_10_update_manifest sample_4 (seed 1005)
+    ok in 2.5s
+[gemma3:4b] task_11_invoice_signing sample_0 (seed 1001)
+    ok in 385.8s
+[gemma3:4b] task_11_invoice_signing sample_1 (seed 1002)
+    ok in 291.0s
+[gemma3:4b] task_11_invoice_signing sample_2 (seed 1003)
+Plan: 2 models x 20 tasks x 5 samples = 200
+[gemma3:4b] task_11_invoice_signing sample_2 (seed 1003)
+    ok in 322.4s
+[gemma3:4b] task_11_invoice_signing sample_3 (seed 1004)
+    ok in 270.8s
+[gemma3:4b] task_11_invoice_signing sample_4 (seed 1005)
+    ok in 230.3s
+[gemma3:4b] task_12_audit_log sample_0 (seed 1001)
+    ok in 193.3s
+[gemma3:4b] task_12_audit_log sample_1 (seed 1002)
+    ok in 201.7s
+[gemma3:4b] task_12_audit_log sample_2 (seed 1003)
+    ok in 239.7s
+[gemma3:4b] task_12_audit_log sample_3 (seed 1004)
+    ok in 237.3s
+[gemma3:4b] task_12_audit_log sample_4 (seed 1005)
+    ok in 132.8s
+[gemma3:4b] task_13_api_token sample_0 (seed 1001)
+    ok in 247.9s
+[gemma3:4b] task_13_api_token sample_1 (seed 1002)
+    ok in 236.1s
+[gemma3:4b] task_13_api_token sample_2 (seed 1003)
+    ok in 227.4s
+[gemma3:4b] task_13_api_token sample_3 (seed 1004)
+    ok in 228.3s
+[gemma3:4b] task_13_api_token sample_4 (seed 1005)
+    ok in 195.1s
+[gemma3:4b] task_14_session_cookie sample_0 (seed 1001)
+    ok in 257.8s
+[gemma3:4b] task_14_session_cookie sample_1 (seed 1002)
+    ok in 232.4s
+[gemma3:4b] task_14_session_cookie sample_2 (seed 1003)
+    ok in 237.9s
+[gemma3:4b] task_14_session_cookie sample_3 (seed 1004)
+    ok in 223.0s
+[gemma3:4b] task_14_session_cookie sample_4 (seed 1005)
+    ok in 201.0s
+[gemma3:4b] task_15_license_key sample_0 (seed 1001)
+    ok in 168.1s
+[gemma3:4b] task_15_license_key sample_1 (seed 1002)
+    ok in 126.6s
+[gemma3:4b] task_15_license_key sample_2 (seed 1003)
+    ok in 199.5s
+[gemma3:4b] task_15_license_key sample_3 (seed 1004)
+    ok in 191.6s
+[gemma3:4b] task_15_license_key sample_4 (seed 1005)
+    ok in 193.2s
+[gemma3:4b] task_16_webhook_signature sample_0 (seed 1001)
+    ok in 151.3s
+[gemma3:4b] task_16_webhook_signature sample_1 (seed 1002)
+    ok in 113.2s
+[gemma3:4b] task_16_webhook_signature sample_2 (seed 1003)
+    ok in 112.3s
+[gemma3:4b] task_16_webhook_signature sample_3 (seed 1004)
+    ok in 112.3s
+[gemma3:4b] task_16_webhook_signature sample_4 (seed 1005)
+    ok in 115.9s
+[gemma3:4b] task_17_pke_provider sample_0 (seed 1001)
+    ok in 260.2s
+[gemma3:4b] task_17_pke_provider sample_1 (seed 1002)
+    ok in 320.7s
+[gemma3:4b] task_17_pke_provider sample_2 (seed 1003)
+    ok in 170.5s
+[gemma3:4b] task_17_pke_provider sample_3 (seed 1004)
+    ok in 169.5s
+[gemma3:4b] task_17_pke_provider sample_4 (seed 1005)
+    ok in 160.2s
+[gemma3:4b] task_18_signer_negotiation sample_0 (seed 1001)
+    ok in 494.5s
+[gemma3:4b] task_18_signer_negotiation sample_1 (seed 1002)
+    ok in 383.6s
+[gemma3:4b] task_18_signer_negotiation sample_2 (seed 1003)
+    ok in 397.8s
+[gemma3:4b] task_18_signer_negotiation sample_3 (seed 1004)
+    ok in 315.6s
+[gemma3:4b] task_18_signer_negotiation sample_4 (seed 1005)
+    ok in 330.1s
+[gemma3:4b] task_19_crypto_policy sample_0 (seed 1001)
+    ok in 329.0s
+[gemma3:4b] task_19_crypto_policy sample_1 (seed 1002)
+    ok in 240.7s
+[gemma3:4b] task_19_crypto_policy sample_2 (seed 1003)
+    ok in 254.5s
+[gemma3:4b] task_19_crypto_policy sample_3 (seed 1004)
+    ok in 243.9s
+[gemma3:4b] task_19_crypto_policy sample_4 (seed 1005)
+    ok in 239.7s
+[gemma3:4b] task_20_suite_negotiation sample_0 (seed 1001)
+Plan: 3 models x 20 tasks x 5 samples = 300
+[gemma3:4b] task_20_suite_negotiation sample_0 (seed 1001)
+    ok in 508.6s
+[gemma3:4b] task_20_suite_negotiation sample_1 (seed 1002)
+    ok in 334.2s
+[gemma3:4b] task_20_suite_negotiation sample_2 (seed 1003)
+    ok in 387.4s
+[gemma3:4b] task_20_suite_negotiation sample_3 (seed 1004)
+    ok in 338.7s
+[gemma3:4b] task_20_suite_negotiation sample_4 (seed 1005)
+    ok in 360.1s
+[qwen2.5-coder:3b] task_01_file_key_wrap sample_0 (seed 1001)
+    ok in 248.3s
+[qwen2.5-coder:3b] task_01_file_key_wrap sample_1 (seed 1002)
+    ok in 99.9s
+[qwen2.5-coder:3b] task_01_file_key_wrap sample_2 (seed 1003)
+    ok in 95.5s
+[qwen2.5-coder:3b] task_01_file_key_wrap sample_3 (seed 1004)
+    ok in 105.3s
+[qwen2.5-coder:3b] task_01_file_key_wrap sample_4 (seed 1005)
+    ok in 122.3s
+[qwen2.5-coder:3b] task_02_session_handshake sample_0 (seed 1001)
+    ok in 162.4s
+[qwen2.5-coder:3b] task_02_session_handshake sample_1 (seed 1002)
+Plan: 3 models x 20 tasks x 5 samples = 300
+[qwen2.5-coder:3b] task_02_session_handshake sample_1 (seed 1002)
+Ollama version: 0.40.6
+Plan: 3 models x 20 tasks x 5 samples = 300
+[qwen2.5-coder:3b] task_01_file_key_wrap sample_0 (seed 1001)
+    ok in 210.6s
+[qwen2.5-coder:3b] task_01_file_key_wrap sample_1 (seed 1002)
+    ok in 108.2s
+[qwen2.5-coder:3b] task_01_file_key_wrap sample_2 (seed 1003)
+    ok in 93.5s
+[qwen2.5-coder:3b] task_01_file_key_wrap sample_3 (seed 1004)
+    ok in 114.2s
+[qwen2.5-coder:3b] task_01_file_key_wrap sample_4 (seed 1005)
+    ok in 98.1s
+[qwen2.5-coder:3b] task_02_session_handshake sample_0 (seed 1001)
+    ok in 167.4s
+[qwen2.5-coder:3b] task_02_session_handshake sample_1 (seed 1002)
+    ok in 151.3s
+[qwen2.5-coder:3b] task_02_session_handshake sample_2 (seed 1003)
+    ok in 165.7s
+[qwen2.5-coder:3b] task_02_session_handshake sample_3 (seed 1004)
+    ok in 584.4s
+[qwen2.5-coder:3b] task_02_session_handshake sample_4 (seed 1005)
+    ok in 103.4s
+[qwen2.5-coder:3b] task_03_document_signing sample_0 (seed 1001)
+    ok in 124.3s
+[qwen2.5-coder:3b] task_03_document_signing sample_1 (seed 1002)
+    ok in 80.7s
+[qwen2.5-coder:3b] task_03_document_signing sample_2 (seed 1003)
+    ok in 108.7s
+[qwen2.5-coder:3b] task_03_document_signing sample_3 (seed 1004)
+    ok in 99.6s
+[qwen2.5-coder:3b] task_03_document_signing sample_4 (seed 1005)
+    ok in 109.1s
+[qwen2.5-coder:3b] task_04_backup_archive sample_0 (seed 1001)
+    ok in 682.6s
+[qwen2.5-coder:3b] task_04_backup_archive sample_1 (seed 1002)
+    ok in 154.5s
+[qwen2.5-coder:3b] task_04_backup_archive sample_2 (seed 1003)
+    ok in 157.3s
+[qwen2.5-coder:3b] task_04_backup_archive sample_3 (seed 1004)
+    ok in 134.2s
+[qwen2.5-coder:3b] task_04_backup_archive sample_4 (seed 1005)
+    ok in 158.1s
+[qwen2.5-coder:3b] task_05_password_vault sample_0 (seed 1001)
+    ok in 192.4s
+[qwen2.5-coder:3b] task_05_password_vault sample_1 (seed 1002)
+    ok in 524.0s
+[qwen2.5-coder:3b] task_05_password_vault sample_2 (seed 1003)
+    ok in 544.2s
+[qwen2.5-coder:3b] task_05_password_vault sample_3 (seed 1004)
+    ok in 205.6s
+[qwen2.5-coder:3b] task_05_password_vault sample_4 (seed 1005)
+    ok in 201.1s
+[qwen2.5-coder:3b] task_06_sealed_secrets sample_0 (seed 1001)
+    ok in 180.9s
+[qwen2.5-coder:3b] task_06_sealed_secrets sample_1 (seed 1002)
+    ok in 148.1s
+[qwen2.5-coder:3b] task_06_sealed_secrets sample_2 (seed 1003)
+    ok in 138.9s
+[qwen2.5-coder:3b] task_06_sealed_secrets sample_3 (seed 1004)
+    ok in 151.9s
+[qwen2.5-coder:3b] task_06_sealed_secrets sample_4 (seed 1005)
+    ok in 142.3s
+[qwen2.5-coder:3b] task_07_device_pairing sample_0 (seed 1001)
+    ok in 180.1s
+[qwen2.5-coder:3b] task_07_device_pairing sample_1 (seed 1002)
+    ok in 124.9s
+[qwen2.5-coder:3b] task_07_device_pairing sample_2 (seed 1003)
+    ok in 131.7s
+[qwen2.5-coder:3b] task_07_device_pairing sample_3 (seed 1004)
+    ok in 104.1s
+[qwen2.5-coder:3b] task_07_device_pairing sample_4 (seed 1005)
+    ok in 142.9s
+[qwen2.5-coder:3b] task_08_tunnel_rekey sample_0 (seed 1001)
+    ok in 215.3s
+[qwen2.5-coder:3b] task_08_tunnel_rekey sample_1 (seed 1002)
+    ok in 177.7s
+[qwen2.5-coder:3b] task_08_tunnel_rekey sample_2 (seed 1003)
+    ok in 166.1s
+[qwen2.5-coder:3b] task_08_tunnel_rekey sample_3 (seed 1004)
+    ok in 147.6s
+[qwen2.5-coder:3b] task_08_tunnel_rekey sample_4 (seed 1005)
+    ok in 189.8s
+[qwen2.5-coder:3b] task_09_sealed_messages sample_0 (seed 1001)
+    ok in 135.5s
+[qwen2.5-coder:3b] task_09_sealed_messages sample_1 (seed 1002)
+    ok in 109.0s
+[qwen2.5-coder:3b] task_09_sealed_messages sample_2 (seed 1003)
+    ok in 117.8s
+[qwen2.5-coder:3b] task_09_sealed_messages sample_3 (seed 1004)
+    ok in 129.4s
+[qwen2.5-coder:3b] task_09_sealed_messages sample_4 (seed 1005)
+    ok in 124.8s
+[qwen2.5-coder:3b] task_10_update_manifest sample_0 (seed 1001)
+    ok in 178.0s
+[qwen2.5-coder:3b] task_10_update_manifest sample_1 (seed 1002)
+    ok in 125.2s
+[qwen2.5-coder:3b] task_10_update_manifest sample_2 (seed 1003)
+    ok in 129.0s
+[qwen2.5-coder:3b] task_10_update_manifest sample_3 (seed 1004)
+    ok in 124.2s
+[qwen2.5-coder:3b] task_10_update_manifest sample_4 (seed 1005)
+    error in 54.9s
+[qwen2.5-coder:3b] task_11_invoice_signing sample_0 (seed 1001)
+    ok in 115.1s
+[qwen2.5-coder:3b] task_11_invoice_signing sample_1 (seed 1002)
+    ok in 110.7s
+[qwen2.5-coder:3b] task_11_invoice_signing sample_2 (seed 1003)
+    ok in 150.2s
+[qwen2.5-coder:3b] task_11_invoice_signing sample_3 (seed 1004)
+    ok in 166.0s
+[qwen2.5-coder:3b] task_11_invoice_signing sample_4 (seed 1005)
+    ok in 147.5s
+[qwen2.5-coder:3b] task_12_audit_log sample_0 (seed 1001)
+    ok in 165.6s
+[qwen2.5-coder:3b] task_12_audit_log sample_1 (seed 1002)
+    ok in 88.8s
+[qwen2.5-coder:3b] task_12_audit_log sample_2 (seed 1003)
+    ok in 108.7s
+[qwen2.5-coder:3b] task_12_audit_log sample_3 (seed 1004)
+    ok in 94.2s
+[qwen2.5-coder:3b] task_12_audit_log sample_4 (seed 1005)
+    ok in 105.7s
+[qwen2.5-coder:3b] task_13_api_token sample_0 (seed 1001)
+    ok in 153.3s
+[qwen2.5-coder:3b] task_13_api_token sample_1 (seed 1002)
+    ok in 119.9s
+[qwen2.5-coder:3b] task_13_api_token sample_2 (seed 1003)
+    ok in 114.3s
+[qwen2.5-coder:3b] task_13_api_token sample_3 (seed 1004)
+    ok in 108.1s
+[qwen2.5-coder:3b] task_13_api_token sample_4 (seed 1005)
+    ok in 120.6s
+[qwen2.5-coder:3b] task_14_session_cookie sample_0 (seed 1001)
+    ok in 187.3s
+[qwen2.5-coder:3b] task_14_session_cookie sample_1 (seed 1002)
+    ok in 611.0s
+[qwen2.5-coder:3b] task_14_session_cookie sample_2 (seed 1003)
+    ok in 161.2s
+[qwen2.5-coder:3b] task_14_session_cookie sample_3 (seed 1004)
+    ok in 179.6s
+[qwen2.5-coder:3b] task_14_session_cookie sample_4 (seed 1005)
+    ok in 156.8s
+[qwen2.5-coder:3b] task_15_license_key sample_0 (seed 1001)
+    ok in 176.4s
+[qwen2.5-coder:3b] task_15_license_key sample_1 (seed 1002)
+    error in 66.2s
+[qwen2.5-coder:3b] task_15_license_key sample_2 (seed 1003)
+watchdog: relaunching migrate.py (170/300 done)
+Ollama version: 0.40.6
+Plan: 3 models x 20 tasks x 5 samples = 300
+[qwen2.5-coder:3b] task_10_update_manifest sample_4 (seed 1005)
+    ok in 253.9s
+[qwen2.5-coder:3b] task_15_license_key sample_1 (seed 1002)
+    ok in 208.4s
+[qwen2.5-coder:3b] task_15_license_key sample_2 (seed 1003)
+    ok in 170.9s
+[qwen2.5-coder:3b] task_15_license_key sample_3 (seed 1004)
+    ok in 177.0s
+[qwen2.5-coder:3b] task_15_license_key sample_4 (seed 1005)
+    ok in 163.1s
+[qwen2.5-coder:3b] task_16_webhook_signature sample_0 (seed 1001)
+    ok in 123.8s
+[qwen2.5-coder:3b] task_16_webhook_signature sample_1 (seed 1002)
+    ok in 103.3s
+[qwen2.5-coder:3b] task_16_webhook_signature sample_2 (seed 1003)
+    ok in 83.7s
+[qwen2.5-coder:3b] task_16_webhook_signature sample_3 (seed 1004)
+    ok in 99.7s
+[qwen2.5-coder:3b] task_16_webhook_signature sample_4 (seed 1005)
+    ok in 101.5s
+[qwen2.5-coder:3b] task_17_pke_provider sample_0 (seed 1001)
+    ok in 235.6s
+[qwen2.5-coder:3b] task_17_pke_provider sample_1 (seed 1002)
+    ok in 182.8s
+[qwen2.5-coder:3b] task_17_pke_provider sample_2 (seed 1003)
+    ok in 154.7s
+[qwen2.5-coder:3b] task_17_pke_provider sample_3 (seed 1004)
+    ok in 103.3s
+[qwen2.5-coder:3b] task_17_pke_provider sample_4 (seed 1005)
+    ok in 211.9s
+[qwen2.5-coder:3b] task_18_signer_negotiation sample_0 (seed 1001)
+    ok in 187.0s
+[qwen2.5-coder:3b] task_18_signer_negotiation sample_1 (seed 1002)
+    ok in 200.5s
+[qwen2.5-coder:3b] task_18_signer_negotiation sample_2 (seed 1003)
+    ok in 165.6s
+[qwen2.5-coder:3b] task_18_signer_negotiation sample_3 (seed 1004)
+    ok in 172.5s
+[qwen2.5-coder:3b] task_18_signer_negotiation sample_4 (seed 1005)
+    ok in 193.2s
+[qwen2.5-coder:3b] task_19_crypto_policy sample_0 (seed 1001)
+    ok in 287.5s
+[qwen2.5-coder:3b] task_19_crypto_policy sample_1 (seed 1002)
+    ok in 215.9s
+[qwen2.5-coder:3b] task_19_crypto_policy sample_2 (seed 1003)
+    ok in 223.8s
+[qwen2.5-coder:3b] task_19_crypto_policy sample_3 (seed 1004)
+    ok in 213.2s
+[qwen2.5-coder:3b] task_19_crypto_policy sample_4 (seed 1005)
+    ok in 197.6s
+[qwen2.5-coder:3b] task_20_suite_negotiation sample_0 (seed 1001)
+    ok in 322.3s
+[qwen2.5-coder:3b] task_20_suite_negotiation sample_1 (seed 1002)
+    ok in 265.9s
+[qwen2.5-coder:3b] task_20_suite_negotiation sample_2 (seed 1003)
+    ok in 272.7s
+[qwen2.5-coder:3b] task_20_suite_negotiation sample_3 (seed 1004)
+    ok in 280.3s
+[qwen2.5-coder:3b] task_20_suite_negotiation sample_4 (seed 1005)
+    ok in 250.3s
+Model qwen2.5-coder:7b is not installed in Ollama
+watchdog: (re)starting qwen2.5-coder:7b download
+watchdog: (re)starting qwen2.5-coder:7b download
+watchdog: (re)starting qwen2.5-coder:7b download
+watchdog: (re)starting qwen2.5-coder:7b download
+watchdog: (re)starting qwen2.5-coder:7b download
+watchdog: (re)starting qwen2.5-coder:7b download
+watchdog: (re)starting qwen2.5-coder:7b download
+watchdog: (re)starting qwen2.5-coder:7b download
+watchdog: (re)starting qwen2.5-coder:7b download
+watchdog: relaunching local migrate.py (252/400 done)
+Ollama version: 0.40.6
+Plan: 3 models x 20 tasks x 5 samples = 300
+[qwen2.5-coder:7b] task_01_file_key_wrap sample_0 (seed 1001)
+    ok in 459.6s
+[qwen2.5-coder:7b] task_01_file_key_wrap sample_1 (seed 1002)
+    ok in 264.1s
+[qwen2.5-coder:7b] task_01_file_key_wrap sample_2 (seed 1003)
+    ok in 231.9s
+[qwen2.5-coder:7b] task_01_file_key_wrap sample_3 (seed 1004)
+    ok in 275.9s
+[qwen2.5-coder:7b] task_01_file_key_wrap sample_4 (seed 1005)
+    ok in 250.5s
+[qwen2.5-coder:7b] task_02_session_handshake sample_0 (seed 1001)
+    ok in 246.2s
+[qwen2.5-coder:7b] task_02_session_handshake sample_1 (seed 1002)
+    ok in 173.5s
+[qwen2.5-coder:7b] task_02_session_handshake sample_2 (seed 1003)
+    ok in 155.5s
+[qwen2.5-coder:7b] task_02_session_handshake sample_3 (seed 1004)
+    ok in 165.9s
+[qwen2.5-coder:7b] task_02_session_handshake sample_4 (seed 1005)
+    ok in 165.3s
+[qwen2.5-coder:7b] task_03_document_signing sample_0 (seed 1001)
+    ok in 163.1s
+[qwen2.5-coder:7b] task_03_document_signing sample_1 (seed 1002)
+    ok in 131.0s
+[qwen2.5-coder:7b] task_03_document_signing sample_2 (seed 1003)
+    ok in 123.0s
+[qwen2.5-coder:7b] task_03_document_signing sample_3 (seed 1004)
+    ok in 159.6s
+[qwen2.5-coder:7b] task_03_document_signing sample_4 (seed 1005)
+    ok in 205.2s
+[qwen2.5-coder:7b] task_04_backup_archive sample_0 (seed 1001)
+    ok in 295.5s
+[qwen2.5-coder:7b] task_04_backup_archive sample_1 (seed 1002)
+    ok in 206.4s
+[qwen2.5-coder:7b] task_04_backup_archive sample_2 (seed 1003)
+    ok in 205.6s
+[qwen2.5-coder:7b] task_04_backup_archive sample_3 (seed 1004)
+    ok in 188.8s
+[qwen2.5-coder:7b] task_04_backup_archive sample_4 (seed 1005)
+    ok in 192.7s
+[qwen2.5-coder:7b] task_05_password_vault sample_0 (seed 1001)
+    ok in 311.2s
+[qwen2.5-coder:7b] task_05_password_vault sample_1 (seed 1002)
+    ok in 216.7s
+[qwen2.5-coder:7b] task_05_password_vault sample_2 (seed 1003)
+    ok in 215.8s
+[qwen2.5-coder:7b] task_05_password_vault sample_3 (seed 1004)
+    ok in 218.1s
+[qwen2.5-coder:7b] task_05_password_vault sample_4 (seed 1005)
+    ok in 233.0s
+[qwen2.5-coder:7b] task_06_sealed_secrets sample_0 (seed 1001)
+    ok in 238.4s
+[qwen2.5-coder:7b] task_06_sealed_secrets sample_1 (seed 1002)
+    ok in 176.0s
+[qwen2.5-coder:7b] task_06_sealed_secrets sample_2 (seed 1003)
+    ok in 175.4s
+[qwen2.5-coder:7b] task_06_sealed_secrets sample_3 (seed 1004)
+    ok in 170.8s
+[qwen2.5-coder:7b] task_06_sealed_secrets sample_4 (seed 1005)
+    ok in 219.9s
+[qwen2.5-coder:7b] task_07_device_pairing sample_0 (seed 1001)
+    ok in 258.3s
+[qwen2.5-coder:7b] task_07_device_pairing sample_1 (seed 1002)
+    ok in 190.0s
+[qwen2.5-coder:7b] task_07_device_pairing sample_2 (seed 1003)
+    ok in 190.0s
+[qwen2.5-coder:7b] task_07_device_pairing sample_3 (seed 1004)
+    ok in 197.3s
+[qwen2.5-coder:7b] task_07_device_pairing sample_4 (seed 1005)
+    ok in 192.7s
+[qwen2.5-coder:7b] task_08_tunnel_rekey sample_0 (seed 1001)
+    ok in 345.3s
+[qwen2.5-coder:7b] task_08_tunnel_rekey sample_1 (seed 1002)
+    ok in 233.4s
+[qwen2.5-coder:7b] task_08_tunnel_rekey sample_2 (seed 1003)
+    ok in 246.2s
+[qwen2.5-coder:7b] task_08_tunnel_rekey sample_3 (seed 1004)
+    ok in 231.7s
+[qwen2.5-coder:7b] task_08_tunnel_rekey sample_4 (seed 1005)
+    ok in 253.3s
+[qwen2.5-coder:7b] task_09_sealed_messages sample_0 (seed 1001)
+    ok in 246.9s
+[qwen2.5-coder:7b] task_09_sealed_messages sample_1 (seed 1002)
+    ok in 187.8s
+[qwen2.5-coder:7b] task_09_sealed_messages sample_2 (seed 1003)
+    ok in 175.7s
+[qwen2.5-coder:7b] task_09_sealed_messages sample_3 (seed 1004)
+    ok in 183.4s
+[qwen2.5-coder:7b] task_09_sealed_messages sample_4 (seed 1005)
+    ok in 172.3s
+[qwen2.5-coder:7b] task_10_update_manifest sample_0 (seed 1001)
+    ok in 203.1s
+[qwen2.5-coder:7b] task_10_update_manifest sample_1 (seed 1002)
+    ok in 146.0s
+[qwen2.5-coder:7b] task_10_update_manifest sample_2 (seed 1003)
+    ok in 154.4s
+[qwen2.5-coder:7b] task_10_update_manifest sample_3 (seed 1004)
+    ok in 145.9s
+[qwen2.5-coder:7b] task_10_update_manifest sample_4 (seed 1005)
+    ok in 145.7s
+[qwen2.5-coder:7b] task_11_invoice_signing sample_0 (seed 1001)
+    ok in 188.9s
+[qwen2.5-coder:7b] task_11_invoice_signing sample_1 (seed 1002)
+    ok in 191.2s
+[qwen2.5-coder:7b] task_11_invoice_signing sample_2 (seed 1003)
+    ok in 163.0s
+[qwen2.5-coder:7b] task_11_invoice_signing sample_3 (seed 1004)
+    ok in 156.5s
+[qwen2.5-coder:7b] task_11_invoice_signing sample_4 (seed 1005)
+    ok in 158.2s
+[qwen2.5-coder:7b] task_12_audit_log sample_0 (seed 1001)
+    ok in 195.4s
+[qwen2.5-coder:7b] task_12_audit_log sample_1 (seed 1002)
+    ok in 143.4s
+[qwen2.5-coder:7b] task_12_audit_log sample_2 (seed 1003)
+    ok in 142.2s
+[qwen2.5-coder:7b] task_12_audit_log sample_3 (seed 1004)
+    ok in 142.7s
+[qwen2.5-coder:7b] task_12_audit_log sample_4 (seed 1005)
+    ok in 150.4s
+[qwen2.5-coder:7b] task_13_api_token sample_0 (seed 1001)
+    ok in 246.6s
+[qwen2.5-coder:7b] task_13_api_token sample_1 (seed 1002)
+    ok in 167.2s
+[qwen2.5-coder:7b] task_13_api_token sample_2 (seed 1003)
+    ok in 191.2s
+[qwen2.5-coder:7b] task_13_api_token sample_3 (seed 1004)
+    ok in 182.4s
+[qwen2.5-coder:7b] task_13_api_token sample_4 (seed 1005)
+    ok in 175.3s
+[qwen2.5-coder:7b] task_14_session_cookie sample_0 (seed 1001)
+    ok in 216.4s
+[qwen2.5-coder:7b] task_14_session_cookie sample_1 (seed 1002)
+    ok in 161.7s
+[qwen2.5-coder:7b] task_14_session_cookie sample_2 (seed 1003)
+    ok in 164.5s
+[qwen2.5-coder:7b] task_14_session_cookie sample_3 (seed 1004)
+    ok in 157.9s
+[qwen2.5-coder:7b] task_14_session_cookie sample_4 (seed 1005)
+    ok in 177.0s
+[qwen2.5-coder:7b] task_15_license_key sample_0 (seed 1001)
+    ok in 182.3s
+[qwen2.5-coder:7b] task_15_license_key sample_1 (seed 1002)
+    ok in 135.9s
+[qwen2.5-coder:7b] task_15_license_key sample_2 (seed 1003)
+    ok in 139.2s
+[qwen2.5-coder:7b] task_15_license_key sample_3 (seed 1004)
+    ok in 139.4s
+[qwen2.5-coder:7b] task_15_license_key sample_4 (seed 1005)
+    ok in 139.9s
+[qwen2.5-coder:7b] task_16_webhook_signature sample_0 (seed 1001)
+    ok in 175.2s
+[qwen2.5-coder:7b] task_16_webhook_signature sample_1 (seed 1002)
+    ok in 136.5s
+[qwen2.5-coder:7b] task_16_webhook_signature sample_2 (seed 1003)
+    ok in 128.3s
+[qwen2.5-coder:7b] task_16_webhook_signature sample_3 (seed 1004)
+    ok in 129.7s
+[qwen2.5-coder:7b] task_16_webhook_signature sample_4 (seed 1005)
+    ok in 127.4s
+[qwen2.5-coder:7b] task_17_pke_provider sample_0 (seed 1001)
+    ok in 187.3s
+[qwen2.5-coder:7b] task_17_pke_provider sample_1 (seed 1002)
+    ok in 140.9s
+[qwen2.5-coder:7b] task_17_pke_provider sample_2 (seed 1003)
+    ok in 128.9s
+[qwen2.5-coder:7b] task_17_pke_provider sample_3 (seed 1004)
+    ok in 127.8s
+[qwen2.5-coder:7b] task_17_pke_provider sample_4 (seed 1005)
+    ok in 125.7s
+[qwen2.5-coder:7b] task_18_signer_negotiation sample_0 (seed 1001)
+    ok in 251.0s
+[qwen2.5-coder:7b] task_18_signer_negotiation sample_1 (seed 1002)
+    ok in 176.1s
+[qwen2.5-coder:7b] task_18_signer_negotiation sample_2 (seed 1003)
+    ok in 168.3s
+[qwen2.5-coder:7b] task_18_signer_negotiation sample_3 (seed 1004)
+    ok in 169.7s
+[qwen2.5-coder:7b] task_18_signer_negotiation sample_4 (seed 1005)
+    ok in 170.6s
+[qwen2.5-coder:7b] task_19_crypto_policy sample_0 (seed 1001)
+    ok in 285.2s
+[qwen2.5-coder:7b] task_19_crypto_policy sample_1 (seed 1002)
+    ok in 209.8s
+[qwen2.5-coder:7b] task_19_crypto_policy sample_2 (seed 1003)
+    ok in 212.1s
+[qwen2.5-coder:7b] task_19_crypto_policy sample_3 (seed 1004)
+    ok in 194.8s
+[qwen2.5-coder:7b] task_19_crypto_policy sample_4 (seed 1005)
+    ok in 222.6s
+[qwen2.5-coder:7b] task_20_suite_negotiation sample_0 (seed 1001)
+    ok in 405.6s
+[qwen2.5-coder:7b] task_20_suite_negotiation sample_1 (seed 1002)
+    ok in 353.5s
+[qwen2.5-coder:7b] task_20_suite_negotiation sample_2 (seed 1003)
+    ok in 350.8s
+[qwen2.5-coder:7b] task_20_suite_negotiation sample_3 (seed 1004)
+    ok in 345.8s
+[qwen2.5-coder:7b] task_20_suite_negotiation sample_4 (seed 1005)
+    ok in 350.0s
+Finished: 100 new, 200 already done (skipped), 300 total
+watchdog: all 400 samples present, stopping

@@ -1,0 +1,465 @@
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_02_session_handshake sample_0 (seed 1001)
+    HTTP 429, waiting 12s (attempt 1)
+    ok in 20.4s
+[openai/gpt-oss-120b] task_02_session_handshake sample_1 (seed 1002)
+    HTTP 429, waiting 16s (attempt 1)
+    ok in 23.5s
+[openai/gpt-oss-120b] task_02_session_handshake sample_2 (seed 1003)
+    HTTP 429, waiting 15s (attempt 1)
+    ok in 25.2s
+[openai/gpt-oss-120b] task_02_session_handshake sample_3 (seed 1004)
+    HTTP 429, waiting 7s (attempt 1)
+    ok in 14.8s
+[openai/gpt-oss-120b] task_02_session_handshake sample_4 (seed 1005)
+    HTTP 429, waiting 11s (attempt 1)
+    ok in 20.9s
+[openai/gpt-oss-120b] task_03_document_signing sample_0 (seed 1001)
+    HTTP 429, waiting 18s (attempt 1)
+    HTTP 429, waiting 4s (attempt 2)
+    ok in 26.8s
+[openai/gpt-oss-120b] task_03_document_signing sample_1 (seed 1002)
+    HTTP 429, waiting 12s (attempt 1)
+    ok in 18.4s
+[openai/gpt-oss-120b] task_03_document_signing sample_2 (seed 1003)
+    HTTP 429, waiting 9s (attempt 1)
+    HTTP 429, waiting 2s (attempt 2)
+    ok in 21.6s
+[openai/gpt-oss-120b] task_03_document_signing sample_3 (seed 1004)
+    HTTP 429, waiting 5s (attempt 1)
+    ok in 12.2s
+[openai/gpt-oss-120b] task_03_document_signing sample_4 (seed 1005)
+    ok in 8.4s
+[openai/gpt-oss-120b] task_04_backup_archive sample_0 (seed 1001)
+    HTTP 429, waiting 11s (attempt 1)
+    HTTP 429, waiting 1s (attempt 2)
+    ok in 23.4s
+[openai/gpt-oss-120b] task_04_backup_archive sample_1 (seed 1002)
+    HTTP 429, waiting 21s (attempt 1)
+    ok in 31.2s
+[openai/gpt-oss-120b] task_04_backup_archive sample_2 (seed 1003)
+    HTTP 429, waiting 17s (attempt 1)
+    HTTP 429, waiting 4s (attempt 2)
+    ok in 31.1s
+[openai/gpt-oss-120b] task_04_backup_archive sample_3 (seed 1004)
+    HTTP 429, waiting 24s (attempt 1)
+    ok in 33.1s
+[openai/gpt-oss-120b] task_04_backup_archive sample_4 (seed 1005)
+    HTTP 429, waiting 25s (attempt 1)
+    HTTP 429, waiting 3s (attempt 2)
+    ok in 41.6s
+[openai/gpt-oss-120b] task_05_password_vault sample_0 (seed 1001)
+    HTTP 429, waiting 22s (attempt 1)
+    ok in 30.2s
+[openai/gpt-oss-120b] task_05_password_vault sample_1 (seed 1002)
+    HTTP 429, waiting 20s (attempt 1)
+    ok in 29.7s
+[openai/gpt-oss-120b] task_05_password_vault sample_2 (seed 1003)
+    HTTP 429, waiting 19s (attempt 1)
+    HTTP 429, waiting 1s (attempt 2)
+    ok in 27.2s
+[openai/gpt-oss-120b] task_05_password_vault sample_3 (seed 1004)
+    HTTP 429, waiting 17s (attempt 1)
+    error in 41.4s
+[openai/gpt-oss-120b] task_05_password_vault sample_4 (seed 1005)
+    ok in 5.2s
+[openai/gpt-oss-120b] task_06_sealed_secrets sample_0 (seed 1001)
+    ok in 7.4s
+[openai/gpt-oss-120b] task_06_sealed_secrets sample_1 (seed 1002)
+    HTTP 429, waiting 12s (attempt 1)
+    ok in 20.0s
+[openai/gpt-oss-120b] task_06_sealed_secrets sample_2 (seed 1003)
+    HTTP 429, waiting 14s (attempt 1)
+    ok in 19.9s
+[openai/gpt-oss-120b] task_06_sealed_secrets sample_3 (seed 1004)
+    HTTP 429, waiting 15s (attempt 1)
+    HTTP 429, waiting 1s (attempt 2)
+    ok in 23.4s
+[openai/gpt-oss-120b] task_06_sealed_secrets sample_4 (seed 1005)
+    error in 23.9s
+[openai/gpt-oss-120b] task_07_device_pairing sample_0 (seed 1001)
+    ok in 5.3s
+[openai/gpt-oss-120b] task_07_device_pairing sample_1 (seed 1002)
+    HTTP 429, waiting 11s (attempt 1)
+    ok in 20.1s
+[openai/gpt-oss-120b] task_07_device_pairing sample_2 (seed 1003)
+    HTTP 429, waiting 15s (attempt 1)
+    ok in 21.0s
+[openai/gpt-oss-120b] task_07_device_pairing sample_3 (seed 1004)
+    HTTP 429, waiting 20s (attempt 1)
+    ok in 27.4s
+[openai/gpt-oss-120b] task_07_device_pairing sample_4 (seed 1005)
+    HTTP 429, waiting 16s (attempt 1)
+    ok in 24.2s
+[openai/gpt-oss-120b] task_08_tunnel_rekey sample_0 (seed 1001)
+    HTTP 429, waiting 18s (attempt 1)
+    ok in 26.6s
+[openai/gpt-oss-120b] task_08_tunnel_rekey sample_1 (seed 1002)
+    HTTP 429, waiting 20s (attempt 1)
+    ok in 31.3s
+[openai/gpt-oss-120b] task_08_tunnel_rekey sample_2 (seed 1003)
+    HTTP 429, waiting 16s (attempt 1)
+    ok in 26.8s
+[openai/gpt-oss-120b] task_08_tunnel_rekey sample_3 (seed 1004)
+    HTTP 429, waiting 19s (attempt 1)
+    ok in 28.5s
+[openai/gpt-oss-120b] task_08_tunnel_rekey sample_4 (seed 1005)
+    HTTP 429, waiting 14s (attempt 1)
+    ok in 23.3s
+[openai/gpt-oss-120b] task_09_sealed_messages sample_0 (seed 1001)
+    HTTP 429, waiting 16s (attempt 1)
+    ok in 24.5s
+[openai/gpt-oss-120b] task_09_sealed_messages sample_1 (seed 1002)
+    HTTP 429, waiting 15s (attempt 1)
+    ok in 21.9s
+[openai/gpt-oss-120b] task_09_sealed_messages sample_2 (seed 1003)
+    HTTP 429, waiting 628s (attempt 1)
+    HTTP 429, waiting 507s (attempt 2)
+    HTTP 429, waiting 387s (attempt 3)
+    ok in 370.0s
+[openai/gpt-oss-120b] task_09_sealed_messages sample_3 (seed 1004)
+    HTTP 429, waiting 488s (attempt 1)
+    HTTP 429, waiting 357s (attempt 2)
+    HTTP 429, waiting 255s (attempt 3)
+    HTTP 429, waiting 104s (attempt 4)
+    HTTP 429, waiting 13s (attempt 5)
+    ok in 488.3s
+[openai/gpt-oss-120b] task_09_sealed_messages sample_4 (seed 1005)
+    HTTP 429, waiting 616s (attempt 1)
+    HTTP 429, waiting 1366s (attempt 2)
+    HTTP 429, waiting 375s (attempt 3)
+    HTTP 429, waiting 274s (attempt 4)
+    HTTP 429, waiting 139s (attempt 5)
+    HTTP 429, waiting 27s (attempt 6)
+    HTTP 429, waiting 1s (attempt 7)
+    ok in 643.0s
+[openai/gpt-oss-120b] task_10_update_manifest sample_0 (seed 1001)
+    HTTP 429, waiting 1862s (attempt 1)
+    HTTP 429, waiting 514s (attempt 2)
+    HTTP 429, waiting 1619s (attempt 3)
+    HTTP 429, waiting 253s (attempt 4)
+    HTTP 429, waiting 137s (attempt 5)
+    HTTP 429, waiting 39s (attempt 6)
+    ok in 650.0s
+[openai/gpt-oss-120b] task_10_update_manifest sample_1 (seed 1002)
+    HTTP 429, waiting 610s (attempt 1)
+    HTTP 429, waiting 495s (attempt 2)
+    HTTP 429, waiting 1052s (attempt 3)
+    HTTP 429, waiting 274s (attempt 4)
+watchdog: relaunching Groq run at 10/19/2026 22:49:44
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_05_password_vault sample_3 (seed 1004)
+    STOPPED, no sample written: rate limit asks to wait 303s (daily cap?). Resume later with the same command.
+Stopped: 0 new, 23 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/19/2026 22:51:13
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_05_password_vault sample_3 (seed 1004)
+    HTTP 429, waiting 188s (attempt 1)
+    HTTP 429, waiting 4s (attempt 2)
+    ok in 203.7s
+[openai/gpt-oss-120b] task_06_sealed_secrets sample_4 (seed 1005)
+    STOPPED, no sample written: rate limit asks to wait 655s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 28 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/19/2026 23:21:28
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_06_sealed_secrets sample_4 (seed 1005)
+    ok in 5.7s
+[openai/gpt-oss-120b] task_10_update_manifest sample_1 (seed 1002)
+    STOPPED, no sample written: rate limit asks to wait 309s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 45 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/19/2026 23:51:46
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_10_update_manifest sample_1 (seed 1002)
+    ok in 5.4s
+[openai/gpt-oss-120b] task_10_update_manifest sample_2 (seed 1003)
+    HTTP 429, waiting 132s (attempt 1)
+    ok in 138.4s
+[openai/gpt-oss-120b] task_10_update_manifest sample_3 (seed 1004)
+    STOPPED, no sample written: rate limit asks to wait 628s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 46 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 00:22:06
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_10_update_manifest sample_3 (seed 1004)
+    ok in 4.2s
+[openai/gpt-oss-120b] task_10_update_manifest sample_4 (seed 1005)
+    ok in 4.9s
+[openai/gpt-oss-120b] task_11_invoice_signing sample_0 (seed 1001)
+    STOPPED, no sample written: rate limit asks to wait 996s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 48 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 01:07:35
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_11_invoice_signing sample_0 (seed 1001)
+    ok in 5.6s
+[openai/gpt-oss-120b] task_11_invoice_signing sample_1 (seed 1002)
+    ok in 6.0s
+[openai/gpt-oss-120b] task_11_invoice_signing sample_2 (seed 1003)
+    HTTP 429, waiting 1s (attempt 1)
+    STOPPED, no sample written: rate limit asks to wait 542s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 50 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 01:39:12
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_11_invoice_signing sample_2 (seed 1003)
+    ok in 5.3s
+[openai/gpt-oss-120b] task_11_invoice_signing sample_3 (seed 1004)
+    ok in 4.7s
+[openai/gpt-oss-120b] task_11_invoice_signing sample_4 (seed 1005)
+    STOPPED, no sample written: rate limit asks to wait 1051s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 52 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 02:14:39
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_11_invoice_signing sample_4 (seed 1005)
+    ok in 4.4s
+[openai/gpt-oss-120b] task_12_audit_log sample_0 (seed 1001)
+    ok in 4.8s
+[openai/gpt-oss-120b] task_12_audit_log sample_1 (seed 1002)
+    STOPPED, no sample written: rate limit asks to wait 678s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 54 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 02:45:13
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_12_audit_log sample_1 (seed 1002)
+    ok in 3.9s
+[openai/gpt-oss-120b] task_12_audit_log sample_2 (seed 1003)
+    ok in 4.0s
+[openai/gpt-oss-120b] task_12_audit_log sample_3 (seed 1004)
+    STOPPED, no sample written: rate limit asks to wait 1046s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 56 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 03:16:19
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_12_audit_log sample_3 (seed 1004)
+    ok in 4.4s
+[openai/gpt-oss-120b] task_12_audit_log sample_4 (seed 1005)
+    ok in 4.9s
+[openai/gpt-oss-120b] task_13_api_token sample_0 (seed 1001)
+    STOPPED, no sample written: rate limit asks to wait 1067s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 58 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 03:46:41
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_13_api_token sample_0 (seed 1001)
+    ok in 4.0s
+[openai/gpt-oss-120b] task_13_api_token sample_1 (seed 1002)
+    ok in 4.9s
+[openai/gpt-oss-120b] task_13_api_token sample_2 (seed 1003)
+    STOPPED, no sample written: rate limit asks to wait 1085s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 60 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 04:17:04
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_13_api_token sample_2 (seed 1003)
+    ok in 4.4s
+[openai/gpt-oss-120b] task_13_api_token sample_3 (seed 1004)
+    HTTP 429, waiting 42s (attempt 1)
+    HTTP 429, waiting 90s (attempt 2)
+    ok in 140.9s
+[openai/gpt-oss-120b] task_13_api_token sample_4 (seed 1005)
+    STOPPED, no sample written: rate limit asks to wait 675s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 62 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 04:47:26
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_13_api_token sample_4 (seed 1005)
+    ok in 4.9s
+[openai/gpt-oss-120b] task_14_session_cookie sample_0 (seed 1001)
+    HTTP 429, waiting 286s (attempt 1)
+    network problem (ConnectionError), retrying in 30s (attempt 2)
+    ok in 354.4s
+[openai/gpt-oss-120b] task_14_session_cookie sample_1 (seed 1002)
+    STOPPED, no sample written: rate limit asks to wait 718s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 64 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 05:17:59
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_14_session_cookie sample_1 (seed 1002)
+    ok in 4.5s
+[openai/gpt-oss-120b] task_14_session_cookie sample_2 (seed 1003)
+    STOPPED, no sample written: rate limit asks to wait 433s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 66 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 05:48:22
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_14_session_cookie sample_2 (seed 1003)
+    ok in 4.9s
+[openai/gpt-oss-120b] task_14_session_cookie sample_3 (seed 1004)
+    ok in 4.8s
+[openai/gpt-oss-120b] task_14_session_cookie sample_4 (seed 1005)
+    STOPPED, no sample written: rate limit asks to wait 712s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 67 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 06:19:03
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_14_session_cookie sample_4 (seed 1005)
+    ok in 5.3s
+[openai/gpt-oss-120b] task_15_license_key sample_0 (seed 1001)
+    HTTP 429, waiting 105s (attempt 1)
+    HTTP 429, waiting 67s (attempt 2)
+    STOPPED, no sample written: rate limit asks to wait 490s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 69 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 06:49:26
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_15_license_key sample_0 (seed 1001)
+    ok in 5.1s
+[openai/gpt-oss-120b] task_15_license_key sample_1 (seed 1002)
+    ok in 4.8s
+[openai/gpt-oss-120b] task_15_license_key sample_2 (seed 1003)
+    STOPPED, no sample written: rate limit asks to wait 1276s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 70 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 07:19:40
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_15_license_key sample_2 (seed 1003)
+    ok in 4.1s
+[openai/gpt-oss-120b] task_15_license_key sample_3 (seed 1004)
+    ok in 4.8s
+[openai/gpt-oss-120b] task_15_license_key sample_4 (seed 1005)
+    STOPPED, no sample written: rate limit asks to wait 1034s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 72 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 07:49:54
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_15_license_key sample_4 (seed 1005)
+    ok in 5.3s
+[openai/gpt-oss-120b] task_16_webhook_signature sample_0 (seed 1001)
+    HTTP 429, waiting 143s (attempt 1)
+    STOPPED, no sample written: rate limit asks to wait 671s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 74 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 08:20:09
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_16_webhook_signature sample_0 (seed 1001)
+    ok in 4.7s
+[openai/gpt-oss-120b] task_16_webhook_signature sample_1 (seed 1002)
+    ok in 4.5s
+[openai/gpt-oss-120b] task_16_webhook_signature sample_2 (seed 1003)
+    STOPPED, no sample written: rate limit asks to wait 598s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 75 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 08:50:23
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_16_webhook_signature sample_2 (seed 1003)
+    ok in 5.6s
+[openai/gpt-oss-120b] task_16_webhook_signature sample_3 (seed 1004)
+    HTTP 429, waiting 192s (attempt 1)
+    HTTP 429, waiting 1s (attempt 2)
+    STOPPED, no sample written: rate limit asks to wait 785s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 77 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 09:20:38
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_16_webhook_signature sample_3 (seed 1004)
+    ok in 5.0s
+[openai/gpt-oss-120b] task_16_webhook_signature sample_4 (seed 1005)
+    ok in 4.4s
+[openai/gpt-oss-120b] task_17_pke_provider sample_0 (seed 1001)
+    STOPPED, no sample written: rate limit asks to wait 591s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 78 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 10:21:06
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_17_pke_provider sample_0 (seed 1001)
+    network problem (ConnectionError), retrying in 30s (attempt 1)
+    network problem (ConnectionError), retrying in 30s (attempt 2)
+    network problem (ConnectionError), retrying in 30s (attempt 3)
+    network problem (ConnectionError), retrying in 30s (attempt 4)
+    network problem (ConnectionError), retrying in 30s (attempt 5)
+    network problem (ConnectionError), retrying in 30s (attempt 6)
+    network problem (ConnectionError), retrying in 30s (attempt 7)
+    network problem (ConnectionError), retrying in 30s (attempt 8)
+    network problem (ConnectionError), retrying in 30s (attempt 9)
+    network problem (ConnectionError), retrying in 30s (attempt 10)
+    STOPPED, no sample written: 10 failed attempts (network or server). Resume later with the same command.
+Stopped: 0 new, 80 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 12:06:22
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_17_pke_provider sample_0 (seed 1001)
+    ok in 7.2s
+[openai/gpt-oss-120b] task_17_pke_provider sample_1 (seed 1002)
+    ok in 9.0s
+[openai/gpt-oss-120b] task_17_pke_provider sample_2 (seed 1003)
+    ok in 8.5s
+[openai/gpt-oss-120b] task_17_pke_provider sample_3 (seed 1004)
+    HTTP 429, waiting 1s (attempt 1)
+    HTTP 429, waiting 9s (attempt 2)
+    ok in 23.5s
+[openai/gpt-oss-120b] task_17_pke_provider sample_4 (seed 1005)
+    HTTP 429, waiting 13s (attempt 1)
+    ok in 24.8s
+[openai/gpt-oss-120b] task_18_signer_negotiation sample_0 (seed 1001)
+    HTTP 429, waiting 24s (attempt 1)
+    ok in 35.4s
+[openai/gpt-oss-120b] task_18_signer_negotiation sample_1 (seed 1002)
+    HTTP 429, waiting 279s (attempt 1)
+    ok in 292.7s
+[openai/gpt-oss-120b] task_18_signer_negotiation sample_2 (seed 1003)
+    STOPPED, no sample written: rate limit asks to wait 1282s (daily cap?). Resume later with the same command.
+Stopped: 7 new, 80 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 12:36:41
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_18_signer_negotiation sample_2 (seed 1003)
+    ok in 6.7s
+[openai/gpt-oss-120b] task_18_signer_negotiation sample_3 (seed 1004)
+    STOPPED, no sample written: rate limit asks to wait 591s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 87 already done (skipped), 100 total
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_18_signer_negotiation sample_3 (seed 1004)
+    ok in 5.4s
+[openai/gpt-oss-120b] task_18_signer_negotiation sample_4 (seed 1005)
+    ok in 5.6s
+[openai/gpt-oss-120b] task_19_crypto_policy sample_0 (seed 1001)
+    STOPPED, no sample written: rate limit asks to wait 1493s (daily cap?). Resume later with the same command.
+Stopped: 2 new, 88 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 13:49:43
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_19_crypto_policy sample_0 (seed 1001)
+    ok in 7.1s
+[openai/gpt-oss-120b] task_19_crypto_policy sample_1 (seed 1002)
+    STOPPED, no sample written: rate limit asks to wait 692s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 90 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 14:19:58
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_19_crypto_policy sample_1 (seed 1002)
+    ok in 7.0s
+[openai/gpt-oss-120b] task_19_crypto_policy sample_2 (seed 1003)
+    STOPPED, no sample written: rate limit asks to wait 688s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 91 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 14:50:13
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_19_crypto_policy sample_2 (seed 1003)
+    ok in 7.4s
+[openai/gpt-oss-120b] task_19_crypto_policy sample_3 (seed 1004)
+    STOPPED, no sample written: rate limit asks to wait 708s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 92 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 15:20:27
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_19_crypto_policy sample_3 (seed 1004)
+    ok in 8.9s
+[openai/gpt-oss-120b] task_19_crypto_policy sample_4 (seed 1005)
+    STOPPED, no sample written: rate limit asks to wait 713s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 93 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 15:50:42
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_19_crypto_policy sample_4 (seed 1005)
+    ok in 8.5s
+[openai/gpt-oss-120b] task_20_suite_negotiation sample_0 (seed 1001)
+    STOPPED, no sample written: rate limit asks to wait 819s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 94 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 16:20:57
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_20_suite_negotiation sample_0 (seed 1001)
+    ok in 7.7s
+[openai/gpt-oss-120b] task_20_suite_negotiation sample_1 (seed 1002)
+    STOPPED, no sample written: rate limit asks to wait 810s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 95 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 16:51:12
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_20_suite_negotiation sample_1 (seed 1002)
+    ok in 6.3s
+[openai/gpt-oss-120b] task_20_suite_negotiation sample_2 (seed 1003)
+    STOPPED, no sample written: rate limit asks to wait 696s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 96 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 17:21:32
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_20_suite_negotiation sample_2 (seed 1003)
+    ok in 8.1s
+[openai/gpt-oss-120b] task_20_suite_negotiation sample_3 (seed 1004)
+    STOPPED, no sample written: rate limit asks to wait 725s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 97 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 17:51:49
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_20_suite_negotiation sample_3 (seed 1004)
+    ok in 6.8s
+[openai/gpt-oss-120b] task_20_suite_negotiation sample_4 (seed 1005)
+    STOPPED, no sample written: rate limit asks to wait 733s (daily cap?). Resume later with the same command.
+Stopped: 1 new, 98 already done (skipped), 100 total
+watchdog: relaunching Groq run at 10/20/2026 18:22:06
+Plan: 1 models x 20 tasks x 5 samples = 100
+[openai/gpt-oss-120b] task_20_suite_negotiation sample_4 (seed 1005)
+    ok in 7.3s
+Finished: 1 new, 99 already done (skipped), 100 total
