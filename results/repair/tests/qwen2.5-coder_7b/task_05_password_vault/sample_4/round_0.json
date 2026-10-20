@@ -1,0 +1,18 @@
+{
+  "round": 0,
+  "source": "results\\raw\\qwen2.5-coder_7b\\task_05_password_vault\\sample_4.py",
+  "eval": {
+    "all_tests_pass": true,
+    "tests_passed": 10,
+    "tests_failed": 0,
+    "uses_oqs": true,
+    "gate_verdict": "FAIL",
+    "gate_flags": [
+      "A1",
+      "P2"
+    ],
+    "adv_load_error": null,
+    "feedback_tests": "Test suite: all 10 tests passed.",
+    "feedback_gate": "Test suite: all 10 tests passed.\n\nSecurity checker: 5 finding(s):\n- [P2] line 15: RSA key generation or encryption imported after PQC migration. Classical asymmetric operations must be removed.\n- [P2] line 15: OAEP padding import present \u00e2\u20ac\u201d RSA encryption still in use.\n- [P2] line 19: padding.OAEP used \u00e2\u20ac\u201d RSA encryption still active after PQC migration.\n- [P2] line 29: rsa.generate_private_key() called after PQC migration.\n- [A1] With liboqs unavailable or failing, the code still works by falling back to classical cryptography."
+  }
+}
