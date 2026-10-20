@@ -1,0 +1,192 @@
+"""Encrypted backup archives that several recipients can restore.
+
+The archive key (AES‑256‑GCM) is wrapped for each recipient with the
+post‑quantum KEM **ML‑KEM‑768** (liboqs).  For every recipient we
+encapsulate a random shared secret, then encrypt the archive key with
+that secret using AES‑GCM.  The wrapped value stored in the archive is:
+
+    2‑byte big‑endian ciphertext length ||
+    ciphertext (from KEM) ||
+    nonce (12 bytes for AES‑GCM) ||
+    encrypted archive key
+
+All other logic (file encryption, JSON layout, etc.) stays unchanged.
+
+Public API (unchanged):
+    * generate_keypair() → (public_key, private_key)   – both as ``bytes``
+    * create_archive(recipients, files) → ``bytes``
+    * list_files(archive) → ``list[str]``
+    * restore_archive(archive, recipient, private_key) → ``dict``
+
+The implementation uses ``liboqs`` for the KEM and ``cryptography`` for the
+symmetric encryption.
+"""
+
+import base64
+import json
+import os
+
+import oqs
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+
+# --------------------------------------------------------------------------- #
+# Helper functions
+# --------------------------------------------------------------------------- #
+def _b64(data: bytes) -> str:
+    """Base‑64 encode ``data`` and return a UTF‑8 string."""
+    return base64.b64encode(data).decode()
+
+
+def _unb64(text: str) -> bytes:
+    """Decode a base‑64 string back to ``bytes``."""
+    return base64.b64decode(text)
+
+
+# --------------------------------------------------------------------------- #
+# Key‑pair generation (ML‑KEM‑768)
+# --------------------------------------------------------------------------- #
+def generate_keypair():
+    """
+    Generate a post‑quantum key‑pair.
+
+    Returns
+    -------
+    (public_key, private_key) : tuple[bytes, bytes]
+        * ``public_key`` – bytes that can be stored/transmitted.
+        * ``private_key`` – the secret key (also bytes) used for decapsulation.
+    """
+    kem = oqs.KeyEncapsulation("ML-KEM-768")
+    public_key = kem.generate_keypair()          # bytes
+    private_key = kem.export_secret_key()        # bytes
+    return public_key, private_key
+
+
+# --------------------------------------------------------------------------- #
+# Wrapping / unwrapping of the archive key
+# --------------------------------------------------------------------------- #
+def _wrap_for(public_key: bytes, recipient: str, archive_key: bytes) -> bytes:
+    """
+    Wrap ``archive_key`` for a single recipient using ML‑KEM‑768.
+
+    The returned blob is:
+        2‑byte length of the KEM ciphertext ||
+        KEM ciphertext ||
+        12‑byte AES‑GCM nonce ||
+        AES‑GCM ciphertext (the encrypted archive key)
+
+    The whole blob is later base‑64 encoded for JSON storage.
+    """
+    # 1️⃣  Encapsulate a shared secret for the recipient.
+    kem = oqs.KeyEncapsulation("ML-KEM-768")
+    ciphertext, shared_secret = kem.encap_secret(public_key)   # 32‑byte secret
+
+    # 2️⃣  Encrypt the archive key with the shared secret (AES‑GCM).
+    nonce = os.urandom(12)
+    aead = AESGCM(shared_secret)
+    enc_key = aead.encrypt(nonce, archive_key, None)          # no AAD
+
+    # 3️⃣  Assemble the wrapped blob.
+    ct_len = len(ciphertext).to_bytes(2, "big")               # 2‑byte length prefix
+    return ct_len + ciphertext + nonce + enc_key
+
+
+def _unwrap(private_key: bytes, recipient: str, wrapped: bytes) -> bytes:
+    """
+    Recover the original ``archive_key`` for ``recipient`` using the
+    corresponding private key.
+
+    ``wrapped`` must be the blob produced by ``_wrap_for``.
+    """
+    # 1️⃣  Split the blob.
+    ct_len = int.from_bytes(wrapped[:2], "big")
+    ciphertext = wrapped[2 : 2 + ct_len]
+    rest = wrapped[2 + ct_len :]
+    nonce = rest[:12]
+    enc_key = rest[12:]
+
+    # 2️⃣  Decapsulate to obtain the shared secret.
+    kem = oqs.KeyEncapsulation("ML-KEM-768", secret_key=private_key)
+    shared_secret = kem.decap_secret(ciphertext)            # 32‑byte secret
+
+    # 3️⃣  Decrypt the archive key.
+    aead = AESGCM(shared_secret)
+    archive_key = aead.decrypt(nonce, enc_key, None)
+    return archive_key
+
+
+# --------------------------------------------------------------------------- #
+# Archive creation / restoration
+# --------------------------------------------------------------------------- #
+def create_archive(recipients: dict[str, bytes], files: dict[str, bytes]) -> bytes:
+    """
+    Create an encrypted archive.
+
+    Parameters
+    ----------
+    recipients : dict[name, public_key]
+        Mapping of recipient identifiers to their ML‑KEM public keys.
+    files : dict[filename, data]
+        Mapping of file names to the raw file contents.
+
+    Returns
+    -------
+    bytes
+        JSON‑encoded archive (UTF‑8).
+    """
+    # Random AES‑256‑GCM key that protects all files.
+    archive_key = AESGCM.generate_key(bit_length=256)
+    aead = AESGCM(archive_key)
+
+    # Encrypt each file (nonce + ciphertext) and store as base‑64.
+    enc_files = {}
+    for filename, data in files.items():
+        nonce = os.urandom(12)
+        ct = aead.encrypt(nonce, data, filename.encode())
+        enc_files[filename] = _b64(nonce + ct)
+
+    # Wrap the archive key for every recipient.
+    wrapped = {
+        name: _b64(_wrap_for(pk, name, archive_key))
+        for name, pk in recipients.items()
+    }
+
+    # Assemble final JSON structure.
+    archive_dict = {"version": 1, "recipients": wrapped, "files": enc_files}
+    return json.dumps(archive_dict).encode()
+
+
+def list_files(archive: bytes) -> list[str]:
+    """
+    Return the list of file names stored in the archive (no decryption needed).
+    """
+    return sorted(json.loads(archive)["files"])
+
+
+def restore_archive(
+    archive: bytes, recipient: str, private_key: bytes
+) -> dict[str, bytes]:
+    """
+    Decrypt all files for ``recipient`` using their private key.
+
+    Raises
+    ------
+    KeyError
+        If ``recipient`` is not listed in the archive.
+    Any exception from the underlying cryptographic operations if the
+    archive is malformed or tampered with.
+    """
+    doc = json.loads(archive)
+
+    # 1️⃣  Recover the archive key.
+    wrapped_blob = _unb64(doc["recipients"][recipient])
+    archive_key = _unwrap(private_key, recipient, wrapped_blob)
+
+    # 2️⃣  Decrypt each file.
+    aead = AESGCM(archive_key)
+    files = {}
+    for filename, blob in doc["files"].items():
+        raw = _unb64(blob)
+        nonce, ct = raw[:12], raw[12:]
+        files[filename] = aead.decrypt(nonce, ct, filename.encode())
+
+    return files

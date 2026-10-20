@@ -1,0 +1,100 @@
+# PQ-GATE experiment configuration.
+# Every run reads its settings from here so results are reproducible.
+
+ollama:
+  url: http://localhost:11434
+  timeout_s: 900        # per request (raised from 180 on 2026-10-14 after a timing probe: ~220-270 s per sample on CPU)
+  retries_on_timeout: 1 # retry once, then record the sample as "timeout"
+
+models:
+  - name: gemma3:4b
+    family: Google Gemma 3 (general-purpose)
+  - name: qwen2.5-coder:3b
+    family: Alibaba Qwen 2.5 Coder (code-specialised)
+  - name: qwen2.5-coder:7b
+    family: Alibaba Qwen 2.5 Coder 7B (code-specialised, larger)
+    added: 2026-10-15  # after the gemma preview showed very few liboqs migrations; see PROGRESS.md Session 5
+  - name: openai/gpt-oss-120b
+    family: OpenAI gpt-oss 120B (open-weight, large), served by Groq
+    provider: groq
+    max_completion_tokens: 8192  # includes the model's reasoning tokens
+    timeout_s: 300
+    added: 2026-10-19  # large-model condition; chosen before any of its outputs existed (PROGRESS.md Session 7)
+  # Optional third "large API model" (e.g. Groq or Gemini free tier).
+  # Not set up. Only enable if asked.
+  # - name: <api-model-name>
+  #   family: <provider>
+  #   provider: api
+
+generation:
+  temperature: 0.2
+  num_ctx: 8192
+  num_predict: 3072     # output token cap (largest original is ~1500 tokens); stops runaway generations
+  samples_per_task: 5
+  # One fixed seed per sample index (sample_0 uses seeds[0], ...).
+  seeds: [1001, 1002, 1003, 1004, 1005]
+
+prompts:
+  migrate: >-
+    Migrate this code from classical cryptography to post-quantum cryptography
+    using liboqs (ML-KEM / ML-DSA). Keep the same public functions so existing
+    tests still pass. Return only the full Python file.
+  # API reference card, appended after the instruction above for EVERY model and sample.
+  # Decided 2026-10-12, before any migration run (see PROGRESS.md). It shows API usage
+  # only, with no security advice. Do not edit once Phase 3 has started.
+  api_card: |
+    API reference (liboqs-python `oqs`, and `cryptography`):
+    import oqs
+    # ML-KEM-768
+    kem = oqs.KeyEncapsulation("ML-KEM-768")
+    public_key = kem.generate_keypair()            # bytes
+    secret_key = kem.export_secret_key()           # bytes
+    kem2 = oqs.KeyEncapsulation("ML-KEM-768", secret_key=secret_key)
+    ciphertext, shared_secret = oqs.KeyEncapsulation("ML-KEM-768").encap_secret(public_key)
+    shared_secret = kem2.decap_secret(ciphertext)  # 32 bytes
+    # ML-DSA-65
+    sig = oqs.Signature("ML-DSA-65")
+    public_key = sig.generate_keypair()
+    secret_key = sig.export_secret_key()
+    signature = oqs.Signature("ML-DSA-65", secret_key=secret_key).sign(message)
+    ok = oqs.Signature("ML-DSA-65").verify(message, signature, public_key)  # bool
+    signature = sig.sign_with_ctx_str(message, context)
+    ok = oqs.Signature("ML-DSA-65").verify_with_ctx_str(message, signature, context, public_key)
+    # HKDF (cryptography)
+    from cryptography.hazmat.primitives.kdf.hkdf import HKDF
+    from cryptography.hazmat.primitives import hashes
+    key = HKDF(algorithm=hashes.SHA256(), length=32, salt=None, info=b"...").derive(input_bytes)
+
+repair:
+  max_rounds: 3
+  # Phase 4 prompts (decided 2026-10-21, before any repair output). Identical except that the
+  # gate condition adds the checker's findings. {feedback} is filled in by harness/repair.py.
+  # The API card from `prompts` is appended to both, as in the migration prompt.
+  prompt_tests: >-
+    You migrated the Python file below from classical cryptography to post-quantum
+    cryptography using liboqs. Here is feedback on your migration from running the
+    existing test suite:
+
+
+    {feedback}
+
+
+    Review the file and fix any problems. Keep the same public functions so the existing
+    tests still pass. Return only the full Python file.
+  prompt_gate: >-
+    You migrated the Python file below from classical cryptography to post-quantum
+    cryptography using liboqs. Here is feedback on your migration from running the
+    existing test suite and a security checker:
+
+
+    {feedback}
+
+
+    Review the file and fix any problems. Keep the same public functions so the existing
+    tests still pass. Return only the full Python file.
+
+paths:
+  benchmark: benchmark
+  raw_outputs: results/raw
+  tables: results/tables
+  figures: results/figures
