@@ -1,0 +1,17 @@
+{
+  "round": 0,
+  "source": "results\\raw\\gemma3_4b\\task_03_document_signing\\sample_2.py",
+  "eval": {
+    "all_tests_pass": true,
+    "tests_passed": 12,
+    "tests_failed": 0,
+    "uses_oqs": true,
+    "gate_verdict": "FAIL",
+    "gate_flags": [
+      "P2"
+    ],
+    "adv_load_error": null,
+    "feedback_tests": "Test suite: all 12 tests passed.",
+    "feedback_gate": "Test suite: all 12 tests passed.\n\nSecurity checker: 3 finding(s):\n- [P2] line 9: RSA key generation or encryption imported after PQC migration. Classical asymmetric operations must be removed.\n- [P2] line 9: OAEP padding import present \u00e2\u20ac\u201d RSA encryption still in use.\n- [P2] line 21: rsa.generate_private_key() called after PQC migration."
+  }
+}
