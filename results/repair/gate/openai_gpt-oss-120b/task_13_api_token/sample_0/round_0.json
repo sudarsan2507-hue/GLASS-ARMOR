@@ -1,0 +1,17 @@
+{
+  "round": 0,
+  "source": "results\\raw\\openai_gpt-oss-120b\\task_13_api_token\\sample_0.py",
+  "eval": {
+    "all_tests_pass": true,
+    "tests_passed": 10,
+    "tests_failed": 0,
+    "uses_oqs": true,
+    "gate_verdict": "FAIL",
+    "gate_flags": [
+      "A5"
+    ],
+    "adv_load_error": null,
+    "feedback_tests": "Test suite: all 10 tests passed.",
+    "feedback_gate": "Test suite: all 10 tests passed.\n\nSecurity checker: 1 finding(s):\n- [A5] A signature still verifies after the context, a signed field or part of the message is changed."
+  }
+}
