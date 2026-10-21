@@ -1,0 +1,88 @@
+watchdog: launching local repair at 10/21/2026 00:57:56
+liboqs-python faulthandler is disabled
+11 items x 2 conditions, max 3 rounds
+[tests] gemma3:4b task_03_document_signing s1 round 1
+    ok | tests pass | gate FAIL ['P2'] | unchanged=False
+[tests] gemma3:4b task_03_document_signing s2 round 1
+    ok | tests pass | gate FAIL ['P2'] | unchanged=False
+[tests] gemma3:4b task_03_document_signing s3 round 1
+    ok | tests pass | gate FAIL ['P2'] | unchanged=False
+[tests] gemma3:4b task_12_audit_log s2 round 1
+    ok | tests pass | gate FAIL ['A1', 'P2', 'P3'] | unchanged=False
+[tests] gemma3:4b task_12_audit_log s3 round 1
+    ok | tests pass | gate FAIL ['A1', 'P2', 'P3'] | unchanged=False
+[tests] qwen2.5-coder:3b task_20_suite_negotiation s3 round 1
+Traceback (most recent call last):
+  File "D:\Projects\Quantum_Encryption\pq-gate\harness\repair.py", line 187, in <module>
+    main()
+  File "D:\Projects\Quantum_Encryption\pq-gate\harness\repair.py", line 174, in main
+    log["eval"] = evaluate(task, d / f"round_{k}.py")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Quantum_Encryption\pq-gate\harness\repair.py", line 88, in evaluate
+    static = run_static_batch([path])[str(path.resolve())]
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\Quantum_Encryption\pq-gate\gate\run_gate.py", line 69, in run_static_batch
+    raise StaticError(f"semgrep reported errors: {str(data['errors'])[:300]}")
+gate.run_gate.StaticError: semgrep reported errors: [{'code': 3, 'level': 'warn', 'type': ['PartialParsing', [{'path': 'D:\\Projects\\Quantum_Encryption\\pq-gate\\results\\repair\\tests\\qwen2.5-coder_3b\\task_20_suite_negotiation\\sample_3\\round_1.py', 'start': {'line': 1, 'col': 1, 'offset': 0}, 'end': {'line': 1, 'col': 441, 'offset': 440}}]], 'm
+watchdog: launching local repair at 10/21/2026 01:29:20
+liboqs-python faulthandler is disabled
+11 items x 2 conditions, max 3 rounds
+[tests] qwen2.5-coder:3b task_20_suite_negotiation s3 round 1
+    ok | tests pass | gate FAIL ['A2', 'P2'] | unchanged=True
+[tests] qwen2.5-coder:7b task_05_password_vault s1 round 1
+    ok | tests pass | gate FAIL ['A1', 'P2'] | unchanged=True
+[tests] qwen2.5-coder:7b task_05_password_vault s2 round 1
+    ok | tests FAIL | gate FAIL ['P2'] | unchanged=False
+[tests] qwen2.5-coder:7b task_05_password_vault s2 round 2
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[tests] qwen2.5-coder:7b task_05_password_vault s2 round 3
+    ok | tests FAIL | gate PASS [] | unchanged=True
+[tests] qwen2.5-coder:7b task_05_password_vault s3 round 1
+    ok | tests pass | gate FAIL ['A1', 'P2'] | unchanged=True
+[tests] qwen2.5-coder:7b task_05_password_vault s4 round 1
+    ok | tests pass | gate FAIL ['A1', 'P2'] | unchanged=False
+[tests] qwen2.5-coder:7b task_06_sealed_secrets s4 round 1
+    ok | tests pass | gate FAIL ['A1', 'P2'] | unchanged=True
+[gate] gemma3:4b task_03_document_signing s1 round 1
+    ok | tests pass | gate FAIL ['P2'] | unchanged=False
+[gate] gemma3:4b task_03_document_signing s1 round 2
+    ok | tests pass | gate FAIL ['P2'] | unchanged=True
+[gate] gemma3:4b task_03_document_signing s2 round 1
+    ok | tests pass | gate FAIL ['P2'] | unchanged=False
+[gate] gemma3:4b task_03_document_signing s2 round 2
+    ok | tests pass | gate FAIL ['P2'] | unchanged=True
+[gate] gemma3:4b task_03_document_signing s3 round 1
+    ok | tests pass | gate FAIL ['P2'] | unchanged=False
+[gate] gemma3:4b task_03_document_signing s3 round 2
+    ok | tests pass | gate FAIL ['P2'] | unchanged=True
+[gate] gemma3:4b task_12_audit_log s2 round 1
+    ok | tests pass | gate FAIL ['A1', 'P2', 'P3'] | unchanged=False
+[gate] gemma3:4b task_12_audit_log s2 round 2
+    ok | tests pass | gate FAIL ['A1', 'P2', 'P3'] | unchanged=True
+[gate] gemma3:4b task_12_audit_log s3 round 1
+    ok | tests pass | gate FAIL ['A1', 'P2', 'P3'] | unchanged=False
+[gate] gemma3:4b task_12_audit_log s3 round 2
+    ok | tests pass | gate FAIL ['A1', 'P2', 'P3'] | unchanged=True
+[gate] qwen2.5-coder:7b task_05_password_vault s1 round 1
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] qwen2.5-coder:7b task_05_password_vault s1 round 2
+    ok | tests FAIL | gate PASS [] | unchanged=True
+[gate] qwen2.5-coder:7b task_05_password_vault s2 round 1
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] qwen2.5-coder:7b task_05_password_vault s2 round 2
+    ok | tests FAIL | gate PASS [] | unchanged=True
+[gate] qwen2.5-coder:7b task_05_password_vault s3 round 1
+    ok | tests FAIL | gate FAIL ['P2'] | unchanged=False
+[gate] qwen2.5-coder:7b task_05_password_vault s3 round 2
+    ok | tests FAIL | gate FAIL ['P2'] | unchanged=True
+[gate] qwen2.5-coder:7b task_05_password_vault s4 round 1
+    ok | tests FAIL | gate FAIL ['P2'] | unchanged=False
+[gate] qwen2.5-coder:7b task_05_password_vault s4 round 2
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] qwen2.5-coder:7b task_05_password_vault s4 round 3
+    ok | tests FAIL | gate PASS [] | unchanged=True
+[gate] qwen2.5-coder:7b task_06_sealed_secrets s4 round 1
+    ok | tests FAIL | gate FAIL ['P2'] | unchanged=False
+[gate] qwen2.5-coder:7b task_06_sealed_secrets s4 round 2
+    ok | tests FAIL | gate FAIL ['P2'] | unchanged=True
+Finished.
