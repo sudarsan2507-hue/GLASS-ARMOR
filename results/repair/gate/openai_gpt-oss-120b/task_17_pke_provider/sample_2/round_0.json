@@ -1,0 +1,18 @@
+{
+  "round": 0,
+  "source": "results\\raw\\openai_gpt-oss-120b\\task_17_pke_provider\\sample_2.py",
+  "eval": {
+    "all_tests_pass": true,
+    "tests_passed": 10,
+    "tests_failed": 0,
+    "uses_oqs": true,
+    "gate_verdict": "FAIL",
+    "gate_flags": [
+      "P1",
+      "P3"
+    ],
+    "adv_load_error": null,
+    "feedback_tests": "Test suite: all 10 tests passed.",
+    "feedback_gate": "Test suite: all 10 tests passed.\n\nSecurity checker: 6 finding(s):\n- [P1] line 83: Result of encap_secret() used directly as an AEAD key (no KDF).\n- [P1] line 128: Result of decap_secret() used directly as an AEAD key (no KDF).\n- [P1] line 93: Raw KEM/DH shared secret used directly as an AEAD key (no KDF).\n- [P1] line 136: Raw KEM/DH shared secret used directly as an AEAD key (no KDF).\n- [P3] line 89: Secret key material passed to print(), an exception message or a file write.\n- [P3] line 132: Secret key material passed to print(), an exception message or a file write."
+  }
+}
