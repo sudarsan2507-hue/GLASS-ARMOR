@@ -1,0 +1,449 @@
+watchdog: launching Groq repair at 10/21/2026 00:57:57
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[tests] openai/gpt-oss-120b task_04_backup_archive s3 round 1
+    ok | tests pass | gate FAIL ['P1'] | unchanged=False
+[tests] openai/gpt-oss-120b task_06_sealed_secrets s0 round 1
+    ok | tests pass | gate FAIL ['P1'] | unchanged=False
+[tests] openai/gpt-oss-120b task_06_sealed_secrets s1 round 1
+    ok | tests pass | gate FAIL ['P1'] | unchanged=False
+[tests] openai/gpt-oss-120b task_06_sealed_secrets s3 round 1
+    ok | tests pass | gate FAIL ['P1'] | unchanged=False
+[tests] openai/gpt-oss-120b task_06_sealed_secrets s4 round 1
+    ok | tests pass | gate FAIL ['P1'] | unchanged=False
+[tests] openai/gpt-oss-120b task_13_api_token s0 round 1
+    ok | tests pass | gate FAIL ['A5'] | unchanged=False
+[tests] openai/gpt-oss-120b task_13_api_token s1 round 1
+    ok | tests pass | gate FAIL ['A5'] | unchanged=False
+[tests] openai/gpt-oss-120b task_13_api_token s2 round 1
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[tests] openai/gpt-oss-120b task_13_api_token s2 round 2
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[tests] openai/gpt-oss-120b task_13_api_token s2 round 3
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[tests] openai/gpt-oss-120b task_13_api_token s3 round 1
+    ok | tests pass | gate FAIL ['A5'] | unchanged=False
+[tests] openai/gpt-oss-120b task_13_api_token s4 round 1
+    ok | tests pass | gate FAIL ['A5'] | unchanged=False
+[tests] openai/gpt-oss-120b task_17_pke_provider s0 round 1
+    ok | tests pass | gate FAIL ['P1'] | unchanged=False
+[tests] openai/gpt-oss-120b task_17_pke_provider s1 round 1
+    ok | tests pass | gate FAIL ['A2', 'P1', 'P2'] | unchanged=False
+[tests] openai/gpt-oss-120b task_17_pke_provider s2 round 1
+    STOPPED, nothing written: rate limit asks to wait 423s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 01:29:20
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[tests] openai/gpt-oss-120b task_17_pke_provider s2 round 1
+    HTTP 429, waiting 60s (attempt 1)
+    ok | tests pass | gate FAIL ['P1', 'P3'] | unchanged=False
+[tests] openai/gpt-oss-120b task_17_pke_provider s4 round 1
+    STOPPED, nothing written: rate limit asks to wait 1061s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 02:02:11
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[tests] openai/gpt-oss-120b task_17_pke_provider s4 round 1
+    ok | tests pass | gate FAIL ['P1', 'P3'] | unchanged=False
+[tests] openai/gpt-oss-120b task_19_crypto_policy s2 round 1
+    STOPPED, nothing written: rate limit asks to wait 1097s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 02:32:17
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[tests] openai/gpt-oss-120b task_19_crypto_policy s2 round 1
+    ok | tests pass | gate FAIL ['A2', 'P2'] | unchanged=False
+[tests] openai/gpt-oss-120b task_20_suite_negotiation s0 round 1
+    STOPPED, nothing written: rate limit asks to wait 1110s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 03:05:51
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[tests] openai/gpt-oss-120b task_20_suite_negotiation s0 round 1
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[tests] openai/gpt-oss-120b task_20_suite_negotiation s1 round 1
+    STOPPED, nothing written: rate limit asks to wait 846s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 03:38:48
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[tests] openai/gpt-oss-120b task_20_suite_negotiation s1 round 1
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[tests] openai/gpt-oss-120b task_20_suite_negotiation s2 round 1
+    STOPPED, nothing written: rate limit asks to wait 906s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 04:11:24
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[tests] openai/gpt-oss-120b task_20_suite_negotiation s2 round 1
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[tests] openai/gpt-oss-120b task_20_suite_negotiation s3 round 1
+    STOPPED, nothing written: rate limit asks to wait 1241s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 04:41:25
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[tests] openai/gpt-oss-120b task_20_suite_negotiation s3 round 1
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[tests] openai/gpt-oss-120b task_20_suite_negotiation s4 round 1
+    STOPPED, nothing written: rate limit asks to wait 1147s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 05:11:26
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[tests] openai/gpt-oss-120b task_20_suite_negotiation s4 round 1
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_04_backup_archive s3 round 1
+    STOPPED, nothing written: rate limit asks to wait 1522s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 05:41:27
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_04_backup_archive s3 round 1
+    ok | tests pass | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_06_sealed_secrets s0 round 1
+    STOPPED, nothing written: rate limit asks to wait 872s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 06:11:28
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_06_sealed_secrets s0 round 1
+    ok | tests pass | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_06_sealed_secrets s1 round 1
+    HTTP 429, waiting 237s (attempt 1)
+    HTTP 429, waiting 108s (attempt 2)
+    ok | tests pass | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_06_sealed_secrets s3 round 1
+    STOPPED, nothing written: rate limit asks to wait 819s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 06:41:29
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_06_sealed_secrets s3 round 1
+    ok | tests pass | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_06_sealed_secrets s4 round 1
+    STOPPED, nothing written: rate limit asks to wait 691s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 07:11:30
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_06_sealed_secrets s4 round 1
+    ok | tests pass | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s0 round 1
+    STOPPED, nothing written: rate limit asks to wait 407s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 07:41:31
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s0 round 1
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s0 round 2
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s0 round 3
+    STOPPED, nothing written: rate limit asks to wait 1568s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 08:11:32
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s0 round 3
+    ok | tests pass | gate FAIL ['A5'] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s1 round 1
+    STOPPED, nothing written: rate limit asks to wait 893s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 08:41:33
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s1 round 1
+    network problem (ConnectionError), retrying in 30s (attempt 1)
+    network problem (ConnectionError), retrying in 30s (attempt 2)
+    network problem (ConnectionError), retrying in 30s (attempt 3)
+    network problem (ConnectionError), retrying in 30s (attempt 4)
+    network problem (ConnectionError), retrying in 30s (attempt 5)
+    network problem (ConnectionError), retrying in 30s (attempt 6)
+    network problem (ConnectionError), retrying in 30s (attempt 7)
+    network problem (ConnectionError), retrying in 30s (attempt 8)
+    network problem (ConnectionError), retrying in 30s (attempt 9)
+    network problem (ConnectionError), retrying in 30s (attempt 10)
+    STOPPED, nothing written: 10 failed attempts (network or server). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 09:11:34
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s1 round 1
+    network problem (ConnectionError), retrying in 30s (attempt 1)
+    network problem (ConnectionError), retrying in 30s (attempt 2)
+    network problem (ConnectionError), retrying in 30s (attempt 3)
+    network problem (ConnectionError), retrying in 30s (attempt 4)
+    network problem (ConnectionError), retrying in 30s (attempt 5)
+    network problem (ConnectionError), retrying in 30s (attempt 6)
+    network problem (ConnectionError), retrying in 30s (attempt 7)
+    network problem (ConnectionError), retrying in 30s (attempt 8)
+    network problem (ConnectionError), retrying in 30s (attempt 9)
+    network problem (ConnectionError), retrying in 30s (attempt 10)
+    STOPPED, nothing written: 10 failed attempts (network or server). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 09:41:35
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s1 round 1
+    network problem (ConnectionError), retrying in 30s (attempt 1)
+    network problem (ConnectionError), retrying in 30s (attempt 2)
+    network problem (ConnectionError), retrying in 30s (attempt 3)
+    network problem (ConnectionError), retrying in 30s (attempt 4)
+    network problem (ConnectionError), retrying in 30s (attempt 5)
+    network problem (ConnectionError), retrying in 30s (attempt 6)
+    network problem (ConnectionError), retrying in 30s (attempt 7)
+    network problem (ConnectionError), retrying in 30s (attempt 8)
+    network problem (ConnectionError), retrying in 30s (attempt 9)
+    network problem (ConnectionError), retrying in 30s (attempt 10)
+    STOPPED, nothing written: 10 failed attempts (network or server). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 10:11:36
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s1 round 1
+    network problem (ConnectionError), retrying in 30s (attempt 1)
+    network problem (ConnectionError), retrying in 30s (attempt 2)
+    network problem (ConnectionError), retrying in 30s (attempt 3)
+    network problem (ConnectionError), retrying in 30s (attempt 4)
+    network problem (ConnectionError), retrying in 30s (attempt 5)
+    network problem (ConnectionError), retrying in 30s (attempt 6)
+    network problem (ConnectionError), retrying in 30s (attempt 7)
+    network problem (ConnectionError), retrying in 30s (attempt 8)
+    network problem (ConnectionError), retrying in 30s (attempt 9)
+    network problem (ConnectionError), retrying in 30s (attempt 10)
+    STOPPED, nothing written: 10 failed attempts (network or server). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 10:41:37
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s1 round 1
+    network problem (ConnectionError), retrying in 30s (attempt 1)
+    network problem (ConnectionError), retrying in 30s (attempt 2)
+    network problem (ConnectionError), retrying in 30s (attempt 3)
+    network problem (ConnectionError), retrying in 30s (attempt 4)
+    network problem (ConnectionError), retrying in 30s (attempt 5)
+    network problem (ConnectionError), retrying in 30s (attempt 6)
+    network problem (ConnectionError), retrying in 30s (attempt 7)
+    network problem (ConnectionError), retrying in 30s (attempt 8)
+    network problem (ConnectionError), retrying in 30s (attempt 9)
+    network problem (ConnectionError), retrying in 30s (attempt 10)
+    STOPPED, nothing written: 10 failed attempts (network or server). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 11:11:38
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s1 round 1
+    network problem (ConnectionError), retrying in 30s (attempt 1)
+    network problem (ConnectionError), retrying in 30s (attempt 2)
+    network problem (ConnectionError), retrying in 30s (attempt 3)
+    network problem (ConnectionError), retrying in 30s (attempt 4)
+    network problem (ConnectionError), retrying in 30s (attempt 5)
+    network problem (ConnectionError), retrying in 30s (attempt 6)
+    network problem (ConnectionError), retrying in 30s (attempt 7)
+    network problem (ConnectionError), retrying in 30s (attempt 8)
+    network problem (ConnectionError), retrying in 30s (attempt 9)
+    network problem (ConnectionError), retrying in 30s (attempt 10)
+    STOPPED, nothing written: 10 failed attempts (network or server). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 11:41:40
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s1 round 1
+    network problem (ConnectionError), retrying in 30s (attempt 1)
+    network problem (ConnectionError), retrying in 30s (attempt 2)
+    network problem (ConnectionError), retrying in 30s (attempt 3)
+    network problem (ConnectionError), retrying in 30s (attempt 4)
+    network problem (ConnectionError), retrying in 30s (attempt 5)
+    network problem (ConnectionError), retrying in 30s (attempt 6)
+    network problem (ConnectionError), retrying in 30s (attempt 7)
+    network problem (ConnectionError), retrying in 30s (attempt 8)
+    network problem (ConnectionError), retrying in 30s (attempt 9)
+    network problem (ConnectionError), retrying in 30s (attempt 10)
+    STOPPED, nothing written: 10 failed attempts (network or server). Re-run the same command later.
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s1 round 1
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s1 round 2
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s1 round 3
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s2 round 1
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s2 round 2
+    HTTP 429, waiting 4s (attempt 1)
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s2 round 3
+    HTTP 429, waiting 3s (attempt 1)
+    HTTP 429, waiting 5s (attempt 2)
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s3 round 1
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s3 round 2
+    STOPPED, nothing written: rate limit asks to wait 1154s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 12:11:45
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s3 round 2
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s3 round 3
+    STOPPED, nothing written: rate limit asks to wait 2102s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 12:41:47
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s3 round 3
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s4 round 1
+    STOPPED, nothing written: rate limit asks to wait 808s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 13:11:48
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s4 round 1
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s4 round 2
+    STOPPED, nothing written: rate limit asks to wait 1159s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 13:41:49
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s4 round 2
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_13_api_token s4 round 3
+    STOPPED, nothing written: rate limit asks to wait 362s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 14:11:50
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_13_api_token s4 round 3
+    ok | tests FAIL | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_17_pke_provider s0 round 1
+    STOPPED, nothing written: rate limit asks to wait 448s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 14:41:51
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_17_pke_provider s0 round 1
+    ok | tests pass | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_17_pke_provider s1 round 1
+    STOPPED, nothing written: rate limit asks to wait 798s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 15:11:52
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_17_pke_provider s1 round 1
+    ok | tests pass | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_17_pke_provider s2 round 1
+    HTTP 429, waiting 166s (attempt 1)
+    STOPPED, nothing written: rate limit asks to wait 706s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 15:41:53
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_17_pke_provider s2 round 1
+    ok | tests pass | gate FAIL ['P3'] | unchanged=False
+[gate] openai/gpt-oss-120b task_17_pke_provider s2 round 2
+    STOPPED, nothing written: rate limit asks to wait 756s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 16:11:55
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_17_pke_provider s2 round 2
+    ok | tests pass | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_17_pke_provider s4 round 1
+    STOPPED, nothing written: rate limit asks to wait 429s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 16:41:56
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_17_pke_provider s4 round 1
+    ok | tests pass | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_19_crypto_policy s2 round 1
+    STOPPED, nothing written: rate limit asks to wait 1482s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 17:11:57
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_19_crypto_policy s2 round 1
+    ok | tests FAIL | gate NOT VALID PYTHON [] | unchanged=False
+[gate] openai/gpt-oss-120b task_19_crypto_policy s2 round 2
+    STOPPED, nothing written: rate limit asks to wait 450s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 17:41:58
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_19_crypto_policy s2 round 2
+    ok | tests pass | gate PASS [] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s0 round 1
+    HTTP 429, waiting 224s (attempt 1)
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s0 round 2
+    STOPPED, nothing written: rate limit asks to wait 1239s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 18:12:04
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s0 round 2
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s0 round 3
+    STOPPED, nothing written: rate limit asks to wait 2207s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 18:42:06
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s0 round 3
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s1 round 1
+    STOPPED, nothing written: rate limit asks to wait 968s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 19:12:07
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s1 round 1
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s1 round 2
+    STOPPED, nothing written: rate limit asks to wait 1588s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 19:42:08
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s1 round 2
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s1 round 3
+    STOPPED, nothing written: rate limit asks to wait 2194s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 20:12:10
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s1 round 3
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s2 round 1
+    STOPPED, nothing written: rate limit asks to wait 1033s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 20:42:11
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s2 round 1
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s2 round 2
+    STOPPED, nothing written: rate limit asks to wait 1114s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 21:12:12
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s2 round 2
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s2 round 3
+    STOPPED, nothing written: rate limit asks to wait 1139s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 21:42:14
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s2 round 3
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s3 round 1
+    STOPPED, nothing written: rate limit asks to wait 1211s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 22:12:15
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s3 round 1
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s3 round 2
+    STOPPED, nothing written: rate limit asks to wait 1234s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 22:42:16
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s3 round 2
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s3 round 3
+    STOPPED, nothing written: rate limit asks to wait 1271s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 23:12:18
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s3 round 3
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s4 round 1
+    STOPPED, nothing written: rate limit asks to wait 1038s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/21/2026 23:42:21
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s4 round 1
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s4 round 2
+    STOPPED, nothing written: rate limit asks to wait 1893s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/22/2026 00:12:23
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s4 round 2
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s4 round 3
+    STOPPED, nothing written: rate limit asks to wait 1255s (daily cap?). Re-run the same command later.
+watchdog: launching Groq repair at 10/22/2026 00:42:24
+liboqs-python faulthandler is disabled
+20 items x 2 conditions, max 3 rounds
+[gate] openai/gpt-oss-120b task_20_suite_negotiation s4 round 3
+    ok | tests pass | gate FAIL ['A2'] | unchanged=False
+Finished.
