@@ -1,0 +1,11 @@
+--- benchmark/task_02_session_handshake/reference_pqc.py	2026-10-12 23:38:41.586730000 +0530
++++ benchmark/task_02_session_handshake/broken/b2_F4_pq_secret_unused.py	2026-10-14 23:03:48.620761300 +0530
+@@ -28,7 +28,7 @@
+ 
+ def _session_key(classical_secret, pq_secret, transcript):
+     return HKDF(algorithm=hashes.SHA256(), length=32, salt=None,
+-                info=b"pq-gate hybrid session v1" + transcript).derive(classical_secret + pq_secret)
++                info=b"pq-gate hybrid session v1" + transcript).derive(classical_secret)
+ 
+ 
+ def client_start():

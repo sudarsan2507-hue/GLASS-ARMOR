@@ -1,0 +1,129 @@
+[
+  {
+    "task": "task_02_session_handshake",
+    "file": "b5_F4_ciphertext_as_secret.py",
+    "flaw": "F4",
+    "expected": [
+      "P6",
+      "A4"
+    ],
+    "flags": [
+      "A4",
+      "P6"
+    ],
+    "verdict": "FAIL",
+    "caught_expected": true,
+    "adversarial": {
+      "A1": true,
+      "A2": null,
+      "A3": true,
+      "A4": false,
+      "A5": null,
+      "A6": true
+    }
+  },
+  {
+    "task": "task_05_password_vault",
+    "file": "b5_F8_hex_string_compare.py",
+    "flaw": "F8",
+    "expected": [
+      "P5"
+    ],
+    "flags": [
+      "P5"
+    ],
+    "verdict": "FAIL",
+    "caught_expected": true,
+    "adversarial": {
+      "A1": true,
+      "A2": null,
+      "A3": null,
+      "A4": null,
+      "A5": null,
+      "A6": null
+    }
+  },
+  {
+    "task": "task_07_device_pairing",
+    "file": "b5_F8_hex_compare.py",
+    "flaw": "F8",
+    "expected": [
+      "P5"
+    ],
+    "flags": [],
+    "verdict": "PASS",
+    "caught_expected": false,
+    "adversarial": {
+      "A1": true,
+      "A2": null,
+      "A3": null,
+      "A4": true,
+      "A5": null,
+      "A6": null
+    }
+  },
+  {
+    "task": "task_08_tunnel_rekey",
+    "file": "b5_F4_pq_from_public_key.py",
+    "flaw": "F4",
+    "expected": [
+      "P6",
+      "A4"
+    ],
+    "flags": [
+      "A4",
+      "P6"
+    ],
+    "verdict": "FAIL",
+    "caught_expected": true,
+    "adversarial": {
+      "A1": true,
+      "A2": true,
+      "A3": null,
+      "A4": false,
+      "A5": null,
+      "A6": true
+    }
+  },
+  {
+    "task": "task_14_session_cookie",
+    "file": "b4_F8_bytewise_compare.py",
+    "flaw": "F8",
+    "expected": [
+      "P5"
+    ],
+    "flags": [],
+    "verdict": "PASS",
+    "caught_expected": false,
+    "adversarial": {
+      "A1": true,
+      "A2": null,
+      "A3": null,
+      "A4": null,
+      "A5": true,
+      "A6": null
+    }
+  },
+  {
+    "task": "task_20_suite_negotiation",
+    "file": "b5_F4_classical_twice.py",
+    "flaw": "F4",
+    "expected": [
+      "P6",
+      "A4"
+    ],
+    "flags": [
+      "P6"
+    ],
+    "verdict": "FAIL",
+    "caught_expected": true,
+    "adversarial": {
+      "A1": true,
+      "A2": true,
+      "A3": null,
+      "A4": null,
+      "A5": null,
+      "A6": true
+    }
+  }
+]

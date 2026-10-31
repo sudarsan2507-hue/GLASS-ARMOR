@@ -1,0 +1,11 @@
+condition,model,items,fixed,broke_tests,never_changed,mean_rounds
+gate,ALL,31,10,9,1,2.13
+gate,gemma3_4b,5,0,0,0,2.0
+gate,openai_gpt-oss-120b,20,10,4,0,2.1
+gate,qwen2.5-coder_3b,1,0,0,1,3.0
+gate,qwen2.5-coder_7b,5,0,5,0,2.2
+tests,ALL,31,0,2,4,1.13
+tests,gemma3_4b,5,0,0,0,1.0
+tests,openai_gpt-oss-120b,20,0,1,0,1.1
+tests,qwen2.5-coder_3b,1,0,0,1,1.0
+tests,qwen2.5-coder_7b,5,0,1,3,1.4

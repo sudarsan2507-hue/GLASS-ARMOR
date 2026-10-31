@@ -1,0 +1,5 @@
+Test suite: all 10 tests passed.
+
+Security checker: 2 finding(s):
+- [P1] line 50: Raw KEM/DH shared secret used directly as an AEAD key (no KDF).
+- [P1] line 81: Raw KEM/DH shared secret used directly as an AEAD key (no KDF).

@@ -1,0 +1,36 @@
+item,task,secure,F1,F2,F3,F4,F5,F6,F7,F8,F9,F10,other_flaw,notes
+item_01,task_05_password_vault,no,,,,,,,,,,,"not migrated: classical only, oqs imported but unused","Identical to original apart from 'import oqs' (line 17); vault key still wrapped with RSA-2048 OAEP (lines 29, 42-48), so no PQ protection."
+item_02,task_18_signer_negotiation,yes,,,,,,,,,,,,"ML-DSA-65 used for sign/verify (lines 29-41); alg label still bound into signed bytes (lines 62, 72); no classical signer registered; no context string but domain separation kept via alg prefix."
+item_03,task_06_sealed_secrets,no,x,,,,,,,,,,,"Raw ML-KEM shared secret used directly as AES-256-GCM key, no KDF (lines 45-46 and 77-78)."
+item_04,task_04_backup_archive,yes,,,,,,,,,,,,"ML-KEM-768 secret goes through HKDF-SHA256 (lines 78-84, 121-127) before wrapping archive key with AES-GCM; fresh os.urandom nonces; no classical path."
+item_05,task_17_pke_provider,no,x,,x,,,,,,,,,"MlKemProvider uses the raw shared secret as the AES key (lines 135, 173); RsaOaepProvider still registered and selectable via config (lines 43-78, 180-183)."
+item_06,task_05_password_vault,no,,,,,,,,,,,"not migrated: classical only, oqs imported but unused","Identical to original apart from 'import oqs' (line 17); RSA-OAEP key wrapping unchanged (lines 29, 42-48)."
+item_07,task_07_device_pairing,yes,,,,,,,,,,,,"ML-KEM-768 encapsulation; shared secret through HKDF with full transcript (device hello + ciphertext) (lines 28-35, 91, 110); HMAC compared with compare_digest (line 129). Hub keypair at lines 84-85 is unused but harmless."
+item_08,task_03_document_signing,no,,,,,,,,,,,"not migrated: classical only, oqs imported but unused",Still RSA-PSS only (original code unchanged); only adds an unused oqs import (line 10) and an example __main__ block.
+item_09,task_05_password_vault,no,,,,,,,,,,,"not migrated: classical only, oqs imported but unused",Identical to original apart from 'import oqs' (line 17); RSA-OAEP key wrapping unchanged.
+item_10,task_17_pke_provider,no,x,,,,,,,,,,,"Shared secret used directly as AES key (lines 94, 136); aes_key generated at line 83 is unused. Extra ML-DSA provider registered under pke config (line 235) is odd but not classical."
+item_11,task_05_password_vault,no,,,,,,,,,,,"not migrated: classical only, oqs imported but unused",Identical to original apart from 'import oqs' (line 17); RSA-OAEP key wrapping unchanged.
+item_12,task_19_crypto_policy,yes,,,,,,,,,,,,"ML-KEM-768 secret derived through HKDF bound to policy and KEM ciphertext (lines 70-87, 124, 165); only ML-KEM in KEX (line 51); random nonces."
+item_13,task_03_document_signing,no,,,,,,,,,,,"not migrated: classical only, oqs imported but unused",Still RSA-PSS only (original code unchanged); only adds an unused oqs import (line 10) and an example __main__ block.
+item_14,task_11_invoice_signing,yes,,,,,,,,,,,,ML-DSA-65 sign/verify over doc_type + canonical JSON incl. issuer (lines 41-58); no classical path; verify fails closed.
+item_15,task_18_signer_negotiation,no,,,,,,,x,,,,,"seal_envelope/open_envelope sign and verify only the raw message (lines 62, 72), dropping the alg label the original bound into the signature; no ML-DSA context string either, so no domain separation. Practical impact limited while only one alg is supported."
+item_16,task_10_update_manifest,yes,,,,,,,,,,,,ML-DSA-65 signs name/version/sha256 (lines 31-47); alg pinned to ML-DSA-65 (line 62); errors fail closed (line 75).
+item_17,task_17_pke_provider,yes,,,,,,,,,,,,"ML-KEM-768 shared secret passed through HKDF-SHA256 (lines 29-37, 109, 150); only the PQ provider is registered (line 159)."
+item_18,task_20_suite_negotiation,yes,,,,,,,,,,,,Only an ML-KEM-768 suite offered/preferred (lines 100-105); session key via HKDF over suite and both hellos (lines 111-119); random GCM nonces (line 237).
+item_19,task_20_suite_negotiation,no,,,,,,,,,,,classical X25519/P-256 KEX relabelled with ML-KEM/ML-DSA suite names; no PQC actually used,SERVER_PREFERENCE/CLIENT_SUITES renamed to 'ML-KEM-768'/'ML-DSA-65' (lines 24-25) but KEX maps them to _X25519 and _P256 (line 57); oqs imported but unused.
+item_20,task_12_audit_log,no,,,,,x,,,,,,"not migrated: classical only, oqs imported but unused","Module still ECDSA P-256 (lines 18-43); demo main() prints a KEM shared secret and HKDF key (lines 98, 100, 113), demo-only throwaway values."
+item_21,task_10_update_manifest,yes,,,,,,,,,,,,ML-DSA-65 signs name/version/sha256 (lines 123-139); alg pinned (line 154); broad except fails closed (line 165).
+item_22,task_18_signer_negotiation,yes,,,,,,,,,,,,"ML-DSA-65 only (lines 37-98, 104-107); alg bound into signed data (lines 170, 204); verify fails closed."
+item_23,task_14_session_cookie,yes,,,,,,,,,,,,"ML-DSA-65 signs the whole session JSON (lines 103-104, 141-143); CSRF uses compare_digest (line 165); sid from secrets module."
+item_24,task_06_sealed_secrets,no,x,,,,,,,,,,,"Raw ML-KEM shared secret used directly as AES-GCM key, no KDF (lines 49, 53 and 76, 79)."
+item_25,task_12_audit_log,no,,,,,x,,,,,,"not migrated: classical only, oqs imported but unused","Module still ECDSA P-256 (lines 18-43); demo main() prints a KEM shared secret and HKDF key (lines 98, 100, 113), demo-only throwaway values."
+item_26,task_17_pke_provider,no,x,,,,,,,,,,,"Raw ML-KEM shared secret used directly as AES-GCM key (lines 246, 289)."
+item_27,task_03_document_signing,yes,,,,,,,,,,,,"ML-DSA-65 over 'pq-gate docsign v1|purpose|document' (lines 17-23, 50-67); purpose binding kept; no classical path."
+item_28,task_18_signer_negotiation,yes,,,,,,,,,,,,"ML-DSA-65 used (lines 29-41); alg label bound into signed bytes (lines 62, 72); no classical signer; no ctx string but domain separation via prefix."
+item_29,task_03_document_signing,yes,,,,,,,,,,,,"ML-DSA-65 over purpose-prefixed bytes (lines 110-112, 140-153); no classical path; verify fails closed."
+item_30,task_05_password_vault,no,x,,,,,,,,,,,"Vault key is the raw ML-KEM shared secret (line 84, returned at line 111) and used directly as the AES-GCM key for entries (lines 123, 136), no KDF."
+item_31,task_18_signer_negotiation,no,,,,,,,x,,,,,"seal_envelope/open_envelope sign and verify only the raw message (lines 62, 72), dropping the alg label the original bound into the signature; no ML-DSA context string either. Practical impact limited while only one alg is supported."
+item_32,task_03_document_signing,no,,,,,,,,,,,"not migrated: classical only, oqs imported but unused",Still RSA-PSS only (original code unchanged); only adds an unused oqs import (line 10) and an example __main__ block.
+item_33,task_11_invoice_signing,yes,,,,,,,,,,,,ML-DSA-65 over doc_type + canonical JSON incl. issuer (lines 149-164); no classical path; verify fails closed.
+item_34,task_02_session_handshake,yes,,,,,,,,,,,,"ML-KEM-768 handshake; shared secret through HKDF bound to both hellos (lines 23-30, 86, 117); random GCM nonces (line 140)."
+item_35,task_06_sealed_secrets,no,,,,,,,,,,,"not migrated: classical only, oqs imported but unused",seal/unseal still use RSA-OAEP (lines 30-62); ML-KEM code at lines 22-28 is a dead module-level demo not used by the API.
