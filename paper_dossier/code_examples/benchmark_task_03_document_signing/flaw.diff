@@ -1,0 +1,19 @@
+--- benchmark/task_03_document_signing/reference_pqc.py	2026-10-12 23:39:37.540022300 +0530
++++ benchmark/task_03_document_signing/broken/b1_F7_context_ignored.py	2026-10-12 23:40:27.006214100 +0530
+@@ -25,14 +25,14 @@
+ def sign_document(private_key, document, purpose="general"):
+     """Sign document for the given purpose. Returns the signature bytes."""
+     with oqs.Signature(SIG_ALG, secret_key=private_key) as sig:
+-        return sig.sign_with_ctx_str(document, _context(purpose))
++        return sig.sign(document)
+ 
+ 
+ def verify_document(public_key, document, signature, purpose="general"):
+     """Return True if signature is valid for document and purpose, else False."""
+     try:
+         with oqs.Signature(SIG_ALG) as sig:
+-            return sig.verify_with_ctx_str(document, signature, _context(purpose), public_key)
++            return sig.verify(document, signature, public_key)
+     except Exception:
+         return False
+ 

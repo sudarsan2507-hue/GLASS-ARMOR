@@ -1,0 +1,98 @@
+id,value,meaning,source,script
+bench_tasks,20,benchmark tasks,benchmark/*/meta.yaml,scripts/dossier/compute_stats.py
+bench_orig_lines_min_max,55-107,lines in original.py (min-max),benchmark/*/original.py,scripts/dossier/compute_stats.py
+bench_tests_total,198,functional tests over all tasks (pytest count on original.py),results/tables/benchmark_validation.csv,scripts/dossier/compute_stats.py
+bench_variants_total,77,broken variants incl. held-out,benchmark/*/meta.yaml,scripts/dossier/compute_stats.py
+bench_variants_heldout,6,held-out variants,benchmark/*/meta.yaml,scripts/dossier/compute_stats.py
+bench_test_invisible,71/71 = 100.0% (95% Wilson CI 94.9-100.0%),original 71 broken variants passing all tests (test-invisible),results/tables/benchmark_validation.csv,scripts/dossier/compute_stats.py
+bench_orig_ref_pass,40/40,originals + references passing all tests,results/tables/benchmark_validation.csv,scripts/dossier/compute_stats.py
+val_tests_detect,0/71 = 0.0% (95% Wilson CI 0.0-5.1%),variants flagged by tests (in-sample),results/tables/gate_by_flaw.csv,scripts/dossier/compute_stats.py
+val_semgrep_detect,2/71 = 2.8% (95% Wilson CI 0.8-9.7%),variants flagged by semgrep (in-sample),results/tables/gate_by_flaw.csv,scripts/dossier/compute_stats.py
+val_bandit_detect,7/71 = 9.9% (95% Wilson CI 4.9-19.0%),variants flagged by bandit (in-sample),results/tables/gate_by_flaw.csv,scripts/dossier/compute_stats.py
+val_gate_detect,71/71 = 100.0% (95% Wilson CI 94.9-100.0%),variants flagged by gate (in-sample),results/tables/gate_by_flaw.csv,scripts/dossier/compute_stats.py
+val_tests_fp,0/20 = 0.0% (95% Wilson CI 0.0-16.1%),references flagged by tests (false positives),results/tables/gate_by_flaw.csv,scripts/dossier/compute_stats.py
+val_semgrep_fp,0/20 = 0.0% (95% Wilson CI 0.0-16.1%),references flagged by semgrep (false positives),results/tables/gate_by_flaw.csv,scripts/dossier/compute_stats.py
+val_bandit_fp,0/20 = 0.0% (95% Wilson CI 0.0-16.1%),references flagged by bandit (false positives),results/tables/gate_by_flaw.csv,scripts/dossier/compute_stats.py
+val_gate_fp,0/20 = 0.0% (95% Wilson CI 0.0-16.1%),references flagged by gate (false positives),results/tables/gate_by_flaw.csv,scripts/dossier/compute_stats.py
+heldout_caught,4/6 = 66.7% (95% Wilson CI 30.0-90.3%),held-out variants caught by an expected check,results/tables/gate_heldout_2026-10-14.json,scripts/dossier/compute_stats.py
+heldout_F4,3/3 = 100.0% (95% Wilson CI 43.8-100.0%),held-out F4 caught,results/tables/gate_heldout_2026-10-14.json,scripts/dossier/compute_stats.py
+heldout_F8,1/3 = 33.3% (95% Wilson CI 6.1-79.2%),held-out F8 caught,results/tables/gate_heldout_2026-10-14.json,scripts/dossier/compute_stats.py
+p3_gemma3_4b_pass,71/100 = 71.0% (95% Wilson CI 61.5-79.0%),gemma3:4b: outputs passing all tests,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_gemma3_4b_fail_frozen,5/5 = 100.0% (95% Wilson CI 56.6-100.0%),gemma3:4b: gate FAIL among test-passing liboqs-importing outputs (frozen gate),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_gemma3_4b_fail_corrected,5/5 = 100.0% (95% Wilson CI 56.6-100.0%),"gemma3:4b: same, after A2 naming-bug correction",results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_gemma3_4b_fail_strict_corr,10/10 = 100.0% (95% Wilson CI 72.2-100.0%),gemma3:4b: gate FAIL among strictly migrated test-passing outputs (corrected),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_gemma3_4b_fail_imp_calls_corr,2/2 = 100.0% (95% Wilson CI 34.2-100.0%),gemma3:4b: gate FAIL among test-passing outputs that import AND call liboqs in a function (corrected),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_gemma3_4b_classical_pass,66,gemma3:4b: outputs passing all tests without importing liboqs,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_gemma3_4b_baselines,"semgrep 0, bandit 0 of 5",gemma3:4b: baselines on test-passing liboqs outputs,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_openai_gpt-oss-120b_pass,69/100 = 69.0% (95% Wilson CI 59.4-77.2%),openai/gpt-oss-120b: outputs passing all tests,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_openai_gpt-oss-120b_fail_frozen,20/69 = 29.0% (95% Wilson CI 19.6-40.6%),openai/gpt-oss-120b: gate FAIL among test-passing liboqs-importing outputs (frozen gate),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_openai_gpt-oss-120b_fail_corrected,15/69 = 21.7% (95% Wilson CI 13.6-32.8%),"openai/gpt-oss-120b: same, after A2 naming-bug correction",results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_openai_gpt-oss-120b_fail_strict_corr,15/69 = 21.7% (95% Wilson CI 13.6-32.8%),openai/gpt-oss-120b: gate FAIL among strictly migrated test-passing outputs (corrected),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_openai_gpt-oss-120b_fail_imp_calls_corr,15/69 = 21.7% (95% Wilson CI 13.6-32.8%),openai/gpt-oss-120b: gate FAIL among test-passing outputs that import AND call liboqs in a function (corrected),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_openai_gpt-oss-120b_classical_pass,0,openai/gpt-oss-120b: outputs passing all tests without importing liboqs,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_openai_gpt-oss-120b_baselines,"semgrep 0, bandit 1 of 69",openai/gpt-oss-120b: baselines on test-passing liboqs outputs,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_3b_pass,52/100 = 52.0% (95% Wilson CI 42.3-61.5%),qwen2.5-coder:3b: outputs passing all tests,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_3b_fail_frozen,1/1 = 100.0% (95% Wilson CI 20.7-100.0%),qwen2.5-coder:3b: gate FAIL among test-passing liboqs-importing outputs (frozen gate),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_3b_fail_corrected,1/1 = 100.0% (95% Wilson CI 20.7-100.0%),"qwen2.5-coder:3b: same, after A2 naming-bug correction",results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_3b_fail_strict_corr,0/0 = n/a (95% Wilson CI nan-nan%),qwen2.5-coder:3b: gate FAIL among strictly migrated test-passing outputs (corrected),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_3b_fail_imp_calls_corr,0/0 = n/a (95% Wilson CI nan-nan%),qwen2.5-coder:3b: gate FAIL among test-passing outputs that import AND call liboqs in a function (corrected),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_3b_classical_pass,51,qwen2.5-coder:3b: outputs passing all tests without importing liboqs,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_3b_baselines,"semgrep 0, bandit 0 of 1",qwen2.5-coder:3b: baselines on test-passing liboqs outputs,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_7b_pass,9/100 = 9.0% (95% Wilson CI 4.8-16.2%),qwen2.5-coder:7b: outputs passing all tests,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_7b_fail_frozen,5/9 = 55.6% (95% Wilson CI 26.7-81.1%),qwen2.5-coder:7b: gate FAIL among test-passing liboqs-importing outputs (frozen gate),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_7b_fail_corrected,5/9 = 55.6% (95% Wilson CI 26.7-81.1%),"qwen2.5-coder:7b: same, after A2 naming-bug correction",results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_7b_fail_strict_corr,0/4 = 0.0% (95% Wilson CI 0.0-49.0%),qwen2.5-coder:7b: gate FAIL among strictly migrated test-passing outputs (corrected),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_7b_fail_imp_calls_corr,0/4 = 0.0% (95% Wilson CI 0.0-49.0%),qwen2.5-coder:7b: gate FAIL among test-passing outputs that import AND call liboqs in a function (corrected),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_7b_classical_pass,0,qwen2.5-coder:7b: outputs passing all tests without importing liboqs,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_qwen25-coder_7b_baselines,"semgrep 0, bandit 0 of 9",qwen2.5-coder:7b: baselines on test-passing liboqs outputs,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_ALL_pass,201/400 = 50.2% (95% Wilson CI 45.4-55.1%),ALL: outputs passing all tests,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_ALL_fail_frozen,31/84 = 36.9% (95% Wilson CI 27.4-47.6%),ALL: gate FAIL among test-passing liboqs-importing outputs (frozen gate),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_ALL_fail_corrected,26/84 = 31.0% (95% Wilson CI 22.1-41.5%),"ALL: same, after A2 naming-bug correction",results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_ALL_fail_strict_corr,25/83 = 30.1% (95% Wilson CI 21.3-40.7%),ALL: gate FAIL among strictly migrated test-passing outputs (corrected),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_ALL_fail_imp_calls_corr,17/75 = 22.7% (95% Wilson CI 14.7-33.3%),ALL: gate FAIL among test-passing outputs that import AND call liboqs in a function (corrected),results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_ALL_classical_pass,117,ALL: outputs passing all tests without importing liboqs,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_ALL_baselines,"semgrep 0, bandit 1 of 84",ALL: baselines on test-passing liboqs outputs,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_strict_without_import,8: gemma3:4b task_11_invoice_signing s1; gemma3:4b task_11_invoice_signing s3; gemma3:4b task_13_api_token s1; gemma3:4b task_14_session_cookie s0; gemma3:4b task_14_session_cookie s1; gemma3:4b task_14_session_cookie s2; gemma3:4b task_14_session_cookie s3; gemma3:4b task_14_session_cookie s4,test-passing outputs that call oqs.* in a function but have no 'import oqs' line,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_groups_flagged_frozen,11,"(model, task) groups with >=1 gate FAIL (frozen)",results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_groups_flagged_corrected,10,"(model, task) groups with >=1 gate FAIL (corrected)",results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_tasks_flagged_corrected,9,distinct tasks with >=1 corrected gate FAIL,results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+p3_groups_total,24,"(model, task) groups with >=1 test-passing liboqs output",results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_items,35,blind-labelled items,labeling/labels_ai.csv,scripts/dossier/compute_stats.py
+lab_counts,"secure 16, insecure 19, unsure 0",AI label verdicts,labeling/labels_ai.csv,scripts/dossier/compute_stats.py
+lab_unmigrated_items,11: item_01 item_06 item_08 item_09 item_11 item_13 item_19 item_20 item_25 item_32 item_35,items the labeller marked as not actually migrated (text match on its notes),labeling/labels_ai.csv,scripts/dossier/compute_stats.py
+lab_all_frozen_confusion,TP 16 FP 1 FN 3 TN 15 (n=35),"gate vs AI labels, all items, frozen gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_all_frozen_precision,16/17 = 94.1% (95% Wilson CI 73.0-99.0%),"precision, all items, frozen gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_all_frozen_recall,16/19 = 84.2% (95% Wilson CI 62.4-94.5%),"recall, all items, frozen gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_all_frozen_fpr,1/16 = 6.2% (95% Wilson CI 1.1-28.3%),"false positive rate, all items, frozen gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_all_frozen_f1,0.889,"F1, all items, frozen gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_all_corrected_confusion,TP 16 FP 0 FN 3 TN 16 (n=35),"gate vs AI labels, all items, corrected gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_all_corrected_precision,16/16 = 100.0% (95% Wilson CI 80.6-100.0%),"precision, all items, corrected gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_all_corrected_recall,16/19 = 84.2% (95% Wilson CI 62.4-94.5%),"recall, all items, corrected gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_all_corrected_fpr,0/16 = 0.0% (95% Wilson CI 0.0-19.4%),"false positive rate, all items, corrected gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_all_corrected_f1,0.914,"F1, all items, corrected gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_real_frozen_confusion,TP 5 FP 1 FN 3 TN 15 (n=24),"gate vs AI labels, real items, frozen gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_real_frozen_precision,5/6 = 83.3% (95% Wilson CI 43.6-97.0%),"precision, real items, frozen gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_real_frozen_recall,5/8 = 62.5% (95% Wilson CI 30.6-86.3%),"recall, real items, frozen gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_real_frozen_fpr,1/16 = 6.2% (95% Wilson CI 1.1-28.3%),"false positive rate, real items, frozen gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_real_frozen_f1,0.714,"F1, real items, frozen gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_real_corrected_confusion,TP 5 FP 0 FN 3 TN 16 (n=24),"gate vs AI labels, real items, corrected gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_real_corrected_precision,5/5 = 100.0% (95% Wilson CI 56.6-100.0%),"precision, real items, corrected gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_real_corrected_recall,5/8 = 62.5% (95% Wilson CI 30.6-86.3%),"recall, real items, corrected gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_real_corrected_fpr,0/16 = 0.0% (95% Wilson CI 0.0-19.4%),"false positive rate, real items, corrected gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+lab_real_corrected_f1,0.769,"F1, real items, corrected gate",labeling/labels_ai.csv + results/labeling_key.csv + results/tables/phase3_eval_strict.csv,scripts/dossier/compute_stats.py
+rep_tests_openai_gpt-oss-120b_fixed,0/20 = 0.0% (95% Wilson CI 0.0-16.1%),"repair fixed, condition tests, openai_gpt-oss-120b",results/tables/repair_items.csv,scripts/dossier/compute_stats.py
+rep_tests_ALL_fixed,0/31 = 0.0% (95% Wilson CI 0.0-11.0%),"repair fixed, condition tests, ALL",results/tables/repair_items.csv,scripts/dossier/compute_stats.py
+rep_gate_openai_gpt-oss-120b_fixed,10/20 = 50.0% (95% Wilson CI 29.9-70.1%),"repair fixed, condition gate, openai_gpt-oss-120b",results/tables/repair_items.csv,scripts/dossier/compute_stats.py
+rep_gate_ALL_fixed,10/31 = 32.3% (95% Wilson CI 18.6-49.9%),"repair fixed, condition gate, ALL",results/tables/repair_items.csv,scripts/dossier/compute_stats.py
+rep_mcnemar,"discordant: gate-only fixed 10, tests-only fixed 0; exact two-sided p = 0.0020","McNemar exact test, gate vs tests feedback, 31 paired items",results/tables/repair_items.csv,scripts/dossier/compute_stats.py
+rep_task20_items,5,repair items that were A2 naming-bug false alarms (gpt-oss task_20),results/tables/repair_items.csv,scripts/dossier/compute_stats.py
+runtime_gen_gemma3:4b,6.3 h,"summed generation time, Phase 3, gemma3:4b",results/raw/*/*/sample_*.json (duration_s),scripts/dossier/compute_stats.py
+runtime_gen_openai/gpt-oss-120b,1.2 h,"summed generation time, Phase 3, openai/gpt-oss-120b",results/raw/*/*/sample_*.json (duration_s),scripts/dossier/compute_stats.py
+runtime_gen_qwen2.5-coder:3b,5.0 h,"summed generation time, Phase 3, qwen2.5-coder:3b",results/raw/*/*/sample_*.json (duration_s),scripts/dossier/compute_stats.py
+runtime_gen_qwen2.5-coder:7b,5.6 h,"summed generation time, Phase 3, qwen2.5-coder:7b",results/raw/*/*/sample_*.json (duration_s),scripts/dossier/compute_stats.py
+groq_tokens_phase3,"prompt 113760, completion 211371","Groq token usage, Phase 3 gpt-oss",results/raw/openai_gpt-oss-120b/*/sample_*.json (usage),scripts/dossier/compute_stats.py
+runtime_repair_gemma3:4b,1.08 h,"summed generation time, Phase 4, gemma3:4b",results/repair/**/round_*.json (duration_s),scripts/dossier/compute_stats.py
+runtime_repair_openai/gpt-oss-120b,0.30 h,"summed generation time, Phase 4, openai/gpt-oss-120b",results/repair/**/round_*.json (duration_s),scripts/dossier/compute_stats.py
+runtime_repair_qwen2.5-coder:3b,0.28 h,"summed generation time, Phase 4, qwen2.5-coder:3b",results/repair/**/round_*.json (duration_s),scripts/dossier/compute_stats.py
+runtime_repair_qwen2.5-coder:7b,1.65 h,"summed generation time, Phase 4, qwen2.5-coder:7b",results/repair/**/round_*.json (duration_s),scripts/dossier/compute_stats.py
+groq_tokens_phase4,UNVERIFIED,Groq token usage in Phase 4 (repair.py did not log usage),harness/repair.py,scripts/dossier/compute_stats.py

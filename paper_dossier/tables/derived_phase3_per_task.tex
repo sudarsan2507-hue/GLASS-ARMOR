@@ -1,0 +1,35 @@
+\begin{table}[t]
+\centering
+\caption{Phase 3: flags per (model, task)}
+\small
+\begin{tabular}{llllll}
+\hline
+model & task & test\_passing\_oqs\_outputs & gate\_fail\_frozen & gate\_fail\_corrected & flags \\
+\hline
+gemma3:4b & task\_03\_document\_signing & 3 & 3 & 3 & P2x3 \\
+gemma3:4b & task\_12\_audit\_log & 2 & 2 & 2 & A1x2 P2x2 P3x2 \\
+openai/gpt-oss-120b & task\_02\_session\_handshake & 4 & 0 & 0 &  \\
+openai/gpt-oss-120b & task\_03\_document\_signing & 5 & 0 & 0 &  \\
+openai/gpt-oss-120b & task\_04\_backup\_archive & 2 & 1 & 1 & P1x1 \\
+openai/gpt-oss-120b & task\_05\_password\_vault & 5 & 0 & 0 &  \\
+openai/gpt-oss-120b & task\_06\_sealed\_secrets & 4 & 4 & 4 & P1x4 \\
+openai/gpt-oss-120b & task\_07\_device\_pairing & 1 & 0 & 0 &  \\
+openai/gpt-oss-120b & task\_09\_sealed\_messages & 3 & 0 & 0 &  \\
+openai/gpt-oss-120b & task\_10\_update\_manifest & 5 & 0 & 0 &  \\
+openai/gpt-oss-120b & task\_11\_invoice\_signing & 4 & 0 & 0 &  \\
+openai/gpt-oss-120b & task\_12\_audit\_log & 5 & 0 & 0 &  \\
+openai/gpt-oss-120b & task\_13\_api\_token & 5 & 5 & 5 & A5x5 \\
+openai/gpt-oss-120b & task\_14\_session\_cookie & 5 & 0 & 0 &  \\
+openai/gpt-oss-120b & task\_15\_license\_key & 2 & 0 & 0 &  \\
+openai/gpt-oss-120b & task\_16\_webhook\_signature & 2 & 0 & 0 &  \\
+openai/gpt-oss-120b & task\_17\_pke\_provider & 5 & 4 & 4 & A2x1 P1x4 P2x1 P3x1 \\
+openai/gpt-oss-120b & task\_18\_signer\_negotiation & 4 & 0 & 0 &  \\
+openai/gpt-oss-120b & task\_19\_crypto\_policy & 3 & 1 & 1 & A2x1 P2x1 \\
+openai/gpt-oss-120b & task\_20\_suite\_negotiation & 5 & 5 & 0 & A2x5 \\
+qwen2.5-coder:3b & task\_20\_suite\_negotiation & 1 & 1 & 1 & A2x1 P2x1 \\
+qwen2.5-coder:7b & task\_05\_password\_vault & 4 & 4 & 4 & A1x4 P2x4 \\
+qwen2.5-coder:7b & task\_06\_sealed\_secrets & 1 & 1 & 1 & A1x1 P2x1 \\
+qwen2.5-coder:7b & task\_18\_signer\_negotiation & 4 & 0 & 0 &  \\
+\hline
+\end{tabular}
+\end{table}

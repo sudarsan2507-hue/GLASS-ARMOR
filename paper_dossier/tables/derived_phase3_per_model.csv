@@ -1,0 +1,6 @@
+model,samples,parse,pass_tests,pass_and_imports_oqs,pass_and_strict_migrated,gate_fail_frozen,gate_fail_corrected,gate_fail_strict_frozen,gate_fail_strict_corrected,pass_and_imports_and_calls_oqs,gate_fail_imports_and_calls_corrected,semgrep_flags_on_pop,bandit_flags_on_pop,pass_tests_not_importing_oqs,pass_tests_not_strict_migrated
+gemma3:4b,100,98,71,5,10,5,5,10,10,2,2,0,0,66,61
+openai/gpt-oss-120b,100,98,69,69,69,20,15,20,15,69,15,0,1,0,0
+qwen2.5-coder:3b,100,95,52,1,0,1,1,0,0,0,0,0,0,51,52
+qwen2.5-coder:7b,100,100,9,9,4,5,5,0,0,4,0,0,0,0,5
+ALL,400,391,201,84,83,31,26,30,25,75,17,0,1,117,118

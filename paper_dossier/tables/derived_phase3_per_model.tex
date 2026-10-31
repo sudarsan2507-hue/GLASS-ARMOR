@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Phase 3: 400 migrations per model}
+\small
+\begin{tabular}{llllllllllllllll}
+\hline
+model & samples & parse & pass\_tests & pass\_and\_imports\_oqs & pass\_and\_strict\_migrated & gate\_fail\_frozen & gate\_fail\_corrected & gate\_fail\_strict\_frozen & gate\_fail\_strict\_corrected & pass\_and\_imports\_and\_calls\_oqs & gate\_fail\_imports\_and\_calls\_corrected & semgrep\_flags\_on\_pop & bandit\_flags\_on\_pop & pass\_tests\_not\_importing\_oqs & pass\_tests\_not\_strict\_migrated \\
+\hline
+gemma3:4b & 100 & 98 & 71 & 5 & 10 & 5 & 5 & 10 & 10 & 2 & 2 & 0 & 0 & 66 & 61 \\
+openai/gpt-oss-120b & 100 & 98 & 69 & 69 & 69 & 20 & 15 & 20 & 15 & 69 & 15 & 0 & 1 & 0 & 0 \\
+qwen2.5-coder:3b & 100 & 95 & 52 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 51 & 52 \\
+qwen2.5-coder:7b & 100 & 100 & 9 & 9 & 4 & 5 & 5 & 0 & 0 & 4 & 0 & 0 & 0 & 0 & 5 \\
+ALL & 400 & 391 & 201 & 84 & 83 & 31 & 26 & 30 & 25 & 75 & 17 & 0 & 1 & 117 & 118 \\
+\hline
+\end{tabular}
+\end{table}

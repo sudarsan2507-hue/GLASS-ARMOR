@@ -1,0 +1,25 @@
+model,task,test_passing_oqs_outputs,gate_fail_frozen,gate_fail_corrected,flags
+gemma3:4b,task_03_document_signing,3,3,3,P2x3
+gemma3:4b,task_12_audit_log,2,2,2,A1x2 P2x2 P3x2
+openai/gpt-oss-120b,task_02_session_handshake,4,0,0,
+openai/gpt-oss-120b,task_03_document_signing,5,0,0,
+openai/gpt-oss-120b,task_04_backup_archive,2,1,1,P1x1
+openai/gpt-oss-120b,task_05_password_vault,5,0,0,
+openai/gpt-oss-120b,task_06_sealed_secrets,4,4,4,P1x4
+openai/gpt-oss-120b,task_07_device_pairing,1,0,0,
+openai/gpt-oss-120b,task_09_sealed_messages,3,0,0,
+openai/gpt-oss-120b,task_10_update_manifest,5,0,0,
+openai/gpt-oss-120b,task_11_invoice_signing,4,0,0,
+openai/gpt-oss-120b,task_12_audit_log,5,0,0,
+openai/gpt-oss-120b,task_13_api_token,5,5,5,A5x5
+openai/gpt-oss-120b,task_14_session_cookie,5,0,0,
+openai/gpt-oss-120b,task_15_license_key,2,0,0,
+openai/gpt-oss-120b,task_16_webhook_signature,2,0,0,
+openai/gpt-oss-120b,task_17_pke_provider,5,4,4,A2x1 P1x4 P2x1 P3x1
+openai/gpt-oss-120b,task_18_signer_negotiation,4,0,0,
+openai/gpt-oss-120b,task_19_crypto_policy,3,1,1,A2x1 P2x1
+openai/gpt-oss-120b,task_20_suite_negotiation,5,5,0,A2x5
+qwen2.5-coder:3b,task_20_suite_negotiation,1,1,1,A2x1 P2x1
+qwen2.5-coder:7b,task_05_password_vault,4,4,4,A1x4 P2x4
+qwen2.5-coder:7b,task_06_sealed_secrets,1,1,1,A1x1 P2x1
+qwen2.5-coder:7b,task_18_signer_negotiation,4,0,0,
