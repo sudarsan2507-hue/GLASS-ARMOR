@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# secrets (API keys)
+.env
+
+# build outputs
+paper_dossier.zip
+results/logs/pull_qwen7b*.log
