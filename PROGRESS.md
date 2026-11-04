@@ -1,4 +1,4 @@
-# PQ-GATE — Progress Log
+# PQ-GATE - Progress Log
 
 **Current phase:** All experiments complete (Phases 0–4). Next: paper writing (deadline 13 Nov 2026). See "Phase 4 COMPLETE" at the end.
 **Deadline:** 13 Nov 2026 (ICSE 2027 workshop)
@@ -27,7 +27,7 @@
 
 ---
 
-## Session 1 — 2026-10-12
+## Session 1 - 2026-10-12
 
 ### Done
 - **Machine:** Windows 10 Pro, Intel i5-6300U (2 cores / 4 threads), 15.9 GB RAM, **no dedicated GPU** (Intel HD 520), so Ollama runs on the CPU only.
@@ -82,7 +82,7 @@
 
 ---
 
-## Session 2 — 2026-10-13 / 14
+## Session 2 - 2026-10-13 / 14
 
 ### Done: Phase 1 complete (20 tasks)
 | Family | Tasks |
@@ -113,11 +113,11 @@
 
 ### Pending
 - CHECKPOINT 1b was accepted (user said "do phase 2").
-- Decide whether to rebalance the flaw mix (F4×3, F8×3 are light) — deferred, gate first.
+- Decide whether to rebalance the flaw mix (F4×3, F8×3 are light) - deferred, gate first.
 
 ---
 
-## Session 3 — 2026-10-14
+## Session 3 - 2026-10-14
 
 ### Done: Phase 2 complete, waiting at CHECKPOINT 2
 
@@ -229,7 +229,7 @@ cd D:\Projects\Quantum_Encryption\pq-gate
 
 ---
 
-## Session 4 — 2026-10-14 (user: "do all of these" → held-out variants, Phase 3, blind labelling)
+## Session 4 - 2026-10-14 (user: "do all of these" → held-out variants, Phase 3, blind labelling)
 
 ### 1. Held-out F4/F8 variants: an out-of-sample test of the gate
 - **Protocol:**
@@ -310,7 +310,7 @@ cd D:\Projects\Quantum_Encryption\pq-gate
 
 ---
 
-## Session 5 — 2026-10-15
+## Session 5 - 2026-10-15
 
 - The migration run stopped at 02:08 when the session ended / laptop slept, with 52/200 done (all gemma3:4b, all `ok`, 0 timeouts). It was **resumed** at 16:30 (same command; resume skips finished samples).
 - **Bug fixed in `scripts/evaluate.py`:** `PQGATE_TARGET` is now resolved to an absolute path, because tests run in a throwaway cwd. A relative path made every test "fail" in a preview script. evaluate.py itself already passed absolute paths, so no stored result was affected.
@@ -343,7 +343,7 @@ cd D:\Projects\Quantum_Encryption\pq-gate
 
 ---
 
-## Session 6 — 2026-10-18
+## Session 6 - 2026-10-18
 
 - Found everything stopped since **2026-10-15 22:04** (laptop off/asleep), at 106/300:
   - gemma3:4b 100/100
@@ -376,7 +376,7 @@ cd D:\Projects\Quantum_Encryption\pq-gate
 
 ---
 
-## Session 7 — 2026-10-19
+## Session 7 - 2026-10-19
 
 - **gemma3:4b 100/100 and qwen2.5-coder:3b 100/100 finished at 00:25** (200/300). The two re-run infrastructure-error samples completed ok.
 - **The 7B download failed at its final step:** `remove ...-partial-0: The system cannot find the file specified`. This is Ollama tripping over chunk files left by the earlier interrupted pulls; a retry gave the same error.
@@ -422,7 +422,7 @@ cd D:\Projects\Quantum_Encryption\pq-gate
 
 ---
 
-## Session 8 — 2026-10-20: first Phase 3 scores (377/400 samples; Groq still 77/100)
+## Session 8 - 2026-10-20: first Phase 3 scores (377/400 samples; Groq still 77/100)
 
 - **Local runs complete:** gemma3:4b, qwen2.5-coder:3b and qwen2.5-coder:7b, 300/300, all `ok`. The 7B took ~4 min/sample.
 - `scripts/evaluate.py` now runs Semgrep/Bandit in chunks of 50 files (the Windows command-line length limit broke the first attempt).
@@ -456,7 +456,7 @@ cd D:\Projects\Quantum_Encryption\pq-gate
 
 ---
 
-## Session 9 — 2026-10-20: Phase 3 complete (400/400) — final gate scores; labelling set built
+## Session 9 - 2026-10-20: Phase 3 complete (400/400) - final gate scores; labelling set built
 
 - All 400 migrations finished (Groq done at 18:22). Final scoring: `results/logs/evaluate_final.log`, `results/tables/phase3_eval.csv`.
 - **Final results.** GATE VERDICTS; not yet confirmed by labels:
@@ -485,7 +485,7 @@ cd D:\Projects\Quantum_Encryption\pq-gate
 
 ---
 
-## Session 10 — 2026-10-21: Phase 4 (repair loop) — design fixed before any repair output
+## Session 10 - 2026-10-21: Phase 4 (repair loop) - design fixed before any repair output
 
 - **Question:** does gate feedback fix test-passing insecure migrations where test feedback does not?
 - **Items:** the 31 Phase 3 outputs that pass all tests, use liboqs and FAIL the gate (gpt-oss 20, gemma 5, qwen-7B 5, qwen-3B 1). Each is repaired by the model that wrote it, with the same seed and temperature.
@@ -518,7 +518,7 @@ cd D:\Projects\Quantum_Encryption\pq-gate
 
 ---
 
-## CHECKPOINT 3 — 2026-10-21: gate vs blind (AI) labels
+## CHECKPOINT 3 - 2026-10-21: gate vs blind (AI) labels
 
 - **Labeller:** independent Claude subagent, blind to gate verdicts. 35 items: 16 secure, 19 insecure, 0 unsure.
   - Flaws: F1 ×6, F7 ×2, F5 ×2 (demo `main()` prints), F3 ×1.
@@ -550,7 +550,7 @@ cd D:\Projects\Quantum_Encryption\pq-gate
     - **qwen-7B: 0/5, broke the tests in all 5**
   - **tests condition:** 0/11 fixed (gemma 0/5, qwen-3B 0/1, qwen-7B 0/5; 3 of qwen-7B never changed, 1 broke tests).
   - **Reading:** for the small local models, specific security feedback does not lead to a working fix. The 7B tries and breaks the code instead.
-  - **Pending:** Groq gpt-oss — tests condition 17/20, gate condition 0/20 (rate-limited, auto-resumes).
+  - **Pending:** Groq gpt-oss - tests condition 17/20, gate condition 0/20 (rate-limited, auto-resumes).
 - **2026-10-21 08:00, Groq repair:**
   - **tests condition finished:** gpt-oss-120b **0/20 fixed** (1 broke tests).
   - **gate condition:** 6/20 done; **5 fixed**, 1 broke tests.
@@ -560,7 +560,7 @@ cd D:\Projects\Quantum_Encryption\pq-gate
 
 ---
 
-## Phase 4 COMPLETE — 2026-10-22 (Groq part finished 00:42)
+## Phase 4 COMPLETE - 2026-10-22 (Groq part finished 00:42)
 
 **Fixed = final file passes all tests AND the gate passes** (`results/tables/repair_summary.csv`, `repair_items.csv`):
 

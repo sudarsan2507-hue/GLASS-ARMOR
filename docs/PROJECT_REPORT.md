@@ -1,4 +1,4 @@
-# PQ-GATE — Project Report (end to end)
+# PQ-GATE - Project Report (end to end)
 
 **Passing Tests, Failing Security: Measuring and Gating LLM-Driven Post-Quantum Migrations**
 
@@ -69,7 +69,7 @@ We asked whether code that AI models migrate from classical cryptography (RSA, e
 
 ---
 
-## 7. Phase 1 — The benchmark
+## 7. Phase 1 - The benchmark
 
 ### 7.1 How it is built
 Each of the 20 tasks lives in `benchmark/task_NN_name/` and contains:
@@ -115,7 +115,7 @@ Each of the 20 tasks lives in `benchmark/task_NN_name/` and contains:
 
 ---
 
-## 8. Phase 2 — The security gate
+## 8. Phase 2 - The security gate
 
 ### 8.1 Design (two tiers)
 
@@ -160,7 +160,7 @@ The gate was frozen (hashes of all gate files saved), then 6 new variants were w
 
 ---
 
-## 9. Phase 3 — 400 real AI migrations
+## 9. Phase 3 - 400 real AI migrations
 
 ### 9.1 Protocol
 4 models × 20 tasks × 5 samples = 400 migrations (`harness/migrate.py`), every raw output and full log saved in `results/raw/`. Each output was then scored (`scripts/evaluate.py`): does it parse, does it import liboqs, do all tests pass, the gate verdict, and the default-Semgrep and Bandit findings. Model outputs are untrusted code, so tests and attacks ran in a subprocess with a timeout inside a throwaway folder.
@@ -189,7 +189,7 @@ The blind labeller found that importing liboqs is not proof of a migration (11 o
 
 ---
 
-## 10. Checkpoint 3 — Is the gate right? (blind labels)
+## 10. Checkpoint 3 - Is the gate right? (blind labels)
 
 - 35 files sampled at random (seed 2026) from the 84 test-passing liboqs outputs, at most 20 per model.
 - Labelled by an **independent Claude agent** that saw only the labelling guide, the files and each task's original/reference code, and was barred from all gate results. (Chosen by the user over human labelling; a human spot-check of about 10 items is still recommended.)
@@ -210,7 +210,7 @@ The blind labeller found that importing liboqs is not proof of a migration (11 o
 
 ---
 
-## 11. Phase 4 — Repair loop (gate feedback vs test feedback)
+## 11. Phase 4 - Repair loop (gate feedback vs test feedback)
 
 ### 11.1 Protocol
 - Items: the 31 outputs that pass all tests, use liboqs and fail the gate. Each is repaired by the model that wrote it, same seed.
@@ -256,7 +256,7 @@ The blind labeller found that importing liboqs is not proof of a migration (11 o
 
 ---
 
-## 14. Code map — what is where, and why
+## 14. Code map - what is where, and why
 
 ### 14.1 Configuration and documentation
 

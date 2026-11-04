@@ -1,4 +1,4 @@
-# PQ-GATE — Paper Dossier
+# PQ-GATE - Paper Dossier
 
 **Passing Tests, Failing Security: Measuring and Gating LLM-Driven Post-Quantum Migrations**
 
@@ -45,8 +45,8 @@ Conventions: **NOT DONE** = planned or requested but never performed. **UNKNOWN*
 | 11 | Reproducibility artifact | PARTLY | All code, raw outputs, logs and hashes in the repo; **no anonymous repository, no release** | Section 13 |
 | 12 | Experimental consistency | PARTLY | Same prompt/seeds/temperature for all models; but gemma used Ollama 0.40.3 vs 0.40.6 for qwen; qwen-7B and gpt-oss added mid-study (decisions logged) | Section 14 |
 | 13 | Statistics | PARTLY | Wilson CIs and an exact McNemar test computed here; **no cluster-aware statistics** (samples of one task are correlated) | Sections 8.4, 8.6 |
-| 14 | Framing | NOT DONE | Paper not written | — |
-| 15 | Venue check | NOT DONE | Venue named in the brief only (ICSE 2027 workshop); call for papers / page limits not checked | — |
+| 14 | Framing | NOT DONE | Paper not written | - |
+| 15 | Venue check | NOT DONE | Venue named in the brief only (ICSE 2027 workshop); call for papers / page limits not checked | - |
 
 ---
 
@@ -293,12 +293,12 @@ Per gate check (TP / FN / fired on another variant / FP on references):
 
 | Variant | Flaw | Expected | Gate | Why missed |
 |---|---|---|---|---|
-| task_02 b5 KEM ciphertext used as the PQ secret | F4 | P6, A4 | A4, P6 | — |
-| task_08 b5 "PQ secret" = sha256(public KEM key) | F4 | P6, A4 | A4, P6 | — |
-| task_20 b5 `classical + classical` typo | F4 | P6, A4 | P6 | — (A4 not driven for this API) |
-| task_05 b5 check value compared as hex string `!=` | F8 | P5 | P5 | — |
-| task_07 b5 `tag_a.hex() == tag_b.hex()` | F8 | P5 | — | P5's name regex does not match `x.hex()` expressions |
-| task_14 b4 hand-written early-exit byte loop | F8 | P5 | — | No `==` on a mac/tag-named value; loop comparison not modelled |
+| task_02 b5 KEM ciphertext used as the PQ secret | F4 | P6, A4 | A4, P6 | - |
+| task_08 b5 "PQ secret" = sha256(public KEM key) | F4 | P6, A4 | A4, P6 | - |
+| task_20 b5 `classical + classical` typo | F4 | P6, A4 | P6 | - (A4 not driven for this API) |
+| task_05 b5 check value compared as hex string `!=` | F8 | P5 | P5 | - |
+| task_07 b5 `tag_a.hex() == tag_b.hex()` | F8 | P5 | - | P5's name regex does not match `x.hex()` expressions |
+| task_14 b4 hand-written early-exit byte loop | F8 | P5 | - | No `==` on a mac/tag-named value; loop comparison not modelled |
 
 [source: results/tables/gate_heldout_2026-10-14.json]
 
@@ -452,7 +452,7 @@ After the repair the gate says: `Test suite: all 10 tests passed. Security check
 
 | File | Shows | RQ | Source |
 |---|---|---|---|
-| derived_benchmark_tasks | the 20 tasks | — | benchmark/*/meta.yaml, benchmark_validation.csv |
+| derived_benchmark_tasks | the 20 tasks | - | benchmark/*/meta.yaml, benchmark_validation.csv |
 | derived_gate_validation_ci | in-sample detection per flaw with CI | RQ2 | gate_by_flaw.csv |
 | derived_phase3_per_model | Phase 3 per model, frozen and corrected | RQ1, RQ2 | phase3_eval_strict.csv |
 | derived_phase3_per_task | flags per (model, task) | RQ1 | phase3_eval_strict.csv |
@@ -534,7 +534,7 @@ cd pq-gate
 | 10-12 | decision | API reference card added to the prompt, before any run | small models did not know the ML-KEM API |
 | 10-12 | decision | migrate.py made resumable; timeouts and errors count as done | reproducibility |
 | 10-12 | setup | liboqs from a prebuilt MSYS2 DLL | no CMake/MSVC to build liboqs |
-| 10-13/14 | milestone | 20 tasks, 71 variants, 71/71 test-invisible | — |
+| 10-13/14 | milestone | 20 tasks, 71 variants, 71/71 test-invisible | - |
 | 10-14 | decision | P6 (and a second P1) implemented as AST dataflow instead of Semgrep | Semgrep versions flagged 9/20 correct references |
 | 10-14 | fix | several gate bugs fixed during validation (AND-ed Semgrep patterns, A6 logic, A3 not using probe keys, Semgrep crash treated as pass) | found in early validation runs |
 | 10-14 | decision | gate frozen (hashes); 6 held-out variants written and run once | out-of-sample test |
@@ -547,13 +547,13 @@ cd pq-gate
 | 10-19 | decision | gpt-oss-120b via Groq added (large-model condition) | yield; logged before any output |
 | 10-19/20 | incident | Groq rate limits and network drops | client stops without writing; watchdog retries; 2 dropped-connection samples regenerated |
 | 10-20 | fix | Windows command-line length limit | Semgrep/Bandit run in chunks of 50 |
-| 10-20 | milestone | 400/400 scored; labelling set built | — |
+| 10-20 | milestone | 400/400 scored; labelling set built | - |
 | 10-21 | decision | user chose an independent AI labeller instead of human labelling | time |
 | 10-21 | decision | repair design (2 conditions, ≤3 rounds) fixed before any repair output; "stop when unchanged" added after the pilot | identical prompt would repeat |
 | 10-21 | fix | repair loop crashed on a non-Python reply | syntax check first |
 | 10-21 | incident | internet outage ~10:40–11:46 | Groq runs stopped cleanly; relaunched |
 | 10-22 | finding | A2 naming bug → 5 false alarms | corrected counts reported next to frozen ones |
-| 10-23 | output | `docs/PROJECT_REPORT.md/.pdf` | — |
+| 10-23 | output | `docs/PROJECT_REPORT.md/.pdf` | - |
 | 10-31 | output | this dossier; imports-and-calls measure added; CIs and McNemar computed | analysis only |
 
 ## 15. AI-use disclosure facts
