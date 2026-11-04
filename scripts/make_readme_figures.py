@@ -7,7 +7,7 @@ Usage: python scripts/make_readme_figures.py
 """
 import csv
 import re
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 
 import matplotlib
